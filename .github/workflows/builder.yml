@@ -1,0 +1,202 @@
+name: builder
+
+# Renders a procedural-3D "story explainer" short, 100% in CI:
+#   audio  : Kokoro-ONNX TTS + faster-whisper word timings + synthesized SFX  -> timeline.json + audio.wav
+#   render : Three.js (headless Chromium, software WebGL) frames, sharded across a matrix of runners
+#   mux    : per-shard x264 segments are concatenated and muxed with the audio -> final .mp4
+# No LLM / Claude API anywhere: the story + storyboard are checked into story/*.json.
+
+on:
+  workflow_dispatch:
+    inputs:
+      story:
+        description: Storyboard JSON
+        default: story/molasses.json
+      width:
+        description: Render width (px). Final video is upscaled to 1080x1920.
+        default: "720"
+      height:
+        description: Render height (px)
+        default: "1280"
+      shards:
+        description: Parallel render shards (matrix size, max 8)
+        type: choice
+        default: "6"
+        options: ["2", "4", "6", "8"]
+      paint:
+        description: Painterly brush filter strength (0 = off, 1 = full)
+        default: "1"
+  push:
+    paths:
+      - "story/**"
+      - "renderer/**"
+      - "pipeline/**"
+      - ".github/workflows/builder.yml"
+
+env:
+  STORY: ${{ inputs.story || 'story/molasses.json' }}
+  W: ${{ inputs.width || '720' }}
+  H: ${{ inputs.height || '1280' }}
+  FPS: "30"
+  PAINT: ${{ inputs.paint || '1' }}
+  SHARDS: ${{ inputs.shards || '6' }}
+
+jobs:
+  # ------------------------------------------------------------------ 1. voice + timeline
+  audio:
+    runs-on: ubuntu-latest
+    outputs:
+      frames: ${{ steps.meta.outputs.frames }}
+      matrix: ${{ steps.meta.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: System deps (espeak-ng for Kokoro phonemes)
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends espeak-ng ffmpeg
+
+      - name: Python deps
+        run: pip install -r requirements.txt
+
+      - name: Cache Kokoro + Whisper models
+        uses: actions/cache@v4
+        with:
+          path: |
+            models
+            ~/.cache/huggingface
+          key: kokoro-v1.0-whisper-base.en
+
+      - name: Synthesize narration, align words, mix SFX
+        run: python pipeline/tts.py --story "$STORY" --out build --models models
+
+      - name: Compute frame shards
+        id: meta
+        run: |
+          python - <<'PY'
+          import json, math, os
+          tl = json.load(open("build/timeline.json"))
+          fps, n = int(os.environ["FPS"]), int(os.environ["SHARDS"])
+          total = math.ceil(tl["duration"] * fps)
+          per = math.ceil(total / n)
+          shards = [{"i": i, "from": i * per, "to": min(total, (i + 1) * per)} for i in range(n) if i * per < total]
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"frames={total}\n")
+              f.write("matrix=" + json.dumps({"include": shards}) + "\n")
+          print(f"{tl['duration']:.1f}s, {total} frames, {len(shards)} shards of ~{per}")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: timeline
+          path: |
+            build/timeline.json
+            build/audio.wav
+          retention-days: 7
+
+  # ------------------------------------------------------------------ 2. render frames (matrix)
+  render:
+    needs: audio
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix: ${{ fromJSON(needs.audio.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Node deps
+        run: npm ci || npm install
+
+      - name: Chromium (software WebGL via SwiftShader) + fonts + ffmpeg
+        run: |
+          npx playwright install --with-deps chromium
+          sudo apt-get install -y --no-install-recommends ffmpeg fonts-nunito fonts-dejavu-core || sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: timeline
+          path: build
+
+      - name: Render frames ${{ matrix.from }}-${{ matrix.to }}
+        run: |
+          node renderer/render.mjs \
+            --timeline build/timeline.json --out build/frames \
+            --width "$W" --height "$H" --fps "$FPS" --paint "$PAINT" \
+            --from ${{ matrix.from }} --to ${{ matrix.to }} \
+            --workers "$(nproc)"
+
+      - name: Encode segment ${{ matrix.i }}
+        run: |
+          ffmpeg -y -framerate "$FPS" -start_number ${{ matrix.from }} -i build/frames/f_%05d.jpg \
+            -vf "scale=1080:1920:flags=lanczos,format=yuv420p" \
+            -c:v libx264 -preset medium -crf 15 -g 30 -r "$FPS" \
+            -movflags +faststart build/seg_${{ matrix.i }}.mp4
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: seg-${{ matrix.i }}
+          path: build/seg_${{ matrix.i }}.mp4
+          retention-days: 3
+
+      - name: Keep a few raw frames for debugging
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-frames-${{ matrix.i }}
+          path: |
+            build/frames/f_*0.jpg
+          retention-days: 2
+          if-no-files-found: ignore
+
+  # ------------------------------------------------------------------ 3. concat + mux
+  mux:
+    needs: [audio, render]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: timeline
+          path: build
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: seg-*
+          path: build/segs
+          merge-multiple: true
+
+      - name: Concatenate segments and add audio
+        run: |
+          ls build/segs
+          for f in $(ls build/segs/seg_*.mp4 | sort -V); do echo "file '$PWD/$f'"; done > build/list.txt
+          cat build/list.txt
+          ffmpeg -y -f concat -safe 0 -i build/list.txt -c copy build/video_silent.mp4
+
+          MUSIC=""
+          if [ -f assets/music.mp3 ]; then MUSIC="-i assets/music.mp3"; fi
+          if [ -n "$MUSIC" ]; then
+            ffmpeg -y -i build/video_silent.mp4 -i build/audio.wav $MUSIC \
+              -filter_complex "[2:a]volume=0.10,aloop=loop=-1:size=2e9[m];[1:a][m]amix=inputs=2:duration=first:normalize=0[a]" \
+              -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -ar 44100 -shortest -movflags +faststart out.mp4
+          else
+            ffmpeg -y -i build/video_silent.mp4 -i build/audio.wav \
+              -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -ar 44100 -shortest -movflags +faststart out.mp4
+          fi
+          ffprobe -v error -show_entries stream=codec_name,width,height,duration -of default=nw=1 out.mp4
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: short-video
+          path: out.mp4
+          retention-days: 30
