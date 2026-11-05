@@ -1,0 +1,6947 @@
+{
+ "title": "Episode 7 - How Chips Gossip",
+ "format": "long",
+ "voice": "bf_emma",
+ "lang": "en-gb",
+ "speed": 1.0,
+ "cast": {
+  "ada": {
+   "type": "engineer"
+  },
+  "ben": {
+   "type": "worker"
+  },
+  "cy": {
+   "type": "boss"
+  }
+ },
+ "beats": [
+  {
+   "id": "ep07_001",
+   "narration": "Ben empties a bag onto the bench. A temperature sensor. A light sensor. A tiny display. A memory chip. A wireless module. And something he describes only as, very promising.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Episode 7",
+    "sub": "How Chips Gossip",
+    "dur": 3.4
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep07_002",
+   "narration": "Every one of these talks to the microcontroller. But none of them uses the same language.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "wave",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "low",
+    "f": "ben",
+    "az": -4,
+    "move": "drift"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep07_003",
+   "narration": "Can we not just connect them all with wires and let them work it out?",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": "cy",
+    "az": -46,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep07_004",
+   "narration": "That is roughly what we will do. But the wires have rules. Today we learn the main ways chips talk to each other, and why there are so many.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep07_005",
+   "narration": "Every communication method answers the same questions. How many wires? Who decides when bits are sent? How fast? And how many devices can share the line?",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   }
+  },
+  {
+   "id": "ep07_006",
+   "narration": "The simplest is the asynchronous serial port, often called a UART. Two wires: one to transmit, one to receive.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter One",
+    "sub": "Serial: One Bit After Another",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep07_007",
+   "narration": "Bits are sent one after another, at a speed both sides agreed on in advance.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   }
+  },
+  {
+   "id": "ep07_008",
+   "narration": "The line rests high. A start bit pulls it low, announcing a byte is coming. Then eight data bits, lowest first. Then a stop bit returns it high.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "One byte on a UART",
+    "rows": [
+     {
+      "name": "TX line",
+      "wave": "11110=+=+=+=+111",
+      "labels": [
+       "d0",
+       "d1",
+       "d2",
+       "d3",
+       "d4",
+       "d5",
+       "d6",
+       "d7"
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_009",
+   "narration": "There is no clock wire. Both sides must agree on the baud rate, like nine thousand six hundred or one hundred fifteen thousand two hundred bits per second.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "One byte on a UART",
+    "rows": [
+     {
+      "name": "TX line",
+      "wave": "11110=+=+=+=+111",
+      "labels": [
+       "d0",
+       "d1",
+       "d2",
+       "d3",
+       "d4",
+       "d5",
+       "d6",
+       "d7"
+      ]
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep07_010",
+   "narration": "If their clocks drift too far apart, bits get sampled in the wrong place and bytes arrive garbled.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "One byte on a UART",
+    "rows": [
+     {
+      "name": "TX line",
+      "wave": "11110=+=+=+=+111",
+      "labels": [
+       "d0",
+       "d1",
+       "d2",
+       "d3",
+       "d4",
+       "d5",
+       "d6",
+       "d7"
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep07_011",
+   "narration": "Which is why a UART on a cheap internal oscillator can work fine on your desk and fail in a cold garage. Clocks drift with temperature.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "One byte on a UART",
+    "rows": [
+     {
+      "name": "TX line",
+      "wave": "11110=+=+=+=+111",
+      "labels": [
+       "d0",
+       "d1",
+       "d2",
+       "d3",
+       "d4",
+       "d5",
+       "d6",
+       "d7"
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep07_012",
+   "narration": "And the wires cross: my transmit goes to your receive. The most common serial bug in history is connecting transmit to transmit.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "UART wiring",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "sub": "TX",
+      "to": [
+       {
+        "n": "Sensor (RX)"
+       }
+      ]
+     },
+     {
+      "name": "Sensor",
+      "sub": "TX",
+      "to": [
+       {
+        "n": "Microcontroller (RX)"
+       }
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_013",
+   "narration": "I once did that with an email. Nobody received it.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "smug",
+     "face": "smug"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "UART wiring",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "sub": "TX",
+      "to": [
+       {
+        "n": "Sensor (RX)"
+       }
+      ]
+     },
+     {
+      "name": "Sensor",
+      "sub": "TX",
+      "to": [
+       {
+        "n": "Microcontroller (RX)"
+       }
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "cy",
+    "az": -46,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep07_014",
+   "narration": "Inside a board, serial signals use the chip's own voltage levels, typically zero and three point three volts. People often call this TTL serial, after an old logic family.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Two",
+    "sub": "Logic Levels and RS-232",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep07_015",
+   "narration": "For longer cables, there is RS-232, an old standard that uses larger, inverted voltages, so signals survive noisy environments. You cannot connect it straight to a microcontroller pin;",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Same bits, different voltages",
+    "rows": [
+     [
+      "Standard",
+      "One means",
+      "Zero means"
+     ],
+     [
+      "3.3 V logic",
+      "3.3 V",
+      "0 V"
+     ],
+     [
+      "5 V logic",
+      "5 V",
+      "0 V"
+     ],
+     [
+      "RS-232",
+      "-3 to -15 V",
+      "+3 to +15 V"
+     ]
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_016",
+   "narration": "it would destroy it. A small converter chip translates.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Same bits, different voltages",
+    "rows": [
+     [
+      "Standard",
+      "One means",
+      "Zero means"
+     ],
+     [
+      "3.3 V logic",
+      "3.3 V",
+      "0 V"
+     ],
+     [
+      "5 V logic",
+      "5 V",
+      "0 V"
+     ],
+     [
+      "RS-232",
+      "-3 to -15 V",
+      "+3 to +15 V"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep07_017",
+   "narration": "Today, most serial cables to a laptop go through a little USB adapter. It shows up as a serial port, and the chip never knows there was USB involved.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Same bits, different voltages",
+    "rows": [
+     [
+      "Standard",
+      "One means",
+      "Zero means"
+     ],
+     [
+      "3.3 V logic",
+      "3.3 V",
+      "0 V"
+     ],
+     [
+      "5 V logic",
+      "5 V",
+      "0 V"
+     ],
+     [
+      "RS-232",
+      "-3 to -15 V",
+      "+3 to +15 V"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep07_018",
+   "narration": "When speed matters, many chips use SPI, the serial peripheral interface. It adds a clock wire, so the receiver knows exactly when to read each bit.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Three",
+    "sub": "SPI: Fast and Simple",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep07_019",
+   "narration": "Four wires. A chip select line picks which device is listening. The clock, driven by the controller. One data line out, one data line back.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "An SPI transfer",
+    "rows": [
+     {
+      "name": "CS",
+      "wave": "1000000000000001"
+     },
+     {
+      "name": "SCK",
+      "wave": "0010101010101010"
+     },
+     {
+      "name": "MOSI",
+      "wave": "0==============0",
+      "labels": [
+       "one byte out"
+      ]
+     },
+     {
+      "name": "MISO",
+      "wave": "0==============0",
+      "labels": [
+       "one byte back"
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_020",
+   "narration": "Every clock tick moves one bit in each direction at the same time.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "An SPI transfer",
+    "rows": [
+     {
+      "name": "CS",
+      "wave": "1000000000000001"
+     },
+     {
+      "name": "SCK",
+      "wave": "0010101010101010"
+     },
+     {
+      "name": "MOSI",
+      "wave": "0==============0",
+      "labels": [
+       "one byte out"
+      ]
+     },
+     {
+      "name": "MISO",
+      "wave": "0==============0",
+      "labels": [
+       "one byte back"
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep07_021",
+   "narration": "Because the controller drives the clock, there is no baud rate to agree on. SPI can run at tens of megahertz. That is why memory chips and displays love it.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "An SPI transfer",
+    "rows": [
+     {
+      "name": "CS",
+      "wave": "1000000000000001"
+     },
+     {
+      "name": "SCK",
+      "wave": "0010101010101010"
+     },
+     {
+      "name": "MOSI",
+      "wave": "0==============0",
+      "labels": [
+       "one byte out"
+      ]
+     },
+     {
+      "name": "MISO",
+      "wave": "0==============0",
+      "labels": [
+       "one byte back"
+      ]
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep07_022",
+   "narration": "Each extra device shares clock and data, but needs its own chip select wire. Ten devices means ten select pins. That adds up.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "SPI with several devices",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "Flash chip",
+        "label": "CS 1"
+       },
+       {
+        "n": "Display",
+        "label": "CS 2"
+       },
+       {
+        "n": "Radio",
+        "label": "CS 3"
+       }
+      ]
+     },
+     {
+      "name": "Flash chip"
+     },
+     {
+      "name": "Display"
+     },
+     {
+      "name": "Radio"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_023",
+   "narration": "And SPI has modes: which clock edge to sample on, and whether the clock idles high or low. Get the mode wrong and every byte arrives shifted or scrambled.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "SPI with several devices",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "Flash chip",
+        "label": "CS 1"
+       },
+       {
+        "n": "Display",
+        "label": "CS 2"
+       },
+       {
+        "n": "Radio",
+        "label": "CS 3"
+       }
+      ]
+     },
+     {
+      "name": "Flash chip"
+     },
+     {
+      "name": "Display"
+     },
+     {
+      "name": "Radio"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep07_024",
+   "narration": "The datasheet tells you which.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "SPI with several devices",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "Flash chip",
+        "label": "CS 1"
+       },
+       {
+        "n": "Display",
+        "label": "CS 2"
+       },
+       {
+        "n": "Radio",
+        "label": "CS 3"
+       }
+      ]
+     },
+     {
+      "name": "Flash chip"
+     },
+     {
+      "name": "Display"
+     },
+     {
+      "name": "Radio"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep07_025",
+   "narration": "When pins are precious and speed is modest, there is I squared C. Just two wires, shared by many devices, each with its own address.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Four",
+    "sub": "I squared C: Two Wires, Many Chips",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep07_026",
+   "narration": "One wire is the clock, the other carries data. A transaction begins with a start condition, then the address of the device you want, then data.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "An I squared C transaction",
+    "rows": [
+     {
+      "name": "SCL",
+      "wave": "1110101010101010101011"
+     },
+     {
+      "name": "SDA",
+      "wave": "1100==============0011",
+      "labels": [
+       "address 0x48 + write"
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_027",
+   "narration": "The addressed device answers with an acknowledge bit. Everyone else stays quiet.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "An I squared C transaction",
+    "rows": [
+     {
+      "name": "SCL",
+      "wave": "1110101010101010101011"
+     },
+     {
+      "name": "SDA",
+      "wave": "1100==============0011",
+      "labels": [
+       "address 0x48 + write"
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep07_028",
+   "narration": "The wires use open-drain outputs. Devices can only pull the line low; resistors pull it high.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Many devices, two wires",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "Temp sensor (0x48)",
+        "label": "<>SDA + SCL"
+       },
+       {
+        "n": "Light sensor (0x23)",
+        "label": "<>SDA + SCL"
+       },
+       {
+        "n": "Memory (0x50)",
+        "label": "<>SDA + SCL"
+       }
+      ]
+     },
+     {
+      "name": "Temp sensor",
+      "sub": "0x48"
+     },
+     {
+      "name": "Light sensor",
+      "sub": "0x23"
+     },
+     {
+      "name": "Memory",
+      "sub": "0x50"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_029",
+   "narration": "That way, two devices talking at once cannot short each other out, they just pull the line low together.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Many devices, two wires",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "Temp sensor (0x48)",
+        "label": "<>SDA + SCL"
+       },
+       {
+        "n": "Light sensor (0x23)",
+        "label": "<>SDA + SCL"
+       },
+       {
+        "n": "Memory (0x50)",
+        "label": "<>SDA + SCL"
+       }
+      ]
+     },
+     {
+      "name": "Temp sensor",
+      "sub": "0x48"
+     },
+     {
+      "name": "Light sensor",
+      "sub": "0x23"
+     },
+     {
+      "name": "Memory",
+      "sub": "0x50"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep07_030",
+   "narration": "And if we forget the pull-up resistors, the bus never goes high at all, and nothing works.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "cut": "flash",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "shock",
+     "face": "shock"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Many devices, two wires",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "Temp sensor (0x48)",
+        "label": "<>SDA + SCL"
+       },
+       {
+        "n": "Light sensor (0x23)",
+        "label": "<>SDA + SCL"
+       },
+       {
+        "n": "Memory (0x50)",
+        "label": "<>SDA + SCL"
+       }
+      ]
+     },
+     {
+      "name": "Temp sensor",
+      "sub": "0x48"
+     },
+     {
+      "name": "Light sensor",
+      "sub": "0x23"
+     },
+     {
+      "name": "Memory",
+      "sub": "0x50"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.04,
+     "type": "thud",
+     "vol": 0.6
+    }
+   ]
+  },
+  {
+   "id": "ep07_031",
+   "narration": "Classic. Another classic: two sensors from the same manufacturer with the same fixed address. They cannot both live on the same bus without help.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Many devices, two wires",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "Temp sensor (0x48)",
+        "label": "<>SDA + SCL"
+       },
+       {
+        "n": "Light sensor (0x23)",
+        "label": "<>SDA + SCL"
+       },
+       {
+        "n": "Memory (0x50)",
+        "label": "<>SDA + SCL"
+       }
+      ]
+     },
+     {
+      "name": "Temp sensor",
+      "sub": "0x48"
+     },
+     {
+      "name": "Light sensor",
+      "sub": "0x23"
+     },
+     {
+      "name": "Memory",
+      "sub": "0x50"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep07_032",
+   "narration": "How fast is it?",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Many devices, two wires",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "Temp sensor (0x48)",
+        "label": "<>SDA + SCL"
+       },
+       {
+        "n": "Light sensor (0x23)",
+        "label": "<>SDA + SCL"
+       },
+       {
+        "n": "Memory (0x50)",
+        "label": "<>SDA + SCL"
+       }
+      ]
+     },
+     {
+      "name": "Temp sensor",
+      "sub": "0x48"
+     },
+     {
+      "name": "Light sensor",
+      "sub": "0x23"
+     },
+     {
+      "name": "Memory",
+      "sub": "0x50"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "cy",
+    "az": -30,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep07_033",
+   "narration": "Typically one hundred or four hundred kilobits per second. Plenty for a temperature sensor read every few seconds. Too slow for a display showing video.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Many devices, two wires",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "Temp sensor (0x48)",
+        "label": "<>SDA + SCL"
+       },
+       {
+        "n": "Light sensor (0x23)",
+        "label": "<>SDA + SCL"
+       },
+       {
+        "n": "Memory (0x50)",
+        "label": "<>SDA + SCL"
+       }
+      ]
+     },
+     {
+      "name": "Temp sensor",
+      "sub": "0x48"
+     },
+     {
+      "name": "Light sensor",
+      "sub": "0x23"
+     },
+     {
+      "name": "Memory",
+      "sub": "0x50"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep07_034",
+   "narration": "There are more. One-wire buses push data, and sometimes even power, over a single wire plus ground.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Five",
+    "sub": "One Wire, and Parallel",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep07_035",
+   "narration": "They are slow, but great for long cables of cheap sensors, like temperature probes in a greenhouse.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   }
+  },
+  {
+   "id": "ep07_036",
+   "narration": "At the other extreme, parallel interfaces send many bits at once, one wire per bit. Eight or sixteen data lines plus control lines.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep07_037",
+   "narration": "Fast, but hungry for pins and board space.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   }
+  },
+  {
+   "id": "ep07_038",
+   "narration": "There are also hybrids. Dual and quad SPI send two or four bits per clock, to make external flash nearly as fast as a parallel bus with far fewer pins.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Comparing the buses",
+    "rows": [
+     [
+      "Bus",
+      "Wires",
+      "Speed",
+      "Devices"
+     ],
+     [
+      "UART",
+      "2",
+      "slow to medium",
+      "2"
+     ],
+     [
+      "SPI",
+      "4 +",
+      "very fast",
+      "few"
+     ],
+     [
+      "I squared C",
+      "2",
+      "medium",
+      "many"
+     ],
+     [
+      "One-wire",
+      "1 + ground",
+      "slow",
+      "many"
+     ],
+     [
+      "Parallel",
+      "8 to 20",
+      "very fast",
+      "few"
+     ]
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_039",
+   "narration": "And then there is USB.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Comparing the buses",
+    "rows": [
+     [
+      "Bus",
+      "Wires",
+      "Speed",
+      "Devices"
+     ],
+     [
+      "UART",
+      "2",
+      "slow to medium",
+      "2"
+     ],
+     [
+      "SPI",
+      "4 +",
+      "very fast",
+      "few"
+     ],
+     [
+      "I squared C",
+      "2",
+      "medium",
+      "many"
+     ],
+     [
+      "One-wire",
+      "1 + ground",
+      "slow",
+      "many"
+     ],
+     [
+      "Parallel",
+      "8 to 20",
+      "very fast",
+      "few"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep07_040",
+   "narration": "Then there is USB. A brilliant, complex standard that deserves respect. If you need it, use the vendor's USB library and a lot of patience.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "smug",
+     "face": "smug"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Comparing the buses",
+    "rows": [
+     [
+      "Bus",
+      "Wires",
+      "Speed",
+      "Devices"
+     ],
+     [
+      "UART",
+      "2",
+      "slow to medium",
+      "2"
+     ],
+     [
+      "SPI",
+      "4 +",
+      "very fast",
+      "few"
+     ],
+     [
+      "I squared C",
+      "2",
+      "medium",
+      "many"
+     ],
+     [
+      "One-wire",
+      "1 + ground",
+      "slow",
+      "many"
+     ],
+     [
+      "Parallel",
+      "8 to 20",
+      "very fast",
+      "few"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "low",
+    "f": "ada",
+    "az": 36,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep07_041",
+   "narration": "The choice is usually made by the parts you pick. The sensor speaks I squared C, so you speak I squared C.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Comparing the buses",
+    "rows": [
+     [
+      "Bus",
+      "Wires",
+      "Speed",
+      "Devices"
+     ],
+     [
+      "UART",
+      "2",
+      "slow to medium",
+      "2"
+     ],
+     [
+      "SPI",
+      "4 +",
+      "very fast",
+      "few"
+     ],
+     [
+      "I squared C",
+      "2",
+      "medium",
+      "many"
+     ],
+     [
+      "One-wire",
+      "1 + ground",
+      "slow",
+      "many"
+     ],
+     [
+      "Parallel",
+      "8 to 20",
+      "very fast",
+      "few"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep07_042",
+   "narration": "But knowing the trade-offs helps you pick parts wisely, and debug them when they misbehave.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Comparing the buses",
+    "rows": [
+     [
+      "Bus",
+      "Wires",
+      "Speed",
+      "Devices"
+     ],
+     [
+      "UART",
+      "2",
+      "slow to medium",
+      "2"
+     ],
+     [
+      "SPI",
+      "4 +",
+      "very fast",
+      "few"
+     ],
+     [
+      "I squared C",
+      "2",
+      "medium",
+      "many"
+     ],
+     [
+      "One-wire",
+      "1 + ground",
+      "slow",
+      "many"
+     ],
+     [
+      "Parallel",
+      "8 to 20",
+      "very fast",
+      "few"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep07_043",
+   "narration": "Now a practical problem. The wireless module sends a burst of fifty bytes. The UART receives one byte at a time and interrupts for each.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Six",
+    "sub": "Buffers and FIFOs",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep07_044",
+   "narration": "If the code is busy when byte twelve arrives, byte thirteen overwrites it.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep07_045",
+   "narration": "Many peripherals include a small hardware FIFO: a first-in, first-out queue of a few bytes. It buys a little time. But for real slack, the software needs its own buffer.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Bytes arriving faster than handled",
+    "rows": [
+     {
+      "name": "RX bytes",
+      "wave": "1010101010101010"
+     },
+     {
+      "name": "Code free",
+      "wave": "1100000011000000"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_046",
+   "narration": "The classic structure is a circular buffer, also called a ring buffer.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Bytes arriving faster than handled",
+    "rows": [
+     {
+      "name": "RX bytes",
+      "wave": "1010101010101010"
+     },
+     {
+      "name": "Code free",
+      "wave": "1100000011000000"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   }
+  },
+  {
+   "id": "ep07_047",
+   "narration": "An array with two indexes: a head where new data is written, and a tail where old data is read.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Bytes arriving faster than handled",
+    "rows": [
+     {
+      "name": "RX bytes",
+      "wave": "1010101010101010"
+     },
+     {
+      "name": "Code free",
+      "wave": "1100000011000000"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep07_048",
+   "narration": "When an index reaches the end, it wraps back to the start.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Bytes arriving faster than handled",
+    "rows": [
+     {
+      "name": "RX bytes",
+      "wave": "1010101010101010"
+     },
+     {
+      "name": "Code free",
+      "wave": "1100000011000000"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep07_049",
+   "narration": "The interrupt only moves the head. The main loop only moves the tail.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A ring buffer",
+    "lines": [
+     "#define SIZE 64                    // power of two",
+     "static uint8_t buf[SIZE];",
+     "static volatile uint16_t head = 0, tail = 0;",
+     "",
+     "bool put(uint8_t b) {              // called from the ISR",
+     "  if (head - tail == SIZE) return false;   // full",
+     "  buf[head % SIZE] = b; head++; return true;",
+     "}",
+     "bool get(uint8_t *b) {             // called from the main loop",
+     "  if (head == tail) return false;           // empty",
+     ">  *b = buf[tail % SIZE]; tail++; return true;",
+     "}"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_050",
+   "narration": "Because each index has exactly one writer, they can share the buffer safely without disabling interrupts, as long as index updates are atomic.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A ring buffer",
+    "lines": [
+     "#define SIZE 64                    // power of two",
+     "static uint8_t buf[SIZE];",
+     "static volatile uint16_t head = 0, tail = 0;",
+     "",
+     "bool put(uint8_t b) {              // called from the ISR",
+     "  if (head - tail == SIZE) return false;   // full",
+     "  buf[head % SIZE] = b; head++; return true;",
+     "}",
+     "bool get(uint8_t *b) {             // called from the main loop",
+     "  if (head == tail) return false;           // empty",
+     ">  *b = buf[tail % SIZE]; tail++; return true;",
+     "}"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep07_051",
+   "narration": "Keeping the size a power of two makes the wraparound cheap, and letting the indexes run freely makes full and empty easy to tell apart: equal means empty, a difference of the size means full.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A ring buffer",
+    "lines": [
+     "#define SIZE 64                    // power of two",
+     "static uint8_t buf[SIZE];",
+     "static volatile uint16_t head = 0, tail = 0;",
+     "",
+     "bool put(uint8_t b) {              // called from the ISR",
+     "  if (head - tail == SIZE) return false;   // full",
+     "  buf[head % SIZE] = b; head++; return true;",
+     "}",
+     "bool get(uint8_t *b) {             // called from the main loop",
+     "  if (head == tail) return false;           // empty",
+     ">  *b = buf[tail % SIZE]; tail++; return true;",
+     "}"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep07_052",
+   "narration": "What happens when it is full?",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A ring buffer",
+    "lines": [
+     "#define SIZE 64                    // power of two",
+     "static uint8_t buf[SIZE];",
+     "static volatile uint16_t head = 0, tail = 0;",
+     "",
+     "bool put(uint8_t b) {              // called from the ISR",
+     "  if (head - tail == SIZE) return false;   // full",
+     "  buf[head % SIZE] = b; head++; return true;",
+     "}",
+     "bool get(uint8_t *b) {             // called from the main loop",
+     "  if (head == tail) return false;           // empty",
+     ">  *b = buf[tail % SIZE]; tail++; return true;",
+     "}"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -4,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep07_053",
+   "narration": "You decide: drop the new byte, overwrite the oldest, or signal an error. What you must not do is decide by accident. Count the drops, so you know it happened.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A ring buffer",
+    "lines": [
+     "#define SIZE 64                    // power of two",
+     "static uint8_t buf[SIZE];",
+     "static volatile uint16_t head = 0, tail = 0;",
+     "",
+     "bool put(uint8_t b) {              // called from the ISR",
+     "  if (head - tail == SIZE) return false;   // full",
+     "  buf[head % SIZE] = b; head++; return true;",
+     "}",
+     "bool get(uint8_t *b) {             // called from the main loop",
+     "  if (head == tail) return false;           // empty",
+     ">  *b = buf[tail % SIZE]; tail++; return true;",
+     "}"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 4,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep07_054",
+   "narration": "Even with a ring buffer, the processor handles every byte. At high speeds, that is a lot of interruptions. Enter DMA: direct memory access.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Seven",
+    "sub": "DMA: The Delivery Service",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep07_055",
+   "narration": "A DMA controller is a little engine that copies data between peripherals and memory by itself.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "DMA moves data without the CPU",
+    "nodes": [
+     {
+      "name": "UART",
+      "to": [
+       {
+        "n": "DMA controller",
+        "label": "byte ready"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "RAM buffer",
+        "label": "copy"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "CPU",
+        "label": "done! (one interrupt)"
+       }
+      ]
+     },
+     {
+      "name": "RAM buffer"
+     },
+     {
+      "name": "CPU"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_056",
+   "narration": "You tell it: take bytes from the UART, put them in this buffer, and tell me when you have a hundred.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "DMA moves data without the CPU",
+    "nodes": [
+     {
+      "name": "UART",
+      "to": [
+       {
+        "n": "DMA controller",
+        "label": "byte ready"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "RAM buffer",
+        "label": "copy"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "CPU",
+        "label": "done! (one interrupt)"
+       }
+      ]
+     },
+     {
+      "name": "RAM buffer"
+     },
+     {
+      "name": "CPU"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep07_057",
+   "narration": "The processor is free to do other work, or to sleep, while data streams in. One interrupt at the end replaces a hundred interrupts along the way.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "DMA moves data without the CPU",
+    "nodes": [
+     {
+      "name": "UART",
+      "to": [
+       {
+        "n": "DMA controller",
+        "label": "byte ready"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "RAM buffer",
+        "label": "copy"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "CPU",
+        "label": "done! (one interrupt)"
+       }
+      ]
+     },
+     {
+      "name": "RAM buffer"
+     },
+     {
+      "name": "CPU"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep07_058",
+   "narration": "So it is an intern that never complains and never takes lunch.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "DMA moves data without the CPU",
+    "nodes": [
+     {
+      "name": "UART",
+      "to": [
+       {
+        "n": "DMA controller",
+        "label": "byte ready"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "RAM buffer",
+        "label": "copy"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "CPU",
+        "label": "done! (one interrupt)"
+       }
+      ]
+     },
+     {
+      "name": "RAM buffer"
+     },
+     {
+      "name": "CPU"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep07_059",
+   "narration": "And never tells you when it misunderstood the instructions. DMA mistakes are silent: wrong address, wrong length, and it happily overwrites the wrong memory.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "DMA moves data without the CPU",
+    "nodes": [
+     {
+      "name": "UART",
+      "to": [
+       {
+        "n": "DMA controller",
+        "label": "byte ready"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "RAM buffer",
+        "label": "copy"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "CPU",
+        "label": "done! (one interrupt)"
+       }
+      ]
+     },
+     {
+      "name": "RAM buffer"
+     },
+     {
+      "name": "CPU"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep07_060",
+   "narration": "Also, while DMA writes to a buffer, the code must not read it as if it were complete.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "DMA moves data without the CPU",
+    "nodes": [
+     {
+      "name": "UART",
+      "to": [
+       {
+        "n": "DMA controller",
+        "label": "byte ready"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "RAM buffer",
+        "label": "copy"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "CPU",
+        "label": "done! (one interrupt)"
+       }
+      ]
+     },
+     {
+      "name": "RAM buffer"
+     },
+     {
+      "name": "CPU"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -20,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep07_061",
+   "narration": "Usually you use two buffers: the DMA fills one while the code processes the other. That is double buffering.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "DMA moves data without the CPU",
+    "nodes": [
+     {
+      "name": "UART",
+      "to": [
+       {
+        "n": "DMA controller",
+        "label": "byte ready"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "RAM buffer",
+        "label": "copy"
+       }
+      ]
+     },
+     {
+      "name": "DMA controller",
+      "to": [
+       {
+        "n": "CPU",
+        "label": "done! (one interrupt)"
+       }
+      ]
+     },
+     {
+      "name": "RAM buffer"
+     },
+     {
+      "name": "CPU"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep07_062",
+   "narration": "Not every sensor speaks a digital language. Sprout's soil probe outputs a voltage: higher when the soil is wet.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Eight",
+    "sub": "Reading the Analog World",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep07_063",
+   "narration": "To read it, the chip uses its ADC, the analog to digital converter.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   }
+  },
+  {
+   "id": "ep07_064",
+   "narration": "The ADC samples the voltage and turns it into a number. A twelve bit ADC gives values from zero to four thousand ninety-five.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Soil probe voltage",
+    "xl": [
+     "bone dry",
+     "",
+     "",
+     "damp",
+     "",
+     "",
+     "soaked"
+    ],
+    "yl": "volts",
+    "series": [
+     {
+      "type": "line",
+      "name": "Probe voltage",
+      "v": [
+       0.4,
+       0.5,
+       0.9,
+       1.6,
+       2.2,
+       2.5,
+       2.6
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_065",
+   "narration": "With a three point three volt reference, each step is about eight tenths of a millivolt.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Soil probe voltage",
+    "xl": [
+     "bone dry",
+     "",
+     "",
+     "damp",
+     "",
+     "",
+     "soaked"
+    ],
+    "yl": "volts",
+    "series": [
+     {
+      "type": "line",
+      "name": "Probe voltage",
+      "v": [
+       0.4,
+       0.5,
+       0.9,
+       1.6,
+       2.2,
+       2.5,
+       2.6
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 4,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep07_066",
+   "narration": "Note the order of operations: multiply first, then divide, using a wider integer type. Dividing first would throw away precision. Using a sixteen bit type for the product would overflow.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Reading the probe",
+    "lines": [
+     "uint16_t raw = adc_read(SOIL_CHANNEL);        // 0..4095",
+     "uint32_t mv  = (uint32_t)raw * 3300 / 4095;   // millivolts",
+     ">uint16_t moisture = mv_to_percent(mv);        // calibrated"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_067",
+   "narration": "The sample rate matters too. Soil moisture changes over hours. Sampling it a million times a second would be silly. Once a minute, averaging a few readings, is plenty.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Reading the probe",
+    "lines": [
+     "uint16_t raw = adc_read(SOIL_CHANNEL);        // 0..4095",
+     "uint32_t mv  = (uint32_t)raw * 3300 / 4095;   // millivolts",
+     ">uint16_t moisture = mv_to_percent(mv);        // calibrated"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -20,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep07_068",
+   "narration": "And for signals that do change quickly, like sound, the sample rate must be more than twice the highest frequency you care about, or fast signals masquerade as slow ones.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Reading the probe",
+    "lines": [
+     "uint16_t raw = adc_read(SOIL_CHANNEL);        // 0..4095",
+     "uint32_t mv  = (uint32_t)raw * 3300 / 4095;   // millivolts",
+     ">uint16_t moisture = mv_to_percent(mv);        // calibrated"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep07_069",
+   "narration": "Engineers call that aliasing.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Reading the probe",
+    "lines": [
+     "uint16_t raw = adc_read(SOIL_CHANNEL);        // 0..4095",
+     "uint32_t mv  = (uint32_t)raw * 3300 / 4095;   // millivolts",
+     ">uint16_t moisture = mv_to_percent(mv);        // calibrated"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep07_070",
+   "narration": "Put it all together and you get a nice pipeline: a timer triggers the ADC at a steady rate, DMA moves the results into a buffer, and the code processes a whole block at once.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Reading the probe",
+    "lines": [
+     "uint16_t raw = adc_read(SOIL_CHANNEL);        // 0..4095",
+     "uint32_t mv  = (uint32_t)raw * 3300 / 4095;   // millivolts",
+     ">uint16_t moisture = mv_to_percent(mv);        // calibrated"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep07_071",
+   "narration": "The processor barely lifts a finger.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Reading the probe",
+    "lines": [
+     "uint16_t raw = adc_read(SOIL_CHANNEL);        // 0..4095",
+     "uint32_t mv  = (uint32_t)raw * 3300 / 4095;   // millivolts",
+     ">uint16_t moisture = mv_to_percent(mv);        // calibrated"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 4,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep07_072",
+   "narration": "To recap. Serial ports send bits one at a time at an agreed speed. SPI adds a clock for speed. I squared C shares two wires among many addressed devices.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Recap",
+    "sub": "Many Languages, One Chip",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "UART: two wires, agreed baud rate",
+     "RS-232: bigger voltages, needs a converter",
+     "SPI: clocked, fast, a select line per device",
+     "I squared C: two wires, addresses, pull-ups",
+     "Ring buffers decouple interrupts from code",
+     "DMA moves data while the CPU rests",
+     "ADCs turn voltages into numbers"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    },
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep07_073",
+   "narration": "And there are one-wire, parallel, quad SPI, and USB for special needs.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "UART: two wires, agreed baud rate",
+     "RS-232: bigger voltages, needs a converter",
+     "SPI: clocked, fast, a select line per device",
+     "I squared C: two wires, addresses, pull-ups",
+     "Ring buffers decouple interrupts from code",
+     "DMA moves data while the CPU rests",
+     "ADCs turn voltages into numbers"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep07_074",
+   "narration": "Ring buffers let interrupts and the main loop share data safely. DMA moves data without the processor. And the ADC turns the analog world into numbers you can reason about.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "UART: two wires, agreed baud rate",
+     "RS-232: bigger voltages, needs a converter",
+     "SPI: clocked, fast, a select line per device",
+     "I squared C: two wires, addresses, pull-ups",
+     "Ring buffers decouple interrupts from code",
+     "DMA moves data while the CPU rests",
+     "ADCs turn voltages into numbers"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     17,
+     0,
+     -8.5
+    ],
+    "az": 10,
+    "move": "crane"
+   }
+  },
+  {
+   "id": "ep07_075",
+   "narration": "So now Sprout can talk to six sensors.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "UART: two wires, agreed baud rate",
+     "RS-232: bigger voltages, needs a converter",
+     "SPI: clocked, fast, a select line per device",
+     "I squared C: two wires, addresses, pull-ups",
+     "Ring buffers decouple interrupts from code",
+     "DMA moves data while the CPU rests",
+     "ADCs turn voltages into numbers"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "cy",
+    "az": 22,
+    "move": "pull"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep07_076",
+   "narration": "Five. The very promising one turned out to be a fridge magnet.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "smug",
+     "face": "smug"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "UART: two wires, agreed baud rate",
+     "RS-232: bigger voltages, needs a converter",
+     "SPI: clocked, fast, a select line per device",
+     "I squared C: two wires, addresses, pull-ups",
+     "Ring buffers decouple interrupts from code",
+     "DMA moves data while the CPU rests",
+     "ADCs turn voltages into numbers"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "low",
+    "f": "ben",
+    "az": -12,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep07_077",
+   "narration": "Next time, we put all the pieces together into a real system: displays, buttons, memory, and the data flowing between them.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "UART: two wires, agreed baud rate",
+     "RS-232: bigger voltages, needs a converter",
+     "SPI: clocked, fast, a select line per device",
+     "I squared C: two wires, addresses, pull-ups",
+     "Ring buffers decouple interrupts from code",
+     "DMA moves data while the CPU rests",
+     "ADCs turn voltages into numbers"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 10,
+    "move": "drift"
+   }
+  }
+ ]
+}
