@@ -1,0 +1,7162 @@
+{
+ "title": "Episode 12 - Numbers Without Fear",
+ "format": "long",
+ "voice": "bf_emma",
+ "lang": "en-gb",
+ "speed": 1.0,
+ "cast": {
+  "ada": {
+   "type": "engineer"
+  },
+  "ben": {
+   "type": "worker"
+  },
+  "cy": {
+   "type": "boss"
+  }
+ },
+ "beats": [
+  {
+   "id": "ep12_001",
+   "narration": "A customer email arrives. Their Sprout reports soil moisture of minus four thousand percent, and then waters their cactus until it floats.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Episode 12",
+    "sub": "Numbers Without Fear",
+    "dur": 3.4
+   },
+   "cut": "whip",
+   "world": {
+    "droop": [
+     0.0,
+     0.5
+    ]
+   },
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     17,
+     0,
+     -8.5
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep12_002",
+   "narration": "Minus four thousand percent? How is that even possible?",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "cut": "flash",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "shock",
+     "face": "shock"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "close",
+    "f": "cy",
+    "az": 38,
+    "move": "drift",
+    "shake": 0.25
+   },
+   "sfx": [
+    {
+     "at": 0.04,
+     "type": "thud",
+     "vol": 0.6
+    }
+   ]
+  },
+  {
+   "id": "ep12_003",
+   "narration": "Integer overflow, somewhere. And there is a second complaint: Sprouts in hot rooms read the soil as wetter than it is.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 10,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep12_004",
+   "narration": "Math on a microcontroller is not math on a calculator. Numbers have fixed sizes, some operations are slow, and there may be no floating point hardware at all.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     17,
+     0,
+     -8.5
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep12_005",
+   "narration": "Today, the team learns to compute with confidence.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     17,
+     0,
+     -8.5
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   }
+  },
+  {
+   "id": "ep12_006",
+   "narration": "Not all arithmetic costs the same. On a small processor, the difference between the fastest and slowest operations can be a hundredfold.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter One",
+    "sub": "Fast and Slow Operations",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep12_007",
+   "narration": "Additions and shifts are basically free. Multiplication is cheap on most modern microcontrollers. Division is slower.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Rough cost on a small 32-bit chip",
+    "rows": [
+     [
+      "Operation",
+      "Typical cycles"
+     ],
+     [
+      "Add, subtract, shift, and/or",
+      "1"
+     ],
+     [
+      "Multiply (integer)",
+      "1 to 3"
+     ],
+     [
+      "Divide (integer)",
+      "2 to 12"
+     ],
+     [
+      "Float add or multiply, with FPU",
+      "1 to 3"
+     ],
+     [
+      "Float math, no FPU (software)",
+      "30 to 100+"
+     ],
+     [
+      "Square root, sine, log (software)",
+      "hundreds+"
+     ]
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_008",
+   "narration": "And on a chip without a floating point unit, every float operation becomes a little software routine, dozens of cycles each.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Rough cost on a small 32-bit chip",
+    "rows": [
+     [
+      "Operation",
+      "Typical cycles"
+     ],
+     [
+      "Add, subtract, shift, and/or",
+      "1"
+     ],
+     [
+      "Multiply (integer)",
+      "1 to 3"
+     ],
+     [
+      "Divide (integer)",
+      "2 to 12"
+     ],
+     [
+      "Float add or multiply, with FPU",
+      "1 to 3"
+     ],
+     [
+      "Float math, no FPU (software)",
+      "30 to 100+"
+     ],
+     [
+      "Square root, sine, log (software)",
+      "hundreds+"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep12_009",
+   "narration": "Sprout's chip has no floating point unit. The temperature compensation code uses floats, and a square root, inside a loop.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Rough cost on a small 32-bit chip",
+    "rows": [
+     [
+      "Operation",
+      "Typical cycles"
+     ],
+     [
+      "Add, subtract, shift, and/or",
+      "1"
+     ],
+     [
+      "Multiply (integer)",
+      "1 to 3"
+     ],
+     [
+      "Divide (integer)",
+      "2 to 12"
+     ],
+     [
+      "Float add or multiply, with FPU",
+      "1 to 3"
+     ],
+     [
+      "Float math, no FPU (software)",
+      "30 to 100+"
+     ],
+     [
+      "Square root, sine, log (software)",
+      "hundreds+"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_010",
+   "narration": "That one loop costs more than the rest of the sensor code combined.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Rough cost on a small 32-bit chip",
+    "rows": [
+     [
+      "Operation",
+      "Typical cycles"
+     ],
+     [
+      "Add, subtract, shift, and/or",
+      "1"
+     ],
+     [
+      "Multiply (integer)",
+      "1 to 3"
+     ],
+     [
+      "Divide (integer)",
+      "2 to 12"
+     ],
+     [
+      "Float add or multiply, with FPU",
+      "1 to 3"
+     ],
+     [
+      "Float math, no FPU (software)",
+      "30 to 100+"
+     ],
+     [
+      "Square root, sine, log (software)",
+      "hundreds+"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep12_011",
+   "narration": "So floats are bad?",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Rough cost on a small 32-bit chip",
+    "rows": [
+     [
+      "Operation",
+      "Typical cycles"
+     ],
+     [
+      "Add, subtract, shift, and/or",
+      "1"
+     ],
+     [
+      "Multiply (integer)",
+      "1 to 3"
+     ],
+     [
+      "Divide (integer)",
+      "2 to 12"
+     ],
+     [
+      "Float add or multiply, with FPU",
+      "1 to 3"
+     ],
+     [
+      "Float math, no FPU (software)",
+      "30 to 100+"
+     ],
+     [
+      "Square root, sine, log (software)",
+      "hundreds+"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep12_012",
+   "narration": "Floats are fine where speed does not matter and the hardware supports them. On this chip, in a loop that runs often, they are expensive.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Rough cost on a small 32-bit chip",
+    "rows": [
+     [
+      "Operation",
+      "Typical cycles"
+     ],
+     [
+      "Add, subtract, shift, and/or",
+      "1"
+     ],
+     [
+      "Multiply (integer)",
+      "1 to 3"
+     ],
+     [
+      "Divide (integer)",
+      "2 to 12"
+     ],
+     [
+      "Float add or multiply, with FPU",
+      "1 to 3"
+     ],
+     [
+      "Float math, no FPU (software)",
+      "30 to 100+"
+     ],
+     [
+      "Square root, sine, log (software)",
+      "hundreds+"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep12_013",
+   "narration": "Know what your hardware does well.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Rough cost on a small 32-bit chip",
+    "rows": [
+     [
+      "Operation",
+      "Typical cycles"
+     ],
+     [
+      "Add, subtract, shift, and/or",
+      "1"
+     ],
+     [
+      "Multiply (integer)",
+      "1 to 3"
+     ],
+     [
+      "Divide (integer)",
+      "2 to 12"
+     ],
+     [
+      "Float add or multiply, with FPU",
+      "1 to 3"
+     ],
+     [
+      "Float math, no FPU (software)",
+      "30 to 100+"
+     ],
+     [
+      "Square root, sine, log (software)",
+      "hundreds+"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep12_014",
+   "narration": "Even chips with a floating point unit have a catch. Many only accelerate single precision.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Rough cost on a small 32-bit chip",
+    "rows": [
+     [
+      "Operation",
+      "Typical cycles"
+     ],
+     [
+      "Add, subtract, shift, and/or",
+      "1"
+     ],
+     [
+      "Multiply (integer)",
+      "1 to 3"
+     ],
+     [
+      "Divide (integer)",
+      "2 to 12"
+     ],
+     [
+      "Float add or multiply, with FPU",
+      "1 to 3"
+     ],
+     [
+      "Float math, no FPU (software)",
+      "30 to 100+"
+     ],
+     [
+      "Square root, sine, log (software)",
+      "hundreds+"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep12_015",
+   "narration": "Write a constant like zero point five without the f suffix, and C treats it as double precision, quietly calling slow software routines.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Rough cost on a small 32-bit chip",
+    "rows": [
+     [
+      "Operation",
+      "Typical cycles"
+     ],
+     [
+      "Add, subtract, shift, and/or",
+      "1"
+     ],
+     [
+      "Multiply (integer)",
+      "1 to 3"
+     ],
+     [
+      "Divide (integer)",
+      "2 to 12"
+     ],
+     [
+      "Float add or multiply, with FPU",
+      "1 to 3"
+     ],
+     [
+      "Float math, no FPU (software)",
+      "30 to 100+"
+     ],
+     [
+      "Square root, sine, log (software)",
+      "hundreds+"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_016",
+   "narration": "One letter makes it ten times slower?",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "cut": "flash",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "shock",
+     "face": "shock"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A hidden double",
+    "lines": [
+     "float t = temp * 0.5;     // 0.5 is a double: slow software math",
+     ">float t = temp * 0.5f;    // single precision: one fast instruction"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.04,
+     "type": "thud",
+     "vol": 0.6
+    },
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_017",
+   "narration": "On some chips, yes. It is the kind of thing a profile catches instantly, and a code review almost never does.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A hidden double",
+    "lines": [
+     "float t = temp * 0.5;     // 0.5 is a double: slow software math",
+     ">float t = temp * 0.5f;    // single precision: one fast instruction"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep12_018",
+   "narration": "Floats have numerical traps too. They cannot represent most decimal fractions exactly, so comparing two floats for exact equality is risky.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A hidden double",
+    "lines": [
+     "float t = temp * 0.5;     // 0.5 is a double: slow software math",
+     ">float t = temp * 0.5f;    // single precision: one fast instruction"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep12_019",
+   "narration": "And adding a tiny number to a huge one can do nothing at all, because the tiny one falls below the huge one's precision.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A hidden double",
+    "lines": [
+     "float t = temp * 0.5;     // 0.5 is a double: slow software math",
+     ">float t = temp * 0.5f;    // single precision: one fast instruction"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_020",
+   "narration": "First, the minus four thousand percent. Ada finds this line.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Two",
+    "sub": "The Overflow",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep12_021",
+   "narration": "A sixteen bit signed integer holds values up to thirty-two thousand seven hundred sixty-seven. A raw reading of four thousand times one hundred is four hundred thousand.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "The bug",
+    "lines": [
+     "int16_t raw = adc_read();             // 0..4095",
+     ">int16_t percent = raw * 100 / 4095;   // raw * 100 overflows int16!"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_022",
+   "narration": "It overflows, wraps around to a negative number, and the division makes nonsense of it.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "The bug",
+    "lines": [
+     "int16_t raw = adc_read();             // 0..4095",
+     ">int16_t percent = raw * 100 / 4095;   // raw * 100 overflows int16!"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_023",
+   "narration": "Widen the type before the multiplication, not after. Casting the result of an overflowed calculation is too late; the damage is done.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "The fix",
+    "lines": [
+     ">int32_t percent = (int32_t)raw * 100 / 4095;   // widen before multiplying"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_024",
+   "narration": "Saturating is clever. Instead of wrapping from the maximum to a negative number, clamp at the maximum.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Integer habits",
+    "items": [
+     "Know the range of every variable",
+     "Widen before multiplying",
+     "Multiply before dividing, to keep precision",
+     "Watch for signed overflow: it is undefined",
+     "Saturate instead of wrapping when it matters"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_025",
+   "narration": "A moisture reading stuck at one hundred percent is wrong, but much less wrong than minus four thousand.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Integer habits",
+    "items": [
+     "Know the range of every variable",
+     "Widen before multiplying",
+     "Multiply before dividing, to keep precision",
+     "Watch for signed overflow: it is undefined",
+     "Saturate instead of wrapping when it matters"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep12_026",
+   "narration": "Sensor readings are noisy. The obvious fix is averaging. But there are several kinds of averages, with very different costs.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Three",
+    "sub": "Averages",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep12_027",
+   "narration": "A simple moving average keeps the last N readings and averages them. Clear, but it needs memory for N readings.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Raw readings vs smoothed",
+    "xl": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Raw",
+      "v": [
+       50.0,
+       58.0,
+       44.0,
+       61.0,
+       47.0,
+       55.0,
+       40.0,
+       63.0,
+       52.0,
+       48.0
+      ]
+     },
+     {
+      "type": "line",
+      "name": "Moving average",
+      "v": [
+       50.0,
+       54.0,
+       51.0,
+       53.0,
+       52.0,
+       51.0,
+       50.0,
+       52.0,
+       53.0,
+       52.0
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_028",
+   "narration": "A trick: keep a running sum, add the newest reading and subtract the oldest, instead of re-adding all N every time.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Raw readings vs smoothed",
+    "xl": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Raw",
+      "v": [
+       50.0,
+       58.0,
+       44.0,
+       61.0,
+       47.0,
+       55.0,
+       40.0,
+       63.0,
+       52.0,
+       48.0
+      ]
+     },
+     {
+      "type": "line",
+      "name": "Moving average",
+      "v": [
+       50.0,
+       54.0,
+       51.0,
+       53.0,
+       52.0,
+       51.0,
+       50.0,
+       52.0,
+       53.0,
+       52.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep12_029",
+   "narration": "An exponential moving average needs no buffer at all. Each new reading nudges the average a fraction of the way toward it.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Exponential moving average, integer only",
+    "lines": [
+     "// new = old + (sample - old) / 8, with 4 fractional bits",
+     "static int32_t avg_x16 = 0;",
+     ">avg_x16 += ((sample << 4) - avg_x16) >> 3;",
+     "int32_t avg = avg_x16 >> 4;"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_030",
+   "narration": "Choose the fraction as one over a power of two, and the division becomes a shift.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Exponential moving average, integer only",
+    "lines": [
+     "// new = old + (sample - old) / 8, with 4 fractional bits",
+     "static int32_t avg_x16 = 0;",
+     ">avg_x16 += ((sample << 4) - avg_x16) >> 3;",
+     "int32_t avg = avg_x16 >> 4;"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_031",
+   "narration": "Notice the extra fractional bits. Without them, small differences round away to zero, and the average gets stuck short of the true value.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Exponential moving average, integer only",
+    "lines": [
+     "// new = old + (sample - old) / 8, with 4 fractional bits",
+     "static int32_t avg_x16 = 0;",
+     ">avg_x16 += ((sample << 4) - avg_x16) >> 3;",
+     "int32_t avg = avg_x16 >> 4;"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_032",
+   "narration": "Keeping four extra bits of precision avoids that.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Exponential moving average, integer only",
+    "lines": [
+     "// new = old + (sample - old) / 8, with 4 fractional bits",
+     "static int32_t avg_x16 = 0;",
+     ">avg_x16 += ((sample << 4) - avg_x16) >> 3;",
+     "int32_t avg = avg_x16 >> 4;"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep12_033",
+   "narration": "Which one should we use?",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Exponential moving average, integer only",
+    "lines": [
+     "// new = old + (sample - old) / 8, with 4 fractional bits",
+     "static int32_t avg_x16 = 0;",
+     ">avg_x16 += ((sample << 4) - avg_x16) >> 3;",
+     "int32_t avg = avg_x16 >> 4;"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep12_034",
+   "narration": "For the soil, the exponential average. One variable, a shift, and an add.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Exponential moving average, integer only",
+    "lines": [
+     "// new = old + (sample - old) / 8, with 4 fractional bits",
+     "static int32_t avg_x16 = 0;",
+     ">avg_x16 += ((sample << 4) - avg_x16) >> 3;",
+     "int32_t avg = avg_x16 >> 4;"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_035",
+   "narration": "And maybe a median of three first, to throw out single wild spikes before they reach the average.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Exponential moving average, integer only",
+    "lines": [
+     "// new = old + (sample - old) / 8, with 4 fractional bits",
+     "static int32_t avg_x16 = 0;",
+     ">avg_x16 += ((sample << 4) - avg_x16) >> 3;",
+     "int32_t avg = avg_x16 >> 4;"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep12_036",
+   "narration": "The biggest speedups usually come not from faster arithmetic, but from smarter algorithms. Sprout's schedule search is a good example.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Four",
+    "sub": "Choosing Better Algorithms",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep12_037",
+   "narration": "The old code checks every schedule entry, one by one. With ten entries, who cares. With a thousand history entries, it matters.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Operations to search a schedule list",
+    "xl": [
+     "10",
+     "100",
+     "1000",
+     "10000"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Check every entry",
+      "v": [
+       10.0,
+       100.0,
+       1000.0,
+       10000.0
+      ]
+     },
+     {
+      "type": "line",
+      "name": "Binary search (sorted)",
+      "v": [
+       4.0,
+       7.0,
+       10.0,
+       14.0
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_038",
+   "narration": "Keeping the list sorted lets us use binary search: halve the list at each step.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Operations to search a schedule list",
+    "xl": [
+     "10",
+     "100",
+     "1000",
+     "10000"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Check every entry",
+      "v": [
+       10.0,
+       100.0,
+       1000.0,
+       10000.0
+      ]
+     },
+     {
+      "type": "line",
+      "name": "Binary search (sorted)",
+      "v": [
+       4.0,
+       7.0,
+       10.0,
+       14.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_039",
+   "narration": "Often, the best algorithm on a microcontroller is also the simplest: one that avoids work entirely. Can the answer be computed once and stored?",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Operations to search a schedule list",
+    "xl": [
+     "10",
+     "100",
+     "1000",
+     "10000"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Check every entry",
+      "v": [
+       10.0,
+       100.0,
+       1000.0,
+       10000.0
+      ]
+     },
+     {
+      "type": "line",
+      "name": "Binary search (sorted)",
+      "v": [
+       4.0,
+       7.0,
+       10.0,
+       14.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_040",
+   "narration": "Can it be computed incrementally as data arrives, instead of all at once?",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Operations to search a schedule list",
+    "xl": [
+     "10",
+     "100",
+     "1000",
+     "10000"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Check every entry",
+      "v": [
+       10.0,
+       100.0,
+       1000.0,
+       10000.0
+      ]
+     },
+     {
+      "type": "line",
+      "name": "Binary search (sorted)",
+      "v": [
+       4.0,
+       7.0,
+       10.0,
+       14.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep12_041",
+   "narration": "Like the running sum. Instead of summing everything again, we just adjust.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Operations to search a schedule list",
+    "xl": [
+     "10",
+     "100",
+     "1000",
+     "10000"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Check every entry",
+      "v": [
+       10.0,
+       100.0,
+       1000.0,
+       10000.0
+      ]
+     },
+     {
+      "type": "line",
+      "name": "Binary search (sorted)",
+      "v": [
+       4.0,
+       7.0,
+       10.0,
+       14.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep12_042",
+   "narration": "The temperature compensation uses an exponential function, computed in software floats. Ada asks: how accurate does it actually need to be?",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Five",
+    "sub": "Approximations",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep12_043",
+   "narration": "The soil sensor itself is only accurate to a few percent. Computing the correction to ten decimal places is pointless.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep12_044",
+   "narration": "A simpler formula that is accurate to a tenth of a percent is plenty.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep12_045",
+   "narration": "Many smooth functions can be approximated by polynomials over a limited range. A few multiplications and additions replace an expensive library call.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "True curve vs polynomial approximation",
+    "xl": [
+     "10",
+     "15",
+     "20",
+     "25",
+     "30",
+     "35",
+     "40",
+     "45"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "True",
+      "v": [
+       0.0,
+       4.0,
+       9.0,
+       15.0,
+       22.0,
+       30.0,
+       39.0,
+       49.0
+      ]
+     },
+     {
+      "type": "line",
+      "name": "Polynomial",
+      "v": [
+       0.0,
+       4.0,
+       9.0,
+       15.0,
+       22.0,
+       30.0,
+       40.0,
+       49.0
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_046",
+   "narration": "Taylor series are one way to find such polynomials; curve fitting on real data is another.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "True curve vs polynomial approximation",
+    "xl": [
+     "10",
+     "15",
+     "20",
+     "25",
+     "30",
+     "35",
+     "40",
+     "45"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "True",
+      "v": [
+       0.0,
+       4.0,
+       9.0,
+       15.0,
+       22.0,
+       30.0,
+       39.0,
+       49.0
+      ]
+     },
+     {
+      "type": "line",
+      "name": "Polynomial",
+      "v": [
+       0.0,
+       4.0,
+       9.0,
+       15.0,
+       22.0,
+       30.0,
+       40.0,
+       49.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep12_047",
+   "narration": "Writing the polynomial in nested form, called Horner's method, minimizes the number of multiplications. Three coefficients, two multiplies, two adds.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Polynomial in Horner form",
+    "lines": [
+     "// correction = a + t*(b + t*(c)), integer coefficients scaled by 1024",
+     ">int32_t corr = (A + t * (B + t * C / 1024) / 1024);"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_048",
+   "narration": "And check the error across the whole range. An approximation that is perfect at room temperature and wildly off at forty degrees is a bug waiting for summer.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Polynomial in Horner form",
+    "lines": [
+     "// correction = a + t*(b + t*(c)), integer coefficients scaled by 1024",
+     ">int32_t corr = (A + t * (B + t * C / 1024) / 1024);"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep12_049",
+   "narration": "Division is slow, but dividing by a constant is a special case. The compiler, or you, can replace it with a multiplication and a shift.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Six",
+    "sub": "Dividing by a Constant",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep12_050",
+   "narration": "Fifty-two thousand four hundred twenty-nine divided by two to the nineteenth is very close to one tenth.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Division as multiply and shift",
+    "lines": [
+     "// x / 10 for 16-bit x, without a divide instruction",
+     ">uint32_t q = ((uint32_t)x * 52429) >> 19;   // 52429 / 2^19 \u2248 0.1"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_051",
+   "narration": "Multiplying by it and shifting right gives the same answer as dividing by ten, for every sixteen bit input.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Division as multiply and shift",
+    "lines": [
+     "// x / 10 for 16-bit x, without a divide instruction",
+     ">uint32_t q = ((uint32_t)x * 52429) >> 19;   // 52429 / 2^19 \u2248 0.1"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep12_052",
+   "narration": "Compilers already do this automatically when the divisor is a constant they can see.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Division as multiply and shift",
+    "lines": [
+     "// x / 10 for 16-bit x, without a divide instruction",
+     ">uint32_t q = ((uint32_t)x * 52429) >> 19;   // 52429 / 2^19 \u2248 0.1"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep12_053",
+   "narration": "Knowing the trick matters when the divisor is fixed but hidden from the compiler, or when you are reading the assembly and wondering where the division went.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Division as multiply and shift",
+    "lines": [
+     "// x / 10 for 16-bit x, without a divide instruction",
+     ">uint32_t q = ((uint32_t)x * 52429) >> 19;   // 52429 / 2^19 \u2248 0.1"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_054",
+   "narration": "I divide my attention by a constant all the time. The constant is meetings.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "smug",
+     "face": "smug"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Division as multiply and shift",
+    "lines": [
+     "// x / 10 for 16-bit x, without a divide instruction",
+     ">uint32_t q = ((uint32_t)x * 52429) >> 19;   // 52429 / 2^19 \u2248 0.1"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_055",
+   "narration": "Sometimes the fastest computation is no computation. A lookup table stores precomputed answers, and the code simply reads them.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Seven",
+    "sub": "Lookup Tables",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep12_056",
+   "narration": "Our probe's response is not a straight line. So instead of a formula, we store calibration points measured with real soil, and interpolate between neighbors.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Moisture calibration table",
+    "rows": [
+     [
+      "Raw ADC",
+      "Moisture %"
+     ],
+     [
+      "500",
+      "0"
+     ],
+     [
+      "1200",
+      "20"
+     ],
+     [
+      "1900",
+      "45"
+     ],
+     [
+      "2600",
+      "70"
+     ],
+     [
+      "3300",
+      "100"
+     ]
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_057",
+   "narration": "Five points and a little interpolation replace a complicated curve. More points mean more accuracy and more memory. The table lives in flash, costing no RAM.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Linear interpolation between table points",
+    "lines": [
+     "int i = find_segment(raw);                    // which pair of points",
+     "int32_t x0 = tbl[i].raw, x1 = tbl[i+1].raw;",
+     "int32_t y0 = tbl[i].pct, y1 = tbl[i+1].pct;",
+     ">return y0 + (raw - x0) * (y1 - y0) / (x1 - x0);"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_058",
+   "narration": "And when we change probe suppliers, we measure a new table. No code changes.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Linear interpolation between table points",
+    "lines": [
+     "int i = find_segment(raw);                    // which pair of points",
+     "int32_t x0 = tbl[i].raw, x1 = tbl[i+1].raw;",
+     "int32_t y0 = tbl[i].pct, y1 = tbl[i+1].pct;",
+     ">return y0 + (raw - x0) * (y1 - y0) / (x1 - x0);"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_059",
+   "narration": "For the remaining math, Ada switches to fixed point: storing fractional numbers as integers with an agreed scale.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Eight",
+    "sub": "Fake Floating Point",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep12_060",
+   "narration": "In this format, the top eight bits hold the whole part and the bottom eight hold the fraction.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "bits",
+    "title": "Q8.8 fixed point: 3.25",
+    "bits": "0000001101000000",
+    "names": [
+     "7",
+     "6",
+     "5",
+     "4",
+     "3",
+     "2",
+     "1",
+     "0",
+     "\u00bd",
+     "\u00bc",
+     "\u215b",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "hl": [
+     9,
+     8,
+     6
+    ],
+    "label": "3.25 = 0x0340 = 832 / 256"
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_061",
+   "narration": "Three point two five is stored as eight hundred thirty-two, which is three point two five times two hundred fifty-six.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "bits",
+    "title": "Q8.8 fixed point: 3.25",
+    "bits": "0000001101000000",
+    "names": [
+     "7",
+     "6",
+     "5",
+     "4",
+     "3",
+     "2",
+     "1",
+     "0",
+     "\u00bd",
+     "\u00bc",
+     "\u215b",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "hl": [
+     9,
+     8,
+     6
+    ],
+    "label": "3.25 = 0x0340 = 832 / 256",
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep12_062",
+   "narration": "Addition works directly. Multiplication needs a correction: multiply two scaled numbers and the scale doubles, so you shift the result back down. All of it uses fast integer instructions.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "bits",
+    "title": "Q8.8 fixed point: 3.25",
+    "bits": "0000001101000000",
+    "names": [
+     "7",
+     "6",
+     "5",
+     "4",
+     "3",
+     "2",
+     "1",
+     "0",
+     "\u00bd",
+     "\u00bc",
+     "\u215b",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "hl": [
+     9,
+     8,
+     6
+    ],
+    "label": "3.25 = 0x0340 = 832 / 256",
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep12_063",
+   "narration": "The price is range and precision. Choose the scale for your data: enough fractional bits for the precision you need, enough whole bits that values never overflow.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Fixed-point multiply",
+    "lines": [
+     "typedef int16_t q8_8;",
+     ">q8_8 q_mul(q8_8 a, q8_8 b) { return (q8_8)(((int32_t)a * b) >> 8); }"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_064",
+   "narration": "The temperature compensation now runs in integers. Twenty times faster, and Gerald cannot tell the difference.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Fixed-point multiply",
+    "lines": [
+     "typedef int16_t q8_8;",
+     ">q8_8 q_mul(q8_8 a, q8_8 b) { return (q8_8)(((int32_t)a * b) >> 8); }"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep12_065",
+   "narration": "Write the scale into the names. A variable called moisture q eight or temperature centi degrees tells every reader what one unit means.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Fixed-point multiply",
+    "lines": [
+     "typedef int16_t q8_8;",
+     ">q8_8 q_mul(q8_8 a, q8_8 b) { return (q8_8)(((int32_t)a * b) >> 8); }"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep12_066",
+   "narration": "Mixing up scales is the classic fixed-point bug, and naming prevents most of it.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Fixed-point multiply",
+    "lines": [
+     "typedef int16_t q8_8;",
+     ">q8_8 q_mul(q8_8 a, q8_8 b) { return (q8_8)(((int32_t)a * b) >> 8); }"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_067",
+   "narration": "Many teams pick one or two standard formats for the whole codebase, rather than inventing a new scale for every variable. Fewer formats, fewer conversion mistakes.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Fixed-point multiply",
+    "lines": [
+     "typedef int16_t q8_8;",
+     ">q8_8 q_mul(q8_8 a, q8_8 b) { return (q8_8)(((int32_t)a * b) >> 8); }"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_068",
+   "narration": "Investors keep asking about AI. Can Sprout have AI?",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Nine",
+    "sub": "Machine Learning on a Chip?",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "low",
+    "f": "cy",
+    "az": -30,
+    "move": "orbit"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    },
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep12_069",
+   "narration": "Actually, a little bit, yes. Small neural networks can run on microcontrollers, using fixed-point math much like what we just did.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep12_070",
+   "narration": "A model trained on a big computer can be shrunk, converted to eight bit integers, and run on the device.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Tiny ML on a microcontroller",
+    "nodes": [
+     {
+      "name": "Sensor history",
+      "to": [
+       {
+        "n": "Small neural net",
+        "label": "features"
+       }
+      ]
+     },
+     {
+      "name": "Small neural net",
+      "to": [
+       {
+        "n": "Prediction",
+        "label": "will soil dry by tonight?"
+       }
+      ]
+     },
+     {
+      "name": "Prediction"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_071",
+   "narration": "It could learn each plant's drying pattern and water just before it gets thirsty.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Tiny ML on a microcontroller",
+    "nodes": [
+     {
+      "name": "Sensor history",
+      "to": [
+       {
+        "n": "Small neural net",
+        "label": "features"
+       }
+      ]
+     },
+     {
+      "name": "Small neural net",
+      "to": [
+       {
+        "n": "Prediction",
+        "label": "will soil dry by tonight?"
+       }
+      ]
+     },
+     {
+      "name": "Prediction"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_072",
+   "narration": "But be honest about it. A model needs data, testing, and memory. If a simple rule does the job, the simple rule wins.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Tiny ML on a microcontroller",
+    "nodes": [
+     {
+      "name": "Sensor history",
+      "to": [
+       {
+        "n": "Small neural net",
+        "label": "features"
+       }
+      ]
+     },
+     {
+      "name": "Small neural net",
+      "to": [
+       {
+        "n": "Prediction",
+        "label": "will soil dry by tonight?"
+       }
+      ]
+     },
+     {
+      "name": "Prediction"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep12_073",
+   "narration": "Machine learning is a tool, not a marketing requirement.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Tiny ML on a microcontroller",
+    "nodes": [
+     {
+      "name": "Sensor history",
+      "to": [
+       {
+        "n": "Small neural net",
+        "label": "features"
+       }
+      ]
+     },
+     {
+      "name": "Small neural net",
+      "to": [
+       {
+        "n": "Prediction",
+        "label": "will soil dry by tonight?"
+       }
+      ]
+     },
+     {
+      "name": "Prediction"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep12_074",
+   "narration": "I heard marketing requirement.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "smug",
+     "face": "smug"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Tiny ML on a microcontroller",
+    "nodes": [
+     {
+      "name": "Sensor history",
+      "to": [
+       {
+        "n": "Small neural net",
+        "label": "features"
+       }
+      ]
+     },
+     {
+      "name": "Small neural net",
+      "to": [
+       {
+        "n": "Prediction",
+        "label": "will soil dry by tonight?"
+       }
+      ]
+     },
+     {
+      "name": "Prediction"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_075",
+   "narration": "To recap. Learn which operations are cheap on your chip, and avoid software floats in hot loops. Size your integers, widen before multiplying, and clamp instead of wrapping.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Recap",
+    "sub": "Numbers Without Fear",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "world": {
+    "droop": [
+     0.5,
+     0.0
+    ]
+   },
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Know your chip's fast and slow operations",
+     "Widen before multiplying; saturate when sensible",
+     "Running sums and exponential averages",
+     "Better algorithms beat faster arithmetic",
+     "Polynomials, constant division, lookup tables",
+     "Fixed point gives fractions with integer speed"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    },
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep12_076",
+   "narration": "Smooth noisy data with cheap averages. Prefer better algorithms to faster arithmetic. Replace expensive functions with polynomials, lookup tables, and multiply-and-shift tricks.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Know your chip's fast and slow operations",
+     "Widen before multiplying; saturate when sensible",
+     "Running sums and exponential averages",
+     "Better algorithms beat faster arithmetic",
+     "Polynomials, constant division, lookup tables",
+     "Fixed point gives fractions with integer speed"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     17,
+     0,
+     -8.5
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep12_077",
+   "narration": "And use fixed point when you need fractions without floats.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Know your chip's fast and slow operations",
+     "Widen before multiplying; saturate when sensible",
+     "Running sums and exponential averages",
+     "Better algorithms beat faster arithmetic",
+     "Polynomials, constant division, lookup tables",
+     "Fixed point gives fractions with integer speed"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_078",
+   "narration": "Minus four thousand percent is fixed?",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "present",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Know your chip's fast and slow operations",
+     "Widen before multiplying; saturate when sensible",
+     "Running sums and exponential averages",
+     "Better algorithms beat faster arithmetic",
+     "Polynomials, constant division, lookup tables",
+     "Fixed point gives fractions with integer speed"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep12_079",
+   "narration": "Fixed. And the cactus has been dried out and apologized to. Next time, the batteries. Customers want Sprout to last a year on two AA cells.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Know your chip's fast and slow operations",
+     "Widen before multiplying; saturate when sensible",
+     "Running sums and exponential averages",
+     "Better algorithms beat faster arithmetic",
+     "Polynomials, constant division, lookup tables",
+     "Fixed point gives fractions with integer speed"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 10,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep12_080",
+   "narration": "Ben does some quick math, and goes very pale.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "cut": "flash",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "shock",
+     "face": "shock"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Know your chip's fast and slow operations",
+     "Widen before multiplying; saturate when sensible",
+     "Running sums and exponential averages",
+     "Better algorithms beat faster arithmetic",
+     "Polynomials, constant division, lookup tables",
+     "Fixed point gives fractions with integer speed"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -12,
+    "move": "pull",
+    "shake": 0.25
+   },
+   "sfx": [
+    {
+     "at": 0.04,
+     "type": "thud",
+     "vol": 0.6
+    }
+   ]
+  }
+ ]
+}
