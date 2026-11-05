@@ -1,5 +1,6 @@
 // Procedural 3D world kit: Boston street + molasses tank + wave + courtroom. No external assets.
 import * as THREE from 'three';
+import { EXTRA_SETS } from './sets/index.js';
 
 // deterministic RNG so every frame / every worker builds the identical world
 function mulberry(a) { return () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
@@ -296,6 +297,9 @@ function buildCourt() {
   return { group: g, board, drawBoard, boardKey: '' };
 }
 
+// helpers shared with extra sets
+export const KIT = { THREE, mulberry, canvasTex, facadeTex, cobbleTex, plankTex, plateTex, clamp01, smooth };
+
 // ---------------------------------------------------------------- world assembly
 export function buildWorld(scene) {
   const sky = makeSky(); const clouds = makeClouds(3); scene.add(sky, clouds);
@@ -304,18 +308,30 @@ export function buildWorld(scene) {
   const court = buildCourt(); scene.add(court.group);
   const T = street.tank;
   const tmp = new THREE.Vector3();
+  const offsets = { street: [0, 0, 0], court: [600, 0, 0] };
+  const extras = {};
+  EXTRA_SETS.forEach((def, i) => {
+    const inst = def.build(KIT); const o = [1200 + i * 600, 0, 0];
+    inst.group.position.set(...o); inst.group.visible = false; scene.add(inst.group);
+    offsets[def.name] = o; extras[def.name] = { def, inst };
+  });
 
   return {
     sky, clouds, court,
+    offset(name) { return offsets[name] || [0, 0, 0]; },
     setSet(name) {
-      street.group.visible = name === 'street'; clouds.visible = name === 'street'; sky.visible = name === 'street'; court.group.visible = name === 'court';
+      const ex = extras[name];
+      street.group.visible = name === 'street'; clouds.visible = name === 'street' || !!(ex && ex.def.sky); sky.visible = clouds.visible; court.group.visible = name === 'court';
+      for (const [k, e] of Object.entries(extras)) e.inst.group.visible = k === name;
     },
     setBoard(b) {
       if (!b) { court.board.visible = false; return; }
       court.board.visible = true; court.board.position.set(b.pos[0], b.pos[1], b.pos[2]); court.board.rotation.y = (b.rot || 0) * Math.PI / 180;
       const k = b.text + b.color; if (court.boardKey !== k) { court.drawBoard(b.text, b.color); court.boardKey = k; }
     },
-    update(st, time) {
+    update(st, time, beat) {
+      const ex = beat && extras[beat.set]; if (ex && ex.inst.update) ex.inst.update(st, time, beat);
+      if (beat && beat.set !== 'street') return;          // street/tank simulation only when visible
       // ---- tank
       const swell = st.swell, burst = st.burst;
       const shake = swell > 0.3 ? (swell - 0.3) * 0.35 : 0;

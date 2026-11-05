@@ -3,13 +3,15 @@
 Procedural 3D "story explainer" shorts (painterly low-poly world + rubber-hose stick figures), built entirely in CI.
 
 ```
-story/molasses.json   narration + storyboard (hand-written, no LLM at build time)
+story/story.json      narration + storyboard (written ahead of time; no LLM at build time)
+story/examples/       a finished short (molasses) and a long-form studio skeleton
+scripts/validate_story.py   checks a storyboard against what the renderer supports
 pipeline/tts.py       Kokoro-ONNX TTS -> faster-whisper word timings -> numpy SFX -> build/{audio.wav,timeline.json}
 renderer/             Three.js scene (rig.js characters, world.js kit, look.js painterly post) + render.mjs frame driver
 .github/workflows/builder.yml   audio -> render (matrix shards) -> mux -> out.mp4 artifact
 ```
 
-Run the workflow: **Actions -> builder -> Run workflow** (inputs: storyboard, render size, shard count, paint strength).
+Run the workflow: **Actions -> builder -> Run workflow** (inputs: storyboard path, shard count (0=auto), paint strength). Resolution/fps come from the storyboard's `format` (short 9:16 or long 16:9). Download the `video` artifact when done..
 Locally: `pip install -r requirements.txt && npm i && npx playwright install chromium && ./run_local.sh`.
 
 ## Storyboard schema (story/*.json)

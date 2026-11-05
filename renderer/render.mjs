@@ -17,12 +17,13 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = Object.fromEntries(process.argv.slice(2).reduce((a, v, i, all) => (v.startsWith('--') ? [...a, [v.slice(2), all[i + 1] && !all[i + 1].startsWith('--') ? all[i + 1] : 'true']] : a), []));
 const timelinePath = args.timeline || 'build/timeline.json';
 const outDir = path.resolve(ROOT, args.out || 'build/frames');
-const W = +(args.width || 720), H = +(args.height || 1280);
-const FPS = +(args.fps || 30);
 const workers = Math.max(1, +(args.workers || Math.max(1, Math.floor(os.cpus().length / 2))));
 const paint = args.paint ?? '1', msaa = args.msaa ?? '4';
 const stills = args.stills ? args.stills.split(',').map(Number) : null;
 const timeline = JSON.parse(fs.readFileSync(path.resolve(ROOT, timelinePath), 'utf8'));
+const FMT = timeline.format || {};
+const W = +(args.width || FMT.width || 720), H = +(args.height || FMT.height || 1280);
+const FPS = +(args.fps || FMT.fps || timeline.fps || 30);
 const total = Math.ceil(timeline.duration * FPS);
 fs.mkdirSync(outDir, { recursive: true });
 

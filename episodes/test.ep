@@ -1,0 +1,65 @@
+title: Test | All Visuals
+narrator: bf_emma en-gb
+cast: ada=engineer:af_heart, ben=worker:am_michael, cy=boss:bm_george:en-gb
+---
+# Part One | Diagrams
+N: This is the lab where everything happens, and that fern is Gerald.
+%blocks Context Diagram
+- Sensor > MCU:moisture
+- MCU (STM32) > Pump:on/off, Phone:Wi-Fi
+- Pump
+- Phone
+ada: Here is a block diagram with arrows and labels between boxes.
+ben!: Wait, the pump is connected to what?
+%layers Layered Architecture
+- Application | watering logic
+- Services | scheduler, logging
+- Drivers | GPIO, ADC, UART
+- Hardware | the actual chip
+cy~: Layers. I love layers. Investors love layers.
+%code Blink the LED
+| #define LED_PIN 5
+| int main(void) {
+|   gpio_init(LED_PIN);   // set as output
+|>  while (1) {
+|     gpio_toggle(LED_PIN);
+|     delay_ms(500);
+|   }
+| }
+ada>: A tiny program that toggles a pin forever.
+@zone bench
+%timing I2C Start
+- SCL: 1111010101010111
+- SDA: 1110==========11 addr,R/W
+N@ben?: Ben stares at the timing chart and worries.
+%states Watering Machine on=Dry
+- Idle > Dry:soil dry
+- Dry > Watering:pump on
+- Watering > Idle:wet enough
+cy^: Ship it!
+@zone green
+@world droop=0>1
+%memory Memory Map
+- 0x2000_0000 | RAM | 1 | variables
+- 0x0800_8000 | App | 2 | code
+- 0x0800_0000 | Bootloader | 1 | 32 KB
+ada_: Gerald is drooping again.
+%bits GPIOB ODR
+bits 00100000
+names -,-,LED,-,-,-,-,-
+hl 5
+label PORTB |= (1 << 5);
+N: Bit five is set.
+%chart Battery Life
+- line Always on: 100,70,40,10,0
+- line Sleeping: 100,95,90,85,80
+xl Mon,Tue,Wed,Thu,Fri
+N: Sleeping saves a lot.
+%table Buses
+- Bus | Wires | Speed
+- UART | 2 | slow
+- SPI | 4 | fast
+- I2C | 2 | medium
+ben^: Got it!
+%big 40,000\nwatering cycles | per year, give or take
+N: That is a lot of water.

@@ -4,6 +4,7 @@ import { buildWorld } from './world.js';
 import { Character } from './rig.js';
 import { createLook } from './look.js';
 import { GRADES } from './grades.js';
+import { normalizeBeat } from './shots.js';
 
 const q = new URLSearchParams(location.search);
 const W = +(q.get('w') || 720), H = +(q.get('h') || 1280);
@@ -12,13 +13,14 @@ const smooth = (x) => { x = clamp01(x); return x * x * (3 - 2 * x); };
 const EASE = { linear: (x) => x, inOut: smooth, out: (x) => 1 - Math.pow(1 - x, 2.2), in: (x) => x * x };
 const lerp = (a, b, f) => a + (b - a) * f;
 const lerp3 = (a, b, f) => [lerp(a[0], b[0], f), lerp(a[1], b[1], f), lerp(a[2], b[2], f)];
-const SET_OFFSET = { street: 0, court: 600 };
-const WORLD_DEFAULT = { paint: 0, leak: 0, swell: 0, burst: 0, waveZ: -300, flood: 0, aftermath: 0, thermo: 0, rivets: 0 };
+const WORLD_DEFAULT = { paint: 0, leak: 0, swell: 0, burst: 0, waveZ: -300, flood: 0, aftermath: 0, thermo: 0, rivets: 0, droop: 0, protoDroop: 0 };
 
 let S = null;   // state
 
 window.init = async function (timeline) {
   await document.fonts.ready;
+  const FMT = timeline.format || {};
+  timeline.beats.forEach(normalizeBeat);
   const canvas = document.getElementById('c');
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, preserveDrawingBuffer: true, powerPreference: 'high-performance' });
   renderer.setPixelRatio(1); renderer.setSize(W, H, false);
@@ -54,14 +56,17 @@ window.init = async function (timeline) {
 
   // caption element
   const cap = document.getElementById('cap');
-  cap.style.fontSize = Math.round(H * 0.052) + 'px';
-  cap.style.top = Math.round(H * 0.70) + 'px';
-  const r = Math.max(2, Math.round(H * 0.0075)); const sh = [];
+  cap.style.fontSize = Math.round(H * (FMT.captionSize || 0.052)) + 'px';
+  cap.style.top = Math.round(H * (FMT.captionY || 0.70)) + 'px';
+  const title = document.getElementById('title');
+  title.style.fontSize = Math.round(H * (W > H ? 0.11 : 0.07)) + 'px';
+  const r = Math.max(2, Math.round(H * (W > H ? 0.0055 : 0.0075))); const sh = [];
   for (let i = 0; i < 24; i++) { const a = (i / 24) * Math.PI * 2; sh.push(`${(Math.cos(a) * r).toFixed(1)}px ${(Math.sin(a) * r).toFixed(1)}px 0 #1a0f16`); }
   sh.push(`0 ${Math.round(r * 1.6)}px ${Math.round(r * 2)}px rgba(0,0,0,.45)`);
   cap.style.textShadow = sh.join(',');
 
-  S = { renderer, scene, camera, hemi, sun, fill, world, look, chars, timeline, wstates, cap, lastBoard: null };
+  const basePaint = +(q.get('paint') ?? 1);
+  S = { basePaint, renderer, scene, camera, hemi, sun, fill, world, look, chars, timeline, wstates, cap, title, fovScale: FMT.fovScale || 1 };
   return { duration: timeline.duration, beats: timeline.beats.length };
 };
 
@@ -83,18 +88,19 @@ function bracket(kfs, p, key) {
 function lerpAngle(a, b, f) { let d = ((b - a + 540) % 360) - 180; return a + d * f; }
 
 window.renderFrame = function (t) {
-  const { renderer, scene, camera, hemi, sun, fill, world, look, chars, timeline, wstates, cap } = S;
+  const { renderer, scene, camera, hemi, sun, fill, world, look, chars, timeline, wstates, cap, title, fovScale } = S;
   const bi = findBeat(timeline, t), beat = timeline.beats[bi];
   const lt = Math.max(0, t - beat.start);
   const p = clamp01(lt / beat.dur);
-  const off = SET_OFFSET[beat.set] || 0;
+  const OFF = world.offset(beat.set), off = OFF[0];
 
   // world state
   const ws = wstates[bi], st = {};
   for (const k of Object.keys(WORLD_DEFAULT)) st[k] = lerp(ws.from[k], ws.to[k], p);
   world.setSet(beat.set);
   world.setBoard(beat.set === 'court' ? beat.board : null);
-  world.update(st, t);
+  beat._p = p;
+  world.update(st, t, beat);
 
   // grade
   const gr = GRADES[beat.grade] || GRADES.dayCool;
@@ -107,7 +113,7 @@ window.renderFrame = function (t) {
   // camera
   const cam = beat.cam, e = (EASE[cam.ease] || EASE.inOut)(p);
   const pos = lerp3(cam.from.p, cam.to.p, e), tgt = lerp3(cam.from.t, cam.to.t, e);
-  const fov = lerp(cam.from.fov, cam.to.fov, e);
+  const fov = lerp(cam.from.fov, cam.to.fov, e) * fovScale;
   const sk = (cam.shake || 0);
   const hx = Math.sin(t * 1.3) * 0.04 + Math.sin(t * 2.9 + 1) * 0.02;
   const hy = Math.sin(t * 1.7 + 2) * 0.03;
@@ -147,7 +153,15 @@ window.renderFrame = function (t) {
   look.u.whip.value = cut === 'whip' ? Math.pow(Math.max(0, 1 - lt / 0.3), 2) : 0;
   look.u.flash.value = cut === 'flash' ? Math.pow(Math.max(0, 1 - lt / 0.22), 2) * 0.85 : 0;
   look.u.sat.value = gr.sat || 1.1;
+  look.u.paint.value = S.basePaint * (beat.paint ?? 1);
   look.composer.render();
+
+  // chapter title card:  "title": {"text":"Chapter 2", "sub":"The Warm Day", "dur":2.6}
+  if (beat.title && lt < (beat.title.dur || 2.6)) {
+    const d = beat.title.dur || 2.6, a = Math.min(1, lt / 0.25, (d - lt) / 0.3);
+    title.innerHTML = `<div class="t">${beat.title.text}</div>` + (beat.title.sub ? `<div class="s">${beat.title.sub}</div>` : '');
+    title.style.opacity = String(Math.max(0, a)); title.style.transform = `translate(-50%,-50%) scale(${(0.94 + 0.06 * Math.max(0, a)).toFixed(3)})`;
+  } else title.style.opacity = '0';
 
   // caption
   const ch = (beat.chunks || []).find((c) => lt >= c.s && lt < c.e);

@@ -228,6 +228,12 @@ def main():
     args = ap.parse_args()
 
     story = json.load(open(args.story))
+    # ---- resolve output format preset (short 9:16 / long 16:9) -> story["format"]
+    presets = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "formats.json")))
+    f = story.get("format", "short")
+    fmt = dict(presets[f]) if isinstance(f, str) else {**presets[f.get("preset", "short")], **f}
+    story["format"] = fmt
+    story["fps"] = fmt["fps"]
     os.makedirs(args.out, exist_ok=True)
     os.makedirs(os.path.join(args.out, "voice"), exist_ok=True)
     beats = story["beats"]
@@ -249,11 +255,13 @@ def main():
     voices = []
     for b in beats:
         words = b["narration"].split()
+        if len(words) > 45:
+            print(f"[warn] beat '{b['id']}' has {len(words)} words; Kokoro may truncate long inputs. Split it.", file=sys.stderr)
         if args.dry_run:
             n = int(len(words) / 2.7 * SR)
             x = np.zeros(n, np.float32)
         else:
-            x, sr = kokoro.create(b["narration"], voice=story.get("voice", "af_heart"), speed=story.get("speed", 1.05), lang="en-us")
+            x, sr = kokoro.create(b["narration"], voice=b.get("voice", story.get("voice", "af_heart")), speed=b.get("speed", story.get("speed", 1.05)), lang=b.get("lang", story.get("lang", "en-us")))
             assert sr == SR, sr
             x = np.asarray(x, np.float32)
         s0, s1 = trim_bounds(x) if not args.dry_run else (0, len(x))
