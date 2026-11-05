@@ -32,6 +32,7 @@ N: The language promises that a normal variable only changes when your code chan
 ben: Timing loops too. A delay that counts to a million does nothing useful, so the optimizer removes it. Suddenly the sensor gets asked too early.
 ada: And undefined behavior: overflowing a signed integer, reading past an array, using a pointer after freeing it. Unoptimized code often does something reasonable by accident. Optimized code assumes it never happens, and the results can be bizarre.
 N: The lesson is to build with optimization on early, test that build, and treat any difference between debug and release as a bug in your code, not in the compiler.
+ada: Occasionally, very occasionally, the compiler really is wrong. But before you claim that, reduce the problem to a tiny example that anyone can reproduce. Nine times out of ten, building that example reveals your own bug.
 # Chapter Two | Hunting the Impossible
 @zone bench
 @grade labNight
@@ -47,6 +48,14 @@ ben: Fact one: it only reboots while the display is refreshing. Fact two: it is 
 ada^: Fact three is the best clue. The debugger changes timing and keeps the chip awake. So this is likely timing or memory related, not pure logic.
 N: A powerful trick is to make the bug happen faster. Ben fills the history log artificially, and sets the display to refresh constantly. Now Sprout reboots every three minutes. A bug you can trigger in three minutes is a bug you can catch.
 cy?: Can you not just add print statements everywhere?
+ada: Print statements over a slow serial port take milliseconds. That is an eternity. The bug depends on timing, so the print moves the timing, and the bug hides. Engineers call these Heisenbugs: bugs that change when you observe them.
+%code A cheap trace buffer in RAM
+| #define TRACE_N 32
+| static volatile uint32_t trace[TRACE_N], trace_i;
+|>#define TRACE(code) (trace[trace_i++ % TRACE_N] = (code))
+|
+| TRACE(0x0D15);   // display refresh started
+ben: A trace buffer costs a few instructions per event, not milliseconds. It records the last thirty-two events in a circle. After the crash, we read it with the debugger, and see exactly what happened just before.
 ada: Printing changes timing too, and might make it vanish again. Better to record cheaply, in RAM, and read the record after the crash.
 # Chapter Three | Hard Faults
 @zone screen
@@ -68,6 +77,8 @@ N: Stack overflow is a sneaky one. The stack grows downward as functions call fu
 - 0x2000_0000 | Globals | 1 | settings, log index
 ben!: The display buffer sits right below the stack. If the stack overflows, it scribbles over the screen data.
 ada: Or the other way around. If the display code writes past the end of its buffer, it might corrupt something else. Let us find out exactly.
+N: Alignment faults are another classic. Many processors require a four-byte value to start at an address divisible by four. Code that casts a byte pointer, from the middle of a received message, into a pointer to a thirty-two bit number can trigger a fault on some chips, and silently slow access on others.
+ada: The safe way is to copy the bytes into a properly declared variable, with memcpy, instead of pretending a random address holds an aligned integer.
 # Chapter Four | Reading the Crime Scene
 @zone screen
 @grade labNight
@@ -130,6 +141,10 @@ N: And there are defenses that catch problems earlier, before they become myster
 - Keep crash records in the field
 ben: The stack pattern trick is great. Fill the stack with a known value at boot. Later, see how much of the pattern was overwritten. That tells you how close you have come to overflowing.
 ada: Many processors also have a memory protection unit. Mark a small guard region below the stack as forbidden, and an overflow causes an immediate, precise fault, right at the guilty line, instead of corruption that surfaces an hour later.
+N: One more defense is culture. When a field unit crashes, its crash record is a gift. Teams that collect, count, and fix the most common crash signatures every release ship devices that get steadily more reliable.
+ben: And teams that shrug and say, it rebooted, it is fine, ship devices that reboot. Forever.
+cy~: I was very nearly that team.
+ada~: You were the president of that team, Cy, for about an hour.
 # Recap | Nothing Is Impossible
 @zone green
 @grade labMint
