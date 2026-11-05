@@ -1,0 +1,6638 @@
+{
+ "title": "Episode 14 - Sprout Turns Toward the Sun",
+ "format": "long",
+ "voice": "bf_emma",
+ "lang": "en-gb",
+ "speed": 1.0,
+ "cast": {
+  "ada": {
+   "type": "engineer"
+  },
+  "ben": {
+   "type": "worker"
+  },
+  "cy": {
+   "type": "boss"
+  }
+ },
+ "beats": [
+  {
+   "id": "ep14_001",
+   "narration": "The last feature. Cy promised investors a Sprout with a rotating base that slowly turns the plant toward the window, so it grows straight instead of leaning.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Episode 14",
+    "sub": "Sprout Turns Toward the Sun",
+    "dur": 3.4
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     17,
+     0,
+     -8.5
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep14_002",
+   "narration": "It will be magical. A plant that dances with the sun.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "low",
+    "f": "cy",
+    "az": 38,
+    "move": "drift"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep14_003",
+   "narration": "A plant that dances with the sun needs a motor, a gearbox, a sensor to know where it is pointing, and a lot of current.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -28,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep14_004",
+   "narration": "And motors are where software meets physics most directly. Things have mass. They overshoot. They get hot. Today, the final piece: making things move.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 26,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep14_005",
+   "narration": "A brushed DC motor is the simplest. Apply voltage and it spins; reverse the voltage and it spins the other way. More voltage, more speed.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter One",
+    "sub": "Kinds of Motors",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Motor types",
+    "rows": [
+     [
+      "Motor",
+      "How it moves",
+      "Good for"
+     ],
+     [
+      "Brushed DC",
+      "spins when powered",
+      "simple, cheap rotation"
+     ],
+     [
+      "Stepper",
+      "moves in fixed steps",
+      "precise position, no sensor"
+     ],
+     [
+      "Servo (hobby)",
+      "goes to a commanded angle",
+      "small, limited range"
+     ],
+     [
+      "Brushless DC",
+      "spins, electronically commutated",
+      "efficient, long life"
+     ]
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    },
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_006",
+   "narration": "But it has no idea where it is pointing.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Motor types",
+    "rows": [
+     [
+      "Motor",
+      "How it moves",
+      "Good for"
+     ],
+     [
+      "Brushed DC",
+      "spins when powered",
+      "simple, cheap rotation"
+     ],
+     [
+      "Stepper",
+      "moves in fixed steps",
+      "precise position, no sensor"
+     ],
+     [
+      "Servo (hobby)",
+      "goes to a commanded angle",
+      "small, limited range"
+     ],
+     [
+      "Brushless DC",
+      "spins, electronically commutated",
+      "efficient, long life"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_007",
+   "narration": "A stepper motor moves in precise steps, often two hundred per revolution. Count the steps, and you know the position, as long as it never skips.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Motor types",
+    "rows": [
+     [
+      "Motor",
+      "How it moves",
+      "Good for"
+     ],
+     [
+      "Brushed DC",
+      "spins when powered",
+      "simple, cheap rotation"
+     ],
+     [
+      "Stepper",
+      "moves in fixed steps",
+      "precise position, no sensor"
+     ],
+     [
+      "Servo (hobby)",
+      "goes to a commanded angle",
+      "small, limited range"
+     ],
+     [
+      "Brushless DC",
+      "spins, electronically commutated",
+      "efficient, long life"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_008",
+   "narration": "A hobby servo has its own controller inside and moves to whatever angle you command.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Motor types",
+    "rows": [
+     [
+      "Motor",
+      "How it moves",
+      "Good for"
+     ],
+     [
+      "Brushed DC",
+      "spins when powered",
+      "simple, cheap rotation"
+     ],
+     [
+      "Stepper",
+      "moves in fixed steps",
+      "precise position, no sensor"
+     ],
+     [
+      "Servo (hobby)",
+      "goes to a commanded angle",
+      "small, limited range"
+     ],
+     [
+      "Brushless DC",
+      "spins, electronically commutated",
+      "efficient, long life"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep14_009",
+   "narration": "We are using a small brushed DC motor with a gearbox. Cheap, quiet, and strong enough to turn a pot full of wet soil.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Motor types",
+    "rows": [
+     [
+      "Motor",
+      "How it moves",
+      "Good for"
+     ],
+     [
+      "Brushed DC",
+      "spins when powered",
+      "simple, cheap rotation"
+     ],
+     [
+      "Stepper",
+      "moves in fixed steps",
+      "precise position, no sensor"
+     ],
+     [
+      "Servo (hobby)",
+      "goes to a commanded angle",
+      "small, limited range"
+     ],
+     [
+      "Brushless DC",
+      "spins, electronically commutated",
+      "efficient, long life"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep14_010",
+   "narration": "But it needs a sensor to tell us where it is.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Motor types",
+    "rows": [
+     [
+      "Motor",
+      "How it moves",
+      "Good for"
+     ],
+     [
+      "Brushed DC",
+      "spins when powered",
+      "simple, cheap rotation"
+     ],
+     [
+      "Stepper",
+      "moves in fixed steps",
+      "precise position, no sensor"
+     ],
+     [
+      "Servo (hobby)",
+      "goes to a commanded angle",
+      "small, limited range"
+     ],
+     [
+      "Brushless DC",
+      "spins, electronically commutated",
+      "efficient, long life"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_011",
+   "narration": "Steppers deserve a closer look, because they are everywhere in printers and small machines. Their coils are energized in sequence, and each change pulls the shaft one step around.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Motor types",
+    "rows": [
+     [
+      "Motor",
+      "How it moves",
+      "Good for"
+     ],
+     [
+      "Brushed DC",
+      "spins when powered",
+      "simple, cheap rotation"
+     ],
+     [
+      "Stepper",
+      "moves in fixed steps",
+      "precise position, no sensor"
+     ],
+     [
+      "Servo (hobby)",
+      "goes to a commanded angle",
+      "small, limited range"
+     ],
+     [
+      "Brushless DC",
+      "spins, electronically commutated",
+      "efficient, long life"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep14_012",
+   "narration": "Change the coils faster, and it spins faster. Stop, and it holds position firmly, as long as the coils stay powered.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Driving a stepper, full steps",
+    "rows": [
+     {
+      "name": "Coil A",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "Coil B",
+      "wave": "0110011001100110"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_013",
+   "narration": "That holding costs current even when nothing moves, which is a poor fit for a battery device.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Driving a stepper, full steps",
+    "rows": [
+     {
+      "name": "Coil A",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "Coil B",
+      "wave": "0110011001100110"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_014",
+   "narration": "And if you ask a stepper to accelerate too quickly, or push against too much load, it skips steps. Without a sensor, the code never knows.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Driving a stepper, full steps",
+    "rows": [
+     {
+      "name": "Coil A",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "Coil B",
+      "wave": "0110011001100110"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_015",
+   "narration": "It simply believes the wrong position from then on.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Driving a stepper, full steps",
+    "rows": [
+     {
+      "name": "Coil A",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "Coil B",
+      "wave": "0110011001100110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep14_016",
+   "narration": "Which is why steppers usually find a home switch at startup: they turn until a switch clicks, and call that position zero. Then they count from there.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Driving a stepper, full steps",
+    "rows": [
+     {
+      "name": "Coil A",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "Coil B",
+      "wave": "0110011001100110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep14_017",
+   "narration": "An encoder measures rotation. Sprout's is a small magnetic disc on the motor shaft, with two sensors that produce pulses as it turns.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Two",
+    "sub": "Encoders",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep14_018",
+   "narration": "There are two signals, A and B, offset by a quarter of a cycle. That offset is the clever part.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Quadrature encoder signals",
+    "rows": [
+     {
+      "name": "A",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "B",
+      "wave": "0110011001100110"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_019",
+   "narration": "If A rises while B is low, the shaft is turning one way. If A rises while B is high, it is turning the other way.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Quadrature encoder signals",
+    "rows": [
+     {
+      "name": "A",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "B",
+      "wave": "0110011001100110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep14_020",
+   "narration": "This is called quadrature. By counting every edge of both signals, the code tracks both position and direction.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Quadrature encoder signals",
+    "rows": [
+     {
+      "name": "A",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "B",
+      "wave": "0110011001100110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep14_021",
+   "narration": "Many microcontrollers have timers that decode quadrature in hardware, so not a single pulse is missed.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Quadrature encoder signals",
+    "rows": [
+     {
+      "name": "A",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "B",
+      "wave": "0110011001100110"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_022",
+   "narration": "Our encoder gives twelve pulses per motor turn, times four edges, times a gearbox of one hundred fifty. That is seven thousand two hundred counts per turn of the pot.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Reading position from a hardware encoder timer",
+    "lines": [
+     "int32_t position = (int16_t)TIMER3->COUNT;   // counts up or down",
+     ">int32_t degrees  = position * 360 / COUNTS_PER_REV;"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_023",
+   "narration": "Plenty of precision.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Reading position from a hardware encoder timer",
+    "lines": [
+     "int32_t position = (int16_t)TIMER3->COUNT;   // counts up or down",
+     ">int32_t degrees  = position * 360 / COUNTS_PER_REV;"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep14_024",
+   "narration": "I understood about forty percent of that, which is a personal best.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "smug",
+     "face": "smug"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Reading position from a hardware encoder timer",
+    "lines": [
+     "int32_t position = (int16_t)TIMER3->COUNT;   // counts up or down",
+     ">int32_t degrees  = position * 360 / COUNTS_PER_REV;"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "low",
+    "f": "cy",
+    "az": -30,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep14_025",
+   "narration": "A microcontroller pin cannot power a motor directly. The motor needs far more current than a pin can supply, and it creates electrical spikes that would destroy the chip.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Three",
+    "sub": "Driving a DC Motor",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep14_026",
+   "narration": "Between them sits an H-bridge: four switches arranged so the motor can be connected either way round. Close one diagonal pair, and current flows forward.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Motor drive chain",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "H-bridge driver",
+        "label": "PWM + direction"
+       }
+      ]
+     },
+     {
+      "name": "H-bridge driver",
+      "to": [
+       {
+        "n": "Motor",
+        "label": "power"
+       }
+      ]
+     },
+     {
+      "name": "Motor",
+      "to": [
+       {
+        "n": "Encoder",
+        "label": "shaft"
+       }
+      ]
+     },
+     {
+      "name": "Encoder",
+      "to": [
+       {
+        "n": "Microcontroller",
+        "label": "pulses"
+       }
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_027",
+   "narration": "Close the other, and it flows backward.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Motor drive chain",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "H-bridge driver",
+        "label": "PWM + direction"
+       }
+      ]
+     },
+     {
+      "name": "H-bridge driver",
+      "to": [
+       {
+        "n": "Motor",
+        "label": "power"
+       }
+      ]
+     },
+     {
+      "name": "Motor",
+      "to": [
+       {
+        "n": "Encoder",
+        "label": "shaft"
+       }
+      ]
+     },
+     {
+      "name": "Encoder",
+      "to": [
+       {
+        "n": "Microcontroller",
+        "label": "pulses"
+       }
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 4,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep14_028",
+   "narration": "Speed comes from PWM, exactly as with the pump. The duty cycle sets the average voltage the motor sees.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Motor drive chain",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "H-bridge driver",
+        "label": "PWM + direction"
+       }
+      ]
+     },
+     {
+      "name": "H-bridge driver",
+      "to": [
+       {
+        "n": "Motor",
+        "label": "power"
+       }
+      ]
+     },
+     {
+      "name": "Motor",
+      "to": [
+       {
+        "n": "Encoder",
+        "label": "shaft"
+       }
+      ]
+     },
+     {
+      "name": "Encoder",
+      "to": [
+       {
+        "n": "Microcontroller",
+        "label": "pulses"
+       }
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep14_029",
+   "narration": "And the encoder closes the loop, telling the code what actually happened.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Motor drive chain",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "H-bridge driver",
+        "label": "PWM + direction"
+       }
+      ]
+     },
+     {
+      "name": "H-bridge driver",
+      "to": [
+       {
+        "n": "Motor",
+        "label": "power"
+       }
+      ]
+     },
+     {
+      "name": "Motor",
+      "to": [
+       {
+        "n": "Encoder",
+        "label": "shaft"
+       }
+      ]
+     },
+     {
+      "name": "Encoder",
+      "to": [
+       {
+        "n": "Microcontroller",
+        "label": "pulses"
+       }
+      ]
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_030",
+   "narration": "And never, ever close both switches on the same side at once. That shorts the power supply straight to ground, through the bridge. People call it shoot-through.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "cut": "flash",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "shock",
+     "face": "shock"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Motor drive chain",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "H-bridge driver",
+        "label": "PWM + direction"
+       }
+      ]
+     },
+     {
+      "name": "H-bridge driver",
+      "to": [
+       {
+        "n": "Motor",
+        "label": "power"
+       }
+      ]
+     },
+     {
+      "name": "Motor",
+      "to": [
+       {
+        "n": "Encoder",
+        "label": "shaft"
+       }
+      ]
+     },
+     {
+      "name": "Encoder",
+      "to": [
+       {
+        "n": "Microcontroller",
+        "label": "pulses"
+       }
+      ]
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.04,
+     "type": "thud",
+     "vol": 0.6
+    }
+   ]
+  },
+  {
+   "id": "ep14_031",
+   "narration": "The bridge calls it its last day.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "shock"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Motor drive chain",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "H-bridge driver",
+        "label": "PWM + direction"
+       }
+      ]
+     },
+     {
+      "name": "H-bridge driver",
+      "to": [
+       {
+        "n": "Motor",
+        "label": "power"
+       }
+      ]
+     },
+     {
+      "name": "Motor",
+      "to": [
+       {
+        "n": "Encoder",
+        "label": "shaft"
+       }
+      ]
+     },
+     {
+      "name": "Encoder",
+      "to": [
+       {
+        "n": "Microcontroller",
+        "label": "pulses"
+       }
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -20,
+    "move": "push",
+    "shake": 0.25
+   }
+  },
+  {
+   "id": "ep14_032",
+   "narration": "Good driver chips prevent that internally, and add a short dead time when switching direction. Use one.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Motor drive chain",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "H-bridge driver",
+        "label": "PWM + direction"
+       }
+      ]
+     },
+     {
+      "name": "H-bridge driver",
+      "to": [
+       {
+        "n": "Motor",
+        "label": "power"
+       }
+      ]
+     },
+     {
+      "name": "Motor",
+      "to": [
+       {
+        "n": "Encoder",
+        "label": "shaft"
+       }
+      ]
+     },
+     {
+      "name": "Encoder",
+      "to": [
+       {
+        "n": "Microcontroller",
+        "label": "pulses"
+       }
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 20,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep14_033",
+   "narration": "Do not build an H-bridge from loose parts unless you enjoy the smell of hot silicon.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Motor drive chain",
+    "nodes": [
+     {
+      "name": "Microcontroller",
+      "to": [
+       {
+        "n": "H-bridge driver",
+        "label": "PWM + direction"
+       }
+      ]
+     },
+     {
+      "name": "H-bridge driver",
+      "to": [
+       {
+        "n": "Motor",
+        "label": "power"
+       }
+      ]
+     },
+     {
+      "name": "Motor",
+      "to": [
+       {
+        "n": "Encoder",
+        "label": "shaft"
+       }
+      ]
+     },
+     {
+      "name": "Encoder",
+      "to": [
+       {
+        "n": "Microcontroller",
+        "label": "pulses"
+       }
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 4,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep14_034",
+   "narration": "Now the hard part. Ada wants the pot to turn to exactly ninety degrees. The simplest approach: turn the motor on, watch the encoder, and switch off at ninety.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Four",
+    "sub": "Feedback and Control",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep14_035",
+   "narration": "The pot is heavy, so it coasts past the target. The code reverses. It overshoots the other way. Back and forth, never settling. The plant gets seasick.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Bang-bang control: overshoot",
+    "xl": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Position",
+      "v": [
+       0.0,
+       30.0,
+       60.0,
+       85.0,
+       100.0,
+       108.0,
+       104.0,
+       96.0,
+       92.0,
+       95.0
+      ]
+     },
+     {
+      "type": "line",
+      "name": "Target",
+      "v": [
+       90.0,
+       90.0,
+       90.0,
+       90.0,
+       90.0,
+       90.0,
+       90.0,
+       90.0,
+       90.0,
+       90.0
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_036",
+   "narration": "The classic solution is a PID controller: proportional, integral, derivative. Three simple terms that together produce smooth, accurate control.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Bang-bang control: overshoot",
+    "xl": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Position",
+      "v": [
+       0.0,
+       30.0,
+       60.0,
+       85.0,
+       100.0,
+       108.0,
+       104.0,
+       96.0,
+       92.0,
+       95.0
+      ]
+     },
+     {
+      "type": "line",
+      "name": "Target",
+      "v": [
+       90.0,
+       90.0,
+       90.0,
+       90.0,
+       90.0,
+       90.0,
+       90.0,
+       90.0,
+       90.0,
+       90.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep14_037",
+   "narration": "The proportional term pushes harder the farther away we are. Far from target, full power. Close, gentle. Alone, it often settles slightly short, because friction balances the small push.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "The three terms of PID",
+    "items": [
+     "P: push in proportion to the error",
+     "I: push harder if error lingers over time",
+     "D: brake when error is shrinking fast"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_038",
+   "narration": "The integral term adds up the error over time. If a small error lingers, the integral grows until it pushes through the friction.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "The three terms of PID",
+    "items": [
+     "P: push in proportion to the error",
+     "I: push harder if error lingers over time",
+     "D: brake when error is shrinking fast"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep14_039",
+   "narration": "The derivative term watches how fast the error is changing and brakes as the target approaches, preventing overshoot.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "The three terms of PID",
+    "items": [
+     "P: push in proportion to the error",
+     "I: push harder if error lingers over time",
+     "D: brake when error is shrinking fast"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_040",
+   "narration": "Notice the integral is clamped. Otherwise, if the motor is blocked for a while, the integral grows enormous, and when released, the motor charges past the target.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A simple PID step, called at a fixed rate",
+    "lines": [
+     "int32_t err = target - position;",
+     "integral += err;                                  // accumulate",
+     "integral = clamp(integral, -I_MAX, I_MAX);        // anti-windup",
+     "int32_t deriv = err - last_err;  last_err = err;",
+     ">int32_t out = (KP * err + KI * integral + KD * deriv) / SCALE;",
+     "motor_set(clamp(out, -100, 100));                 // percent PWM"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_041",
+   "narration": "That is called windup.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A simple PID step, called at a fixed rate",
+    "lines": [
+     "int32_t err = target - position;",
+     "integral += err;                                  // accumulate",
+     "integral = clamp(integral, -I_MAX, I_MAX);        // anti-windup",
+     "int32_t deriv = err - last_err;  last_err = err;",
+     ">int32_t out = (KP * err + KI * integral + KD * deriv) / SCALE;",
+     "motor_set(clamp(out, -100, 100));                 // percent PWM"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep14_042",
+   "narration": "And the controller runs at a fixed rate, from a timer, using integer math. Irregular timing makes the derivative and integral terms meaningless.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A simple PID step, called at a fixed rate",
+    "lines": [
+     "int32_t err = target - position;",
+     "integral += err;                                  // accumulate",
+     "integral = clamp(integral, -I_MAX, I_MAX);        // anti-windup",
+     "int32_t deriv = err - last_err;  last_err = err;",
+     ">int32_t out = (KP * err + KI * integral + KD * deriv) / SCALE;",
+     "motor_set(clamp(out, -100, 100));                 // percent PWM"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep14_043",
+   "narration": "The three gains, how much of each term to apply, must be tuned for the actual mechanism. Ben and Ada start simple.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Five",
+    "sub": "Tuning",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep14_044",
+   "narration": "The last step matters most. A controller tuned for an empty pot may oscillate with a full one. Test across the whole range of real conditions.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "A practical tuning recipe",
+    "items": [
+     "Start with I and D at zero",
+     "Raise P until it responds briskly, with a little overshoot",
+     "Add D to calm the overshoot",
+     "Add a small I to remove the final error",
+     "Test with a light pot and a heavy, wet pot"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_045",
+   "narration": "It turns, it slows, it stops at ninety. Gerald is facing the window!",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "wave",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "A practical tuning recipe",
+    "items": [
+     "Start with I and D at zero",
+     "Raise P until it responds briskly, with a little overshoot",
+     "Add D to calm the overshoot",
+     "Add a small I to remove the final error",
+     "Test with a light pot and a heavy, wet pot"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -20,
+    "move": "pull"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep14_046",
+   "narration": "The plant dances with the sun!",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "A practical tuning recipe",
+    "items": [
+     "Start with I and D at zero",
+     "Raise P until it responds briskly, with a little overshoot",
+     "Add D to calm the overshoot",
+     "Add a small I to remove the final error",
+     "Test with a light pot and a heavy, wet pot"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep14_047",
+   "narration": "Even with good control, jumping straight from stopped to full speed is harsh. Soil sloshes, gears wear, and the current spike drains the battery. So the target itself moves smoothly.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Six",
+    "sub": "Motion Profiles",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep14_048",
+   "narration": "A trapezoidal profile accelerates gently, cruises at a steady speed, then decelerates gently into the final position.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Trapezoidal speed profile",
+    "xl": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Speed",
+      "v": [
+       0.0,
+       25.0,
+       50.0,
+       75.0,
+       75.0,
+       75.0,
+       75.0,
+       50.0,
+       25.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_049",
+   "narration": "Instead of telling the controller go to ninety degrees, we feed it a sequence of moving targets along that curve.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Trapezoidal speed profile",
+    "xl": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Speed",
+      "v": [
+       0.0,
+       25.0,
+       50.0,
+       75.0,
+       75.0,
+       75.0,
+       75.0,
+       50.0,
+       25.0,
+       0.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep14_050",
+   "narration": "Smoother profiles, with gradual changes in acceleration too, reduce vibration even further. For a slowly rotating plant, the trapezoid is plenty.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Trapezoidal speed profile",
+    "xl": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Speed",
+      "v": [
+       0.0,
+       25.0,
+       50.0,
+       75.0,
+       75.0,
+       75.0,
+       75.0,
+       50.0,
+       25.0,
+       0.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep14_051",
+   "narration": "And it means the motor never draws its full stall current. The battery thanks us.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Trapezoidal speed profile",
+    "xl": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Speed",
+      "v": [
+       0.0,
+       25.0,
+       50.0,
+       75.0,
+       75.0,
+       75.0,
+       75.0,
+       50.0,
+       25.0,
+       0.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep14_052",
+   "narration": "The prototype works. Then reality arrives, one surprise at a time. Ada keeps a list on the whiteboard.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Seven",
+    "sub": "Lessons Motors Teach",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep14_053",
+   "narration": "Motors are electrically noisy. Their brushes spark, and their current changes suddenly. That noise can reset the microcontroller or corrupt sensor readings.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Motor lessons, learned the hard way",
+    "items": [
+     "Motors make electrical noise: filter and separate grounds",
+     "Switching off a motor creates a voltage spike",
+     "Stall current can be many times running current",
+     "Heat builds slowly; protect against it",
+     "Gears have backlash; position has slack",
+     "Mechanics wear; the tuning drifts",
+     "Always have a way to stop"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_054",
+   "narration": "Separate the motor's power path, add filtering, and keep its wires away from the soil probe.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Motor lessons, learned the hard way",
+    "items": [
+     "Motors make electrical noise: filter and separate grounds",
+     "Switching off a motor creates a voltage spike",
+     "Stall current can be many times running current",
+     "Heat builds slowly; protect against it",
+     "Gears have backlash; position has slack",
+     "Mechanics wear; the tuning drifts",
+     "Always have a way to stop"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_055",
+   "narration": "When a motor is switched off, its inductance tries to keep current flowing and produces a voltage spike. Driver chips include diodes to absorb it.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Motor lessons, learned the hard way",
+    "items": [
+     "Motors make electrical noise: filter and separate grounds",
+     "Switching off a motor creates a voltage spike",
+     "Stall current can be many times running current",
+     "Heat builds slowly; protect against it",
+     "Gears have backlash; position has slack",
+     "Mechanics wear; the tuning drifts",
+     "Always have a way to stop"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_056",
+   "narration": "Without them, the spike can destroy the switches.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Motor lessons, learned the hard way",
+    "items": [
+     "Motors make electrical noise: filter and separate grounds",
+     "Switching off a motor creates a voltage spike",
+     "Stall current can be many times running current",
+     "Heat builds slowly; protect against it",
+     "Gears have backlash; position has slack",
+     "Mechanics wear; the tuning drifts",
+     "Always have a way to stop"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep14_057",
+   "narration": "And when a motor is blocked, it draws its stall current, often many times its normal current.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Motor lessons, learned the hard way",
+    "items": [
+     "Motors make electrical noise: filter and separate grounds",
+     "Switching off a motor creates a voltage spike",
+     "Stall current can be many times running current",
+     "Heat builds slowly; protect against it",
+     "Gears have backlash; position has slack",
+     "Mechanics wear; the tuning drifts",
+     "Always have a way to stop"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -20,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep14_058",
+   "narration": "Sprout watches the motor current, and if the pot is stuck behind a curtain, it gives up and reports it, instead of cooking the motor.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Motor lessons, learned the hard way",
+    "items": [
+     "Motors make electrical noise: filter and separate grounds",
+     "Switching off a motor creates a voltage spike",
+     "Stall current can be many times running current",
+     "Heat builds slowly; protect against it",
+     "Gears have backlash; position has slack",
+     "Mechanics wear; the tuning drifts",
+     "Always have a way to stop"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_059",
+   "narration": "Above all, always have a way to stop. A timeout, a current limit, an end-of-travel check. Moving things must fail safe, because they can hurt themselves, and sometimes people.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Motor lessons, learned the hard way",
+    "items": [
+     "Motors make electrical noise: filter and separate grounds",
+     "Switching off a motor creates a voltage spike",
+     "Stall current can be many times running current",
+     "Heat builds slowly; protect against it",
+     "Gears have backlash; position has slack",
+     "Mechanics wear; the tuning drifts",
+     "Always have a way to stop"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 4,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep14_060",
+   "narration": "Autumn. The factory line hums. Bootloaders are programmed, keys injected, self tests pass. Five thousand Sprouts, each with a rotating base, go into boxes.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Eight",
+    "sub": "Shipping Day",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     17,
+     0,
+     -8.5
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep14_061",
+   "narration": "When we started, we had a fern, a soldering iron, and a lot of confidence. Now we have a product. Every episode, every lesson, is in there somewhere.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Everything it took",
+    "items": [
+     "An architecture drawn before coding",
+     "Careful board bring-up",
+     "Registers, interrupts, timers, PWM",
+     "State machines and a watchdog",
+     "Buses, buffers, DMA, sensors",
+     "Fault records and fixed bugs",
+     "Secure, staged updates",
+     "Memory and math on a budget",
+     "A year on two batteries",
+     "A motor under control"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_062",
+   "narration": "And only one board became a coaster.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "wave",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Everything it took",
+    "items": [
+     "An architecture drawn before coding",
+     "Careful board bring-up",
+     "Registers, interrupts, timers, PWM",
+     "State machines and a watchdog",
+     "Buses, buffers, DMA, sensors",
+     "Fault records and fixed bugs",
+     "Secure, staged updates",
+     "Memory and math on a budget",
+     "A year on two batteries",
+     "A motor under control"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep14_063",
+   "narration": "I have something to say. I know I pushed deadlines. I promised features before they existed. I asked for music for a plant.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "present",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Everything it took",
+    "items": [
+     "An architecture drawn before coding",
+     "Careful board bring-up",
+     "Registers, interrupts, timers, PWM",
+     "State machines and a watchdog",
+     "Buses, buffers, DMA, sensors",
+     "Fault records and fixed bugs",
+     "Secure, staged updates",
+     "Memory and math on a budget",
+     "A year on two batteries",
+     "A motor under control"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "cy",
+    "az": 22,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep14_064",
+   "narration": "But you built it. Properly. Thank you.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Everything it took",
+    "items": [
+     "An architecture drawn before coding",
+     "Careful board bring-up",
+     "Registers, interrupts, timers, PWM",
+     "State machines and a watchdog",
+     "Buses, buffers, DMA, sensors",
+     "Fault records and fixed bugs",
+     "Secure, staged updates",
+     "Memory and math on a budget",
+     "A year on two batteries",
+     "A motor under control"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "low",
+    "f": "cy",
+    "az": 38,
+    "move": "push"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep14_065",
+   "narration": "You also bought the fire extinguisher. That was genuinely helpful.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "smug",
+     "face": "smug"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Everything it took",
+    "items": [
+     "An architecture drawn before coding",
+     "Careful board bring-up",
+     "Registers, interrupts, timers, PWM",
+     "State machines and a watchdog",
+     "Buses, buffers, DMA, sensors",
+     "Fault records and fixed bugs",
+     "Secure, staged updates",
+     "Memory and math on a budget",
+     "A year on two batteries",
+     "A motor under control"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 10,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep14_066",
+   "narration": "Over fourteen episodes, we followed one small product from idea to shipping. We drew the map before building. We brought up hardware carefully, and learned to read datasheets and schematics.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Series Recap",
+    "sub": "The Whole Journey",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "layers",
+    "title": "What we built, bottom to top",
+    "items": [
+     {
+      "name": "Product",
+      "sub": "Sprout: sense, decide, act, connect"
+     },
+     {
+      "name": "Application",
+      "sub": "watering strategies, schedules, motion"
+     },
+     {
+      "name": "Services",
+      "sub": "logging, storage, updates, power"
+     },
+     {
+      "name": "Drivers",
+      "sub": "GPIO, timers, ADC, buses, motor"
+     },
+     {
+      "name": "Hardware",
+      "sub": "microcontroller, sensors, pump, radio"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    },
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep14_067",
+   "narration": "We flipped bits in registers, handled interrupts safely, structured programs with state machines and schedulers, and connected chips over buses with buffers and DMA.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "layers",
+    "title": "What we built, bottom to top",
+    "items": [
+     {
+      "name": "Product",
+      "sub": "Sprout: sense, decide, act, connect"
+     },
+     {
+      "name": "Application",
+      "sub": "watering strategies, schedules, motion"
+     },
+     {
+      "name": "Services",
+      "sub": "logging, storage, updates, power"
+     },
+     {
+      "name": "Drivers",
+      "sub": "GPIO, timers, ADC, buses, motor"
+     },
+     {
+      "name": "Hardware",
+      "sub": "microcontroller, sensors, pump, radio"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_068",
+   "narration": "We hunted impossible bugs, built secure updates, squeezed code into tight memory, did math without floats, made batteries last a year, and finally, made things move under control.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "layers",
+    "title": "What we built, bottom to top",
+    "items": [
+     {
+      "name": "Product",
+      "sub": "Sprout: sense, decide, act, connect"
+     },
+     {
+      "name": "Application",
+      "sub": "watering strategies, schedules, motion"
+     },
+     {
+      "name": "Services",
+      "sub": "logging, storage, updates, power"
+     },
+     {
+      "name": "Drivers",
+      "sub": "GPIO, timers, ADC, buses, motor"
+     },
+     {
+      "name": "Hardware",
+      "sub": "microcontroller, sensors, pump, radio"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep14_069",
+   "narration": "Embedded systems are everywhere, quietly doing one job each, very well.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "layers",
+    "title": "What we built, bottom to top",
+    "items": [
+     {
+      "name": "Product",
+      "sub": "Sprout: sense, decide, act, connect"
+     },
+     {
+      "name": "Application",
+      "sub": "watering strategies, schedules, motion"
+     },
+     {
+      "name": "Services",
+      "sub": "logging, storage, updates, power"
+     },
+     {
+      "name": "Drivers",
+      "sub": "GPIO, timers, ADC, buses, motor"
+     },
+     {
+      "name": "Hardware",
+      "sub": "microcontroller, sensors, pump, radio"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep14_070",
+   "narration": "Now you know a little more about how they are made, and why the people who make them are so fond of blinking LEDs.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "layers",
+    "title": "What we built, bottom to top",
+    "items": [
+     {
+      "name": "Product",
+      "sub": "Sprout: sense, decide, act, connect"
+     },
+     {
+      "name": "Application",
+      "sub": "watering strategies, schedules, motion"
+     },
+     {
+      "name": "Services",
+      "sub": "logging, storage, updates, power"
+     },
+     {
+      "name": "Drivers",
+      "sub": "GPIO, timers, ADC, buses, motor"
+     },
+     {
+      "name": "Hardware",
+      "sub": "microcontroller, sensors, pump, radio"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep14_071",
+   "narration": "Ada waters Gerald by hand, just this once, for old times' sake.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "world": {
+    "droop": [
+     0.0,
+     0.0
+    ]
+   },
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "wave",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "layers",
+    "title": "What we built, bottom to top",
+    "items": [
+     {
+      "name": "Product",
+      "sub": "Sprout: sense, decide, act, connect"
+     },
+     {
+      "name": "Application",
+      "sub": "watering strategies, schedules, motion"
+     },
+     {
+      "name": "Services",
+      "sub": "logging, storage, updates, power"
+     },
+     {
+      "name": "Drivers",
+      "sub": "GPIO, timers, ADC, buses, motor"
+     },
+     {
+      "name": "Hardware",
+      "sub": "microcontroller, sensors, pump, radio"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep14_072",
+   "narration": "Thanks for building it with us. See you in the lab.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "wave",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "layers",
+    "title": "What we built, bottom to top",
+    "items": [
+     {
+      "name": "Product",
+      "sub": "Sprout: sense, decide, act, connect"
+     },
+     {
+      "name": "Application",
+      "sub": "watering strategies, schedules, motion"
+     },
+     {
+      "name": "Services",
+      "sub": "logging, storage, updates, power"
+     },
+     {
+      "name": "Drivers",
+      "sub": "GPIO, timers, ADC, buses, motor"
+     },
+     {
+      "name": "Hardware",
+      "sub": "microcontroller, sensors, pump, radio"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "low",
+    "f": "ada",
+    "az": 36,
+    "move": "drift"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  }
+ ]
+}

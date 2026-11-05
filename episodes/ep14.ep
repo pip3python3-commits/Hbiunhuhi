@@ -1,0 +1,150 @@
+title: Episode 14 | Sprout Turns Toward the Sun
+narrator: bf_emma en-gb
+cast: ada=engineer:af_heart, ben=worker:am_michael, cy=boss:bm_george:en-gb
+---
+@zone green
+N: The last feature. Cy promised investors a Sprout with a rotating base that slowly turns the plant toward the window, so it grows straight instead of leaning.
+cy^: It will be magical. A plant that dances with the sun.
+ben?: A plant that dances with the sun needs a motor, a gearbox, a sensor to know where it is pointing, and a lot of current.
+ada: And motors are where software meets physics most directly. Things have mass. They overshoot. They get hot. Today, the final piece: making things move.
+# Chapter One | Kinds of Motors
+@zone screen
+%table Motor types
+- Motor | How it moves | Good for
+- Brushed DC | spins when powered | simple, cheap rotation
+- Stepper | moves in fixed steps | precise position, no sensor
+- Servo (hobby) | goes to a commanded angle | small, limited range
+- Brushless DC | spins, electronically commutated | efficient, long life
+ada: A brushed DC motor is the simplest. Apply voltage and it spins; reverse the voltage and it spins the other way. More voltage, more speed. But it has no idea where it is pointing.
+N: A stepper motor moves in precise steps, often two hundred per revolution. Count the steps, and you know the position, as long as it never skips. A hobby servo has its own controller inside and moves to whatever angle you command.
+ben: We are using a small brushed DC motor with a gearbox. Cheap, quiet, and strong enough to turn a pot full of wet soil. But it needs a sensor to tell us where it is.
+ada: Steppers deserve a closer look, because they are everywhere in printers and small machines. Their coils are energized in sequence, and each change pulls the shaft one step around.
+%timing Driving a stepper, full steps
+- Coil A: 1100110011001100
+- Coil B: 0110011001100110
+N: Change the coils faster, and it spins faster. Stop, and it holds position firmly, as long as the coils stay powered. That holding costs current even when nothing moves, which is a poor fit for a battery device.
+ben: And if you ask a stepper to accelerate too quickly, or push against too much load, it skips steps. Without a sensor, the code never knows. It simply believes the wrong position from then on.
+ada: Which is why steppers usually find a home switch at startup: they turn until a switch clicks, and call that position zero. Then they count from there.
+# Chapter Two | Encoders
+@zone screen
+N: An encoder measures rotation. Sprout's is a small magnetic disc on the motor shaft, with two sensors that produce pulses as it turns.
+%timing Quadrature encoder signals
+- A: 1100110011001100
+- B: 0110011001100110
+ada: There are two signals, A and B, offset by a quarter of a cycle. That offset is the clever part. If A rises while B is low, the shaft is turning one way. If A rises while B is high, it is turning the other way.
+N: This is called quadrature. By counting every edge of both signals, the code tracks both position and direction. Many microcontrollers have timers that decode quadrature in hardware, so not a single pulse is missed.
+%code Reading position from a hardware encoder timer
+| int32_t position = (int16_t)TIMER3->COUNT;   // counts up or down
+|>int32_t degrees  = position * 360 / COUNTS_PER_REV;
+ben: Our encoder gives twelve pulses per motor turn, times four edges, times a gearbox of one hundred fifty. That is seven thousand two hundred counts per turn of the pot. Plenty of precision.
+cy~: I understood about forty percent of that, which is a personal best.
+# Chapter Three | Driving a DC Motor
+@zone bench
+N: A microcontroller pin cannot power a motor directly. The motor needs far more current than a pin can supply, and it creates electrical spikes that would destroy the chip.
+%blocks Motor drive chain
+- Microcontroller > H-bridge driver:PWM + direction
+- H-bridge driver > Motor:power
+- Motor > Encoder:shaft
+- Encoder > Microcontroller:pulses
+ada: Between them sits an H-bridge: four switches arranged so the motor can be connected either way round. Close one diagonal pair, and current flows forward. Close the other, and it flows backward.
+N: Speed comes from PWM, exactly as with the pump. The duty cycle sets the average voltage the motor sees. And the encoder closes the loop, telling the code what actually happened.
+ben!: And never, ever close both switches on the same side at once. That shorts the power supply straight to ground, through the bridge. People call it shoot-through. The bridge calls it its last day.
+ada: Good driver chips prevent that internally, and add a short dead time when switching direction. Use one. Do not build an H-bridge from loose parts unless you enjoy the smell of hot silicon.
+# Chapter Four | Feedback and Control
+@zone screen
+N: Now the hard part. Ada wants the pot to turn to exactly ninety degrees. The simplest approach: turn the motor on, watch the encoder, and switch off at ninety.
+%chart Bang-bang control: overshoot
+- line Position: 0,30,60,85,100,108,104,96,92,95
+- line Target: 90,90,90,90,90,90,90,90,90,90
+xl 0,1,2,3,4,5,6,7,8,9
+ada: The pot is heavy, so it coasts past the target. The code reverses. It overshoots the other way. Back and forth, never settling. The plant gets seasick.
+N: The classic solution is a PID controller: proportional, integral, derivative. Three simple terms that together produce smooth, accurate control.
+%list The three terms of PID
+- P: push in proportion to the error
+- I: push harder if error lingers over time
+- D: brake when error is shrinking fast
+ada: The proportional term pushes harder the farther away we are. Far from target, full power. Close, gentle. Alone, it often settles slightly short, because friction balances the small push.
+N: The integral term adds up the error over time. If a small error lingers, the integral grows until it pushes through the friction. The derivative term watches how fast the error is changing and brakes as the target approaches, preventing overshoot.
+%code A simple PID step, called at a fixed rate
+| int32_t err = target - position;
+| integral += err;                                  // accumulate
+| integral = clamp(integral, -I_MAX, I_MAX);        // anti-windup
+| int32_t deriv = err - last_err;  last_err = err;
+|>int32_t out = (KP * err + KI * integral + KD * deriv) / SCALE;
+| motor_set(clamp(out, -100, 100));                 // percent PWM
+ada>: Notice the integral is clamped. Otherwise, if the motor is blocked for a while, the integral grows enormous, and when released, the motor charges past the target. That is called windup.
+N: And the controller runs at a fixed rate, from a timer, using integer math. Irregular timing makes the derivative and integral terms meaningless.
+# Chapter Five | Tuning
+@zone bench
+N: The three gains, how much of each term to apply, must be tuned for the actual mechanism. Ben and Ada start simple.
+%chart Tuned PID response
+- line Position: 0,35,62,79,87,90,90,90,90,90
+- line Target: 90,90,90,90,90,90,90,90,90,90
+xl 0,1,2,3,4,5,6,7,8,9
+%list A practical tuning recipe
+- Start with I and D at zero
+- Raise P until it responds briskly, with a little overshoot
+- Add D to calm the overshoot
+- Add a small I to remove the final error
+- Test with a light pot and a heavy, wet pot
+ada: The last step matters most. A controller tuned for an empty pot may oscillate with a full one. Test across the whole range of real conditions.
+ben^: It turns, it slows, it stops at ninety. Gerald is facing the window!
+cy^: The plant dances with the sun!
+# Chapter Six | Motion Profiles
+@zone screen
+N: Even with good control, jumping straight from stopped to full speed is harsh. Soil sloshes, gears wear, and the current spike drains the battery. So the target itself moves smoothly.
+%chart Trapezoidal speed profile
+- line Speed: 0,25,50,75,75,75,75,50,25,0
+xl 0,1,2,3,4,5,6,7,8,9
+ada: A trapezoidal profile accelerates gently, cruises at a steady speed, then decelerates gently into the final position. Instead of telling the controller go to ninety degrees, we feed it a sequence of moving targets along that curve.
+N: Smoother profiles, with gradual changes in acceleration too, reduce vibration even further. For a slowly rotating plant, the trapezoid is plenty.
+ben: And it means the motor never draws its full stall current. The battery thanks us.
+# Chapter Seven | Lessons Motors Teach
+@zone bench
+N: The prototype works. Then reality arrives, one surprise at a time. Ada keeps a list on the whiteboard.
+%list Motor lessons, learned the hard way
+- Motors make electrical noise: filter and separate grounds
+- Switching off a motor creates a voltage spike
+- Stall current can be many times running current
+- Heat builds slowly; protect against it
+- Gears have backlash; position has slack
+- Mechanics wear; the tuning drifts
+- Always have a way to stop
+ada: Motors are electrically noisy. Their brushes spark, and their current changes suddenly. That noise can reset the microcontroller or corrupt sensor readings. Separate the motor's power path, add filtering, and keep its wires away from the soil probe.
+N: When a motor is switched off, its inductance tries to keep current flowing and produces a voltage spike. Driver chips include diodes to absorb it. Without them, the spike can destroy the switches.
+ben: And when a motor is blocked, it draws its stall current, often many times its normal current. Sprout watches the motor current, and if the pot is stuck behind a curtain, it gives up and reports it, instead of cooking the motor.
+ada: Above all, always have a way to stop. A timeout, a current limit, an end-of-travel check. Moving things must fail safe, because they can hurt themselves, and sometimes people.
+# Chapter Eight | Shipping Day
+@zone green
+N: Autumn. The factory line hums. Bootloaders are programmed, keys injected, self tests pass. Five thousand Sprouts, each with a rotating base, go into boxes.
+%list Everything it took
+- An architecture drawn before coding
+- Careful board bring-up
+- Registers, interrupts, timers, PWM
+- State machines and a watchdog
+- Buses, buffers, DMA, sensors
+- Fault records and fixed bugs
+- Secure, staged updates
+- Memory and math on a budget
+- A year on two batteries
+- A motor under control
+ada: When we started, we had a fern, a soldering iron, and a lot of confidence. Now we have a product. Every episode, every lesson, is in there somewhere.
+ben^: And only one board became a coaster.
+cy: I have something to say. I know I pushed deadlines. I promised features before they existed. I asked for music for a plant.
+cy^: But you built it. Properly. Thank you.
+ada~: You also bought the fire extinguisher. That was genuinely helpful.
+# Series Recap | The Whole Journey
+@zone screen
+%layers What we built, bottom to top
+- Product | Sprout: sense, decide, act, connect
+- Application | watering strategies, schedules, motion
+- Services | logging, storage, updates, power
+- Drivers | GPIO, timers, ADC, buses, motor
+- Hardware | microcontroller, sensors, pump, radio
+N: Over fourteen episodes, we followed one small product from idea to shipping. We drew the map before building. We brought up hardware carefully, and learned to read datasheets and schematics.
+N: We flipped bits in registers, handled interrupts safely, structured programs with state machines and schedulers, and connected chips over buses with buffers and DMA.
+N: We hunted impossible bugs, built secure updates, squeezed code into tight memory, did math without floats, made batteries last a year, and finally, made things move under control.
+N: Embedded systems are everywhere, quietly doing one job each, very well. Now you know a little more about how they are made, and why the people who make them are so fond of blinking LEDs.
+@world droop=0>0
+N@ada^: Ada waters Gerald by hand, just this once, for old times' sake.
+ada^: Thanks for building it with us. See you in the lab.
