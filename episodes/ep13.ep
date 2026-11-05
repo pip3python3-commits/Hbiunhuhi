@@ -1,0 +1,141 @@
+title: Episode 13 | A Year on Two Batteries
+narrator: bf_emma en-gb
+cast: ada=engineer:af_heart, ben=worker:am_michael, cy=boss:bm_george:en-gb
+---
+@zone green
+N: Field reports are in. Sprouts are working beautifully. For about nine days. Then the batteries die.
+cy!: Nine days? The box says six months! Marketing wants it to say a year!
+ben?: I measured it. Sprout draws about nine milliamps, all the time. Two AA cells hold roughly two thousand milliamp hours. That is about nine days.
+ada: Which means we need to cut the average current by a factor of forty. That sounds impossible, until you realize Sprout spends almost all its time doing nothing, very energetically.
+N: Power is the budget that ties every other decision together. Today, the team learns to measure power, understand where it goes, and make a device that sleeps like a cat.
+# Chapter One | Power Basics
+@zone screen
+N: A quick refresher. Power is voltage times current. For a battery device at a fixed voltage, what matters is current, and especially the average current over time.
+%table Battery math
+- Average current | Battery 2000 mAh lasts
+- 9 mA | about 9 days
+- 1 mA | about 83 days
+- 0.2 mA | about 14 months
+- 0.05 mA | years (battery ages first)
+ada: Battery life is roughly capacity divided by average current. Two thousand milliamp hours at nine milliamps is about two hundred twenty hours. At two tenths of a milliamp, it is ten thousand hours, over a year.
+N: In practice, batteries deliver less than their label, especially when cold or when drained in heavy bursts. Engineers usually plan with a margin, perhaps seventy to eighty percent of rated capacity.
+ben: And battery voltage drops as it drains. Sprout must keep working down to the last useful volt, or it dies with half the energy still inside.
+# Chapter Two | Measuring Current
+@zone bench
+N: You cannot reduce what you cannot measure. And measuring the current of a sleeping microcontroller is surprisingly hard.
+%chart Sprout's current over 10 seconds
+- line mA: 9,9,9,9,9,9,9,9,9,9,9,9
+xl 0,1,2,3,4,5,6,7,8,9,10,11
+ada: A plain multimeter shows an average, and struggles when current jumps from microamps to tens of milliamps in a moment. A dedicated power analyzer records current thousands of times per second, so you can see every spike.
+ben: The cheap way is a small resistor in the supply line and a scope across it. The voltage across the resistor is proportional to the current.
+N: The measurement shows a flat line: nine milliamps, constantly. Sprout never rests. Its main loop spins at full speed, checking for buttons and timers, even when there is nothing to do.
+cy?: So it is like leaving the car engine running in the driveway all night, in case you want to go somewhere.
+ada^: That is exactly what it is.
+# Chapter Three | Sleep Modes
+@zone screen
+N: Microcontrollers have sleep modes that switch off parts of the chip. Deeper sleep saves more power, but takes longer to wake, and preserves less.
+%table Typical sleep modes
+- Mode | Current | Wakes in | What still runs
+- Run | 9 mA | - | everything
+- Sleep | 2 mA | instantly | peripherals, RAM
+- Stop | 10 µA | microseconds | RAM, some timers
+- Standby | 1 µA | milliseconds | almost nothing
+ada: In light sleep, the processor core stops but peripherals keep running, and any interrupt wakes it instantly. In stop mode, most clocks halt, but RAM is kept and a low-power timer can still wake the chip. In standby, even RAM is lost, and waking is almost like a reboot.
+N: The simplest win is to replace the busy loop with a sleep instruction. The processor halts until an interrupt arrives, handles it, then sleeps again.
+%code From busy loop to sleeping loop
+| while (1) {
+|   run_due_tasks();
+|>  __WFI();          // wait for interrupt: sleep until something happens
+| }
+ben: One instruction, and the current drops from nine milliamps to about two. We just quadrupled the battery life.
+ada: And we are just getting started.
+# Chapter Four | Race to Sleep
+@zone screen
+N: Sprout really only needs to do a few things: check the soil now and then, react to the button, and occasionally water. Everything else is waiting.
+%timing Duty cycling
+- Awake: 1000000010000000
+- Asleep: 0111111101111111
+ada: The strategy is duty cycling: wake briefly, do the work quickly, and go back to deep sleep for as long as possible. If Sprout is awake one percent of the time, the average current is dominated by the sleep current.
+%chart Average current by awake fraction
+- line Average mA: 9,4.5,0.9,0.1,0.02
+xl 100%,50%,10%,1%,0.1%
+yl mA
+N: This leads to a counterintuitive idea: race to sleep. Running faster draws more current, but finishes sooner. Often the total energy is lower if you run at full speed and sleep earlier, rather than dawdling at a slow clock.
+ada: Not always. It depends on the chip. Measure both ways. But the instinct is right: the goal is not low current, it is low energy, current multiplied by time.
+cy~: Race to sleep. I have been practicing that my whole life.
+N: Clock speed has another lever. The current a processor draws rises with its clock frequency, and on many chips, a lower supply voltage is allowed at lower speeds. Some chips let software lower the voltage and clock when there is little to do.
+ada: For Sprout, we keep it simple: one moderate clock speed, chosen so the work finishes quickly, and deep sleep the rest of the time. Fancy power scaling adds complexity we do not need yet.
+# Chapter Five | The Peripheral Budget
+@zone bench
+N: With the processor sleeping, Ben measures again. Still six hundred microamps while asleep. Something else is awake.
+%table Who is still drawing current?
+- Component | Current
+- Soil probe (always powered) | 350 µA
+- Status LED (dim glow) | 150 µA
+- Voltage regulator (idle) | 60 µA
+- Wi-Fi module (standby) | 40 µA
+- Microcontroller (stop mode) | 5 µA
+ada: The microcontroller itself is the smallest item now. The soil probe is powered all the time, even though we read it once every ten minutes.
+ben: So we power the probe from a pin. Turn it on, wait a few milliseconds to settle, read, turn it off. It goes from always on to on for five milliseconds every ten minutes.
+N: The same idea applies everywhere. The LED only lights briefly when the button is pressed. The Wi-Fi module is fully powered down between uploads, not merely idle. And the voltage regulator gets replaced with one designed for tiny standby currents.
+%list Peripheral power habits
+- Power sensors only while measuring
+- Turn off unused peripheral clocks
+- Put radios in their deepest off state
+- Set unused pins to a defined level
+- Choose a low quiescent current regulator
+ada: Unused pins matter too. A pin left floating as an input can toggle randomly with noise, and each toggle wastes a little current. Configure every unused pin to a defined state.
+N: Then there is the question of what wakes the chip. In deep sleep, most clocks are off. A tiny real-time clock, running from a low-power crystal at thirty-two thousand seven hundred sixty-eight hertz, keeps time and wakes the chip on schedule.
+%blocks Wake sources in deep sleep
+- Real-time clock > Wake:every 10 min
+- Button pin > Wake:pressed
+- Tank sensor > Wake:empty alarm
+- Wake > Do the work, sleep again
+- Do the work, sleep again
+ada: Why that strange number? Thirty-two thousand seven hundred sixty-eight is two to the fifteenth. A fifteen bit counter overflows exactly once per second. Cheap, precise, and it sips nanowatts.
+ben: The button and the tank sensor become wake-up pins. The chip sleeps through everything else, and the moment either one changes, it wakes and handles it.
+# Chapter Six | The Radio Is the Elephant
+@zone screen
+N: The Wi-Fi radio uses more current than everything else combined, when it is on. Hundreds of milliamps during transmission. So the team plans its use carefully.
+%chart Current during one Wi-Fi upload
+- line mA: 0,120,250,180,250,240,90,0
+xl sleep,wake,connect,auth,send,receive,close,sleep
+ada: A single upload, including connecting to the router, can take a few seconds at a hundred milliamps or more. That one event costs as much energy as hours of sleep.
+N: So Sprout batches. It stores readings locally and uploads once every few hours, not every reading. Alerts that truly matter, like an empty tank, can still go out immediately.
+ben: We also cache the connection details, so reconnecting takes less time. Every second saved at full radio power is a few hours of sleep current.
+# Chapter Seven | The New Budget
+@zone screen
+N: With every change in place, the team builds a power budget: each activity, how often it happens, how long it lasts, and how much current it draws. The average is the sum of each current multiplied by its fraction of time.
+%table Sprout's power budget
+- Activity | Current | Time share | Average
+- Deep sleep | 6 µA | 99.9% | 6 µA
+- Soil reading | 4 mA | 0.01% | 0.4 µA
+- Wi-Fi upload, every 4 h | 150 mA | 0.03% | 45 µA
+- Pump, a few seconds a day | 250 mA | 0.006% | 15 µA
+- Total | | | about 70 µA
+ada: About seventy microamps on average. With two thousand milliamp hours, derated for real-world losses, that is a little over two years on paper.
+cy^: Two years! Can we say two years on the box?
+ada: We say one year on the box. Batteries age, cold weather happens, owners press buttons. Promise less than the math, and you will never have to apologize.
+N: There is one more piece: knowing when the batteries are actually low. Sprout measures its own supply voltage with the ADC, against an internal reference, once a day.
+%chart AA battery voltage over its life
+- line Volts per cell: 1.55,1.45,1.38,1.32,1.27,1.22,1.15,1.0,0.8
+xl 0%,12%,25%,37%,50%,62%,75%,87%,100%
+ada: Alkaline cells slope down gently, then fall off a cliff. Sprout warns the owner on the slope, well before the cliff, so the plant never goes unwatered because of a dead battery.
+ben: And the chip has a brown-out detector: if the voltage drops below a safe level, it holds the processor in reset instead of letting it run unreliably. No half-powered pump commands. No corrupted flash writes.
+N@ben^: The real devices confirm it. The measured average is eighty-two microamps. Close enough to the budget to trust it.
+@world droop=0>0
+# Recap | Sleeping Like a Cat
+@zone green
+%list Today we learned
+- Battery life ≈ capacity ÷ average current
+- Measure with a proper tool; watch the spikes
+- Sleep modes trade depth for wake time
+- Duty cycle: wake briefly, sleep deeply
+- Power off sensors, LEDs, radios between uses
+- Batch radio traffic; it dominates the budget
+- Build a power budget, then promise less
+N: To recap. Battery life comes from average current. Measure it properly, including the spikes. Replace busy loops with sleep, and use the deepest sleep mode the design allows.
+N: Wake briefly and sleep long. Power down everything you are not using, especially sensors and radios. Batch communication. And build a power budget so the battery life on the box is a calculation, not a hope.
+cy: One year on two batteries. Sprout is finally ready.
+ada~: Almost. You promised the investors a Sprout that turns toward the sun.
+N@ben!: Next time, the final episode. Motors.
