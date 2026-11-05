@@ -1,0 +1,1317 @@
+{
+ "title": "Test - All Visuals",
+ "format": "long",
+ "voice": "bf_emma",
+ "lang": "en-gb",
+ "speed": 1.05,
+ "cast": {
+  "ada": {
+   "type": "engineer"
+  },
+  "ben": {
+   "type": "worker"
+  },
+  "cy": {
+   "type": "boss"
+  }
+ },
+ "beats": [
+  {
+   "id": "test_001",
+   "narration": "This is the lab where everything happens, and that fern is Gerald.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Part One",
+    "sub": "Diagrams",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "test_002",
+   "narration": "Here is a block diagram with arrows and labels between boxes.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Context Diagram",
+    "nodes": [
+     {
+      "name": "Sensor",
+      "to": [
+       {
+        "n": "MCU",
+        "label": "moisture"
+       }
+      ]
+     },
+     {
+      "name": "MCU",
+      "sub": "STM32",
+      "to": [
+       {
+        "n": "Pump",
+        "label": "on/off"
+       },
+       {
+        "n": "Phone",
+        "label": "Wi-Fi"
+       }
+      ]
+     },
+     {
+      "name": "Pump"
+     },
+     {
+      "name": "Phone"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "test_003",
+   "narration": "Wait, the pump is connected to what?",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "cut": "flash",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "shock",
+     "face": "shock"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Context Diagram",
+    "nodes": [
+     {
+      "name": "Sensor",
+      "to": [
+       {
+        "n": "MCU",
+        "label": "moisture"
+       }
+      ]
+     },
+     {
+      "name": "MCU",
+      "sub": "STM32",
+      "to": [
+       {
+        "n": "Pump",
+        "label": "on/off"
+       },
+       {
+        "n": "Phone",
+        "label": "Wi-Fi"
+       }
+      ]
+     },
+     {
+      "name": "Pump"
+     },
+     {
+      "name": "Phone"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -36,
+    "move": "orbit",
+    "shake": 0.25
+   },
+   "sfx": [
+    {
+     "at": 0.04,
+     "type": "thud",
+     "vol": 0.6
+    }
+   ]
+  },
+  {
+   "id": "test_004",
+   "narration": "Layers. I love layers. Investors love layers.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "smug",
+     "face": "smug"
+    }
+   ],
+   "visual": {
+    "t": "layers",
+    "title": "Layered Architecture",
+    "items": [
+     {
+      "name": "Application",
+      "sub": "watering logic"
+     },
+     {
+      "name": "Services",
+      "sub": "scheduler, logging"
+     },
+     {
+      "name": "Drivers",
+      "sub": "GPIO, ADC, UART"
+     },
+     {
+      "name": "Hardware",
+      "sub": "the actual chip"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "test_005",
+   "narration": "A tiny program that toggles a pin forever.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Blink the LED",
+    "lines": [
+     "#define LED_PIN 5",
+     "int main(void) {",
+     "  gpio_init(LED_PIN);   // set as output",
+     ">  while (1) {",
+     "    gpio_toggle(LED_PIN);",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "test_006",
+   "narration": "Ben stares at the timing chart and worries.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "I2C Start",
+    "rows": [
+     {
+      "name": "SCL",
+      "wave": "1111010101010111"
+     },
+     {
+      "name": "SDA",
+      "wave": "1110==========11",
+      "labels": [
+       "addr",
+       "R/W"
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "test_007",
+   "narration": "Ship it!",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "states",
+    "title": "Watering Machine",
+    "on": "Dry",
+    "states": [
+     {
+      "name": "Idle",
+      "to": [
+       {
+        "n": "Dry",
+        "label": "soil dry"
+       }
+      ]
+     },
+     {
+      "name": "Dry",
+      "to": [
+       {
+        "n": "Watering",
+        "label": "pump on"
+       }
+      ]
+     },
+     {
+      "name": "Watering",
+      "to": [
+       {
+        "n": "Idle",
+        "label": "wet enough"
+       }
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    },
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "test_008",
+   "narration": "Gerald is drooping again.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "world": {
+    "droop": [
+     0.0,
+     1.0
+    ]
+   },
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "dejected",
+     "face": "sad"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "sad"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "sad"
+    }
+   ],
+   "visual": {
+    "t": "memory",
+    "title": "Memory Map",
+    "regions": [
+     {
+      "addr": "0x2000_0000",
+      "name": "RAM",
+      "size": 1.0,
+      "note": "variables"
+     },
+     {
+      "addr": "0x0800_8000",
+      "name": "App",
+      "size": 2.0,
+      "note": "code"
+     },
+     {
+      "addr": "0x0800_0000",
+      "name": "Bootloader",
+      "size": 1.0,
+      "note": "32 KB"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "test_009",
+   "narration": "Bit five is set.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "bits",
+    "title": "GPIOB ODR",
+    "bits": "00100000",
+    "names": [
+     "-",
+     "-",
+     "LED",
+     "-",
+     "-",
+     "-",
+     "-",
+     "-"
+    ],
+    "hl": [
+     5
+    ],
+    "label": "PORTB |= (1 << 5);"
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "test_010",
+   "narration": "Sleeping saves a lot.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Battery Life",
+    "xl": [
+     "Mon",
+     "Tue",
+     "Wed",
+     "Thu",
+     "Fri"
+    ],
+    "series": [
+     {
+      "type": "line",
+      "name": "Always on",
+      "v": [
+       100.0,
+       70.0,
+       40.0,
+       10.0,
+       0.0
+      ]
+     },
+     {
+      "type": "line",
+      "name": "Sleeping",
+      "v": [
+       100.0,
+       95.0,
+       90.0,
+       85.0,
+       80.0
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "test_011",
+   "narration": "Got it!",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "wave",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Buses",
+    "rows": [
+     [
+      "Bus",
+      "Wires",
+      "Speed"
+     ],
+     [
+      "UART",
+      "2",
+      "slow"
+     ],
+     [
+      "SPI",
+      "4",
+      "fast"
+     ],
+     [
+      "I2C",
+      "2",
+      "medium"
+     ]
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    },
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "test_012",
+   "narration": "That is a lot of water.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "big",
+    "text": "40,000\nwatering cycles",
+    "sub": "per year, give or take"
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  }
+ ]
+}
