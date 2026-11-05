@@ -32,6 +32,10 @@ N: To read it, the code drives one row low at a time and reads the columns. If a
 ben?: What if someone presses three keys at once?
 ada: With some combinations, a phantom fourth key appears, because current sneaks through the pressed switches. Diodes on each key prevent that ghosting. For a schedule keypad, we will simply ignore multiple presses.
 N: Each key still bounces, so the matrix scan runs from a timer every few milliseconds, with the same debounce logic as before, just for twelve keys at once.
+ada: Keypads also need a little user interface thinking. What happens if someone holds a key? Auto-repeat after half a second. What if they press nothing for a minute? Time out and return to the home screen.
+cy: And a beep. Every key should beep.
+ben~: Every key will beep. The office will hate us.
+N: Small details like these turn a technically working keypad into one that feels good. They are part of the system too, and they need time in the schedule.
 # Chapter Two | Displays
 @zone screen
 N: Next, the display. There are many kinds: single LEDs, seven-segment digits, character screens, and pixel displays.
@@ -44,6 +48,14 @@ N: Next, the display. There are many kinds: single LEDs, seven-segment digits, c
 ada: A pixel display, even a small one, holds a lot of data. A one hundred twenty-eight by sixty-four monochrome screen is eight thousand one hundred ninety-two pixels, a kilobyte of memory just for one frame.
 N: The code keeps a frame buffer in RAM, draws text and icons into it, and sends it to the display over SPI. Only changed areas need to be resent, which saves time.
 ben: Fonts eat flash. Every character of every size is a little bitmap. Choose one or two fonts, not twelve.
+ada: There is a subtle problem with updating a display. If we redraw the frame buffer while it is being sent to the screen, the top half shows the old picture and the bottom half the new one. That glitch is called tearing.
+%blocks Double-buffered display
+- Draw here (back buffer) > Swap:when complete
+- Swap > Send this (front buffer):SPI
+- Send this (front buffer) > Display
+- Display
+N: The fix is the same idea as with DMA: two buffers. Draw into one while the other is being sent, then swap. It doubles the memory cost, so on a tiny chip, you might instead only redraw areas that are not being sent.
+ben: Or use a display with its own memory, which keeps the picture even when the chip stops sending. Then we only send changes, and the chip can sleep while the screen keeps showing the moisture level.
 # Chapter Three | Flyweights and Factories
 @zone screen
 N: Ada designs the screens: a moisture bar, a water drop icon, a clock. Many elements repeat. The same drop icon appears on four different screens.
@@ -139,6 +151,17 @@ xl 0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9
 ben?: So, those two spikes?
 ada: Flash writes landing on top of display refreshes. The average load is low, but the peaks are what break deadlines. We stagger them so they never coincide.
 N: That is the heart of system design: knowing the worst case, not just the average. Measure peak loads, not just totals.
+ada: Memory gets the same treatment. We add up every buffer: the display frame, the ring buffers, the stacks, the history cache. Then we compare against the eight kilobytes the chip has.
+%table Sprout Pro's RAM budget
+- Item | Bytes
+- Display frame buffer | 1024
+- Serial ring buffers | 256
+- Task stacks | 2048
+- Settings + history cache | 1536
+- Free for growth | 3328
+N: Roughly forty percent free. That margin is not waste. It is the space where next year's features will live, and the cushion that keeps a surprise from becoming a crash.
+cy?: Can we use the free part for the plant music?
+ada~: No.
 # Recap | Assembling the Pro
 @zone green
 %list Today we learned

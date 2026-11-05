@@ -1,0 +1,7767 @@
+{
+ "title": "Episode 8 - Sprout Grows Up",
+ "format": "long",
+ "voice": "bf_emma",
+ "lang": "en-gb",
+ "speed": 1.0,
+ "cast": {
+  "ada": {
+   "type": "engineer"
+  },
+  "ben": {
+   "type": "worker"
+  },
+  "cy": {
+   "type": "boss"
+  }
+ },
+ "beats": [
+  {
+   "id": "ep08_001",
+   "narration": "Investor day is in three weeks.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Episode 8",
+    "sub": "Sprout Grows Up",
+    "dur": 3.4
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     17,
+     0,
+     -8.5
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep08_002",
+   "narration": "Cy has promised a Sprout Pro: a keypad to set schedules, a small display, a watering history stored in memory, and a light sensor so Sprout knows night from day.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     17,
+     0,
+     -8.5
+    ],
+    "az": 10,
+    "move": "crane"
+   }
+  },
+  {
+   "id": "ep08_003",
+   "narration": "Everything we have learned, all in one device. How hard can it be?",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": "cy",
+    "az": 22,
+    "move": "orbit"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep08_004",
+   "narration": "Each piece is easy. Putting them together is the hard part. Today is about systems: how parts fit, how data flows, and how fast it all needs to go.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 26,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_005",
+   "narration": "First, the keypad. Twelve buttons: the digits, a star, and a hash. Wiring each to its own pin would use twelve pins. The trick is a key matrix.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter One",
+    "sub": "A Keypad Without Many Pins",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep08_006",
+   "narration": "The buttons sit at the crossings of four row wires and three column wires. Seven pins instead of twelve. A sixteen key pad needs eight pins instead of sixteen.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "A 4 by 3 key matrix",
+    "cols": 3,
+    "nodes": [
+     {
+      "name": "1"
+     },
+     {
+      "name": "2"
+     },
+     {
+      "name": "3"
+     },
+     {
+      "name": "4"
+     },
+     {
+      "name": "5"
+     },
+     {
+      "name": "6"
+     },
+     {
+      "name": "7"
+     },
+     {
+      "name": "8"
+     },
+     {
+      "name": "9"
+     },
+     {
+      "name": "*"
+     },
+     {
+      "name": "0"
+     },
+     {
+      "name": "#"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_007",
+   "narration": "To read it, the code drives one row low at a time and reads the columns.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Scanning the rows",
+    "rows": [
+     {
+      "name": "Row 1",
+      "wave": "0111011101110111"
+     },
+     {
+      "name": "Row 2",
+      "wave": "1011101110111011"
+     },
+     {
+      "name": "Row 3",
+      "wave": "1101110111011101"
+     },
+     {
+      "name": "Row 4",
+      "wave": "1110111011101110"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_008",
+   "narration": "If a column reads low while row two is driven, the key at row two, that column, is pressed. Scanning all rows takes a fraction of a millisecond.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Scanning the rows",
+    "rows": [
+     {
+      "name": "Row 1",
+      "wave": "0111011101110111"
+     },
+     {
+      "name": "Row 2",
+      "wave": "1011101110111011"
+     },
+     {
+      "name": "Row 3",
+      "wave": "1101110111011101"
+     },
+     {
+      "name": "Row 4",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep08_009",
+   "narration": "What if someone presses three keys at once?",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Scanning the rows",
+    "rows": [
+     {
+      "name": "Row 1",
+      "wave": "0111011101110111"
+     },
+     {
+      "name": "Row 2",
+      "wave": "1011101110111011"
+     },
+     {
+      "name": "Row 3",
+      "wave": "1101110111011101"
+     },
+     {
+      "name": "Row 4",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_010",
+   "narration": "With some combinations, a phantom fourth key appears, because current sneaks through the pressed switches. Diodes on each key prevent that ghosting.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Scanning the rows",
+    "rows": [
+     {
+      "name": "Row 1",
+      "wave": "0111011101110111"
+     },
+     {
+      "name": "Row 2",
+      "wave": "1011101110111011"
+     },
+     {
+      "name": "Row 3",
+      "wave": "1101110111011101"
+     },
+     {
+      "name": "Row 4",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep08_011",
+   "narration": "For a schedule keypad, we will simply ignore multiple presses.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Scanning the rows",
+    "rows": [
+     {
+      "name": "Row 1",
+      "wave": "0111011101110111"
+     },
+     {
+      "name": "Row 2",
+      "wave": "1011101110111011"
+     },
+     {
+      "name": "Row 3",
+      "wave": "1101110111011101"
+     },
+     {
+      "name": "Row 4",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_012",
+   "narration": "Each key still bounces, so the matrix scan runs from a timer every few milliseconds, with the same debounce logic as before, just for twelve keys at once.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Scanning the rows",
+    "rows": [
+     {
+      "name": "Row 1",
+      "wave": "0111011101110111"
+     },
+     {
+      "name": "Row 2",
+      "wave": "1011101110111011"
+     },
+     {
+      "name": "Row 3",
+      "wave": "1101110111011101"
+     },
+     {
+      "name": "Row 4",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep08_013",
+   "narration": "Keypads also need a little user interface thinking. What happens if someone holds a key? Auto-repeat after half a second. What if they press nothing for a minute?",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Scanning the rows",
+    "rows": [
+     {
+      "name": "Row 1",
+      "wave": "0111011101110111"
+     },
+     {
+      "name": "Row 2",
+      "wave": "1011101110111011"
+     },
+     {
+      "name": "Row 3",
+      "wave": "1101110111011101"
+     },
+     {
+      "name": "Row 4",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep08_014",
+   "narration": "Time out and return to the home screen.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Scanning the rows",
+    "rows": [
+     {
+      "name": "Row 1",
+      "wave": "0111011101110111"
+     },
+     {
+      "name": "Row 2",
+      "wave": "1011101110111011"
+     },
+     {
+      "name": "Row 3",
+      "wave": "1101110111011101"
+     },
+     {
+      "name": "Row 4",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep08_015",
+   "narration": "And a beep. Every key should beep.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "present",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Scanning the rows",
+    "rows": [
+     {
+      "name": "Row 1",
+      "wave": "0111011101110111"
+     },
+     {
+      "name": "Row 2",
+      "wave": "1011101110111011"
+     },
+     {
+      "name": "Row 3",
+      "wave": "1101110111011101"
+     },
+     {
+      "name": "Row 4",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "cy",
+    "az": -46,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep08_016",
+   "narration": "Every key will beep. The office will hate us.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "smug",
+     "face": "smug"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Scanning the rows",
+    "rows": [
+     {
+      "name": "Row 1",
+      "wave": "0111011101110111"
+     },
+     {
+      "name": "Row 2",
+      "wave": "1011101110111011"
+     },
+     {
+      "name": "Row 3",
+      "wave": "1101110111011101"
+     },
+     {
+      "name": "Row 4",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "low",
+    "f": "ben",
+    "az": -20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_017",
+   "narration": "Small details like these turn a technically working keypad into one that feels good. They are part of the system too, and they need time in the schedule.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Scanning the rows",
+    "rows": [
+     {
+      "name": "Row 1",
+      "wave": "0111011101110111"
+     },
+     {
+      "name": "Row 2",
+      "wave": "1011101110111011"
+     },
+     {
+      "name": "Row 3",
+      "wave": "1101110111011101"
+     },
+     {
+      "name": "Row 4",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep08_018",
+   "narration": "Next, the display. There are many kinds: single LEDs, seven-segment digits, character screens, and pixel displays.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Two",
+    "sub": "Displays",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep08_019",
+   "narration": "A pixel display, even a small one, holds a lot of data.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Display options",
+    "rows": [
+     [
+      "Type",
+      "Shows",
+      "Effort"
+     ],
+     [
+      "Status LED",
+      "on, off, blink",
+      "trivial"
+     ],
+     [
+      "Seven-segment",
+      "digits",
+      "low"
+     ],
+     [
+      "Character LCD",
+      "text rows",
+      "medium"
+     ],
+     [
+      "Pixel display",
+      "anything",
+      "high"
+     ]
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_020",
+   "narration": "A one hundred twenty-eight by sixty-four monochrome screen is eight thousand one hundred ninety-two pixels, a kilobyte of memory just for one frame.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Display options",
+    "rows": [
+     [
+      "Type",
+      "Shows",
+      "Effort"
+     ],
+     [
+      "Status LED",
+      "on, off, blink",
+      "trivial"
+     ],
+     [
+      "Seven-segment",
+      "digits",
+      "low"
+     ],
+     [
+      "Character LCD",
+      "text rows",
+      "medium"
+     ],
+     [
+      "Pixel display",
+      "anything",
+      "high"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep08_021",
+   "narration": "The code keeps a frame buffer in RAM, draws text and icons into it, and sends it to the display over SPI.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Display options",
+    "rows": [
+     [
+      "Type",
+      "Shows",
+      "Effort"
+     ],
+     [
+      "Status LED",
+      "on, off, blink",
+      "trivial"
+     ],
+     [
+      "Seven-segment",
+      "digits",
+      "low"
+     ],
+     [
+      "Character LCD",
+      "text rows",
+      "medium"
+     ],
+     [
+      "Pixel display",
+      "anything",
+      "high"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep08_022",
+   "narration": "Only changed areas need to be resent, which saves time.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Display options",
+    "rows": [
+     [
+      "Type",
+      "Shows",
+      "Effort"
+     ],
+     [
+      "Status LED",
+      "on, off, blink",
+      "trivial"
+     ],
+     [
+      "Seven-segment",
+      "digits",
+      "low"
+     ],
+     [
+      "Character LCD",
+      "text rows",
+      "medium"
+     ],
+     [
+      "Pixel display",
+      "anything",
+      "high"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep08_023",
+   "narration": "Fonts eat flash. Every character of every size is a little bitmap. Choose one or two fonts, not twelve.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Display options",
+    "rows": [
+     [
+      "Type",
+      "Shows",
+      "Effort"
+     ],
+     [
+      "Status LED",
+      "on, off, blink",
+      "trivial"
+     ],
+     [
+      "Seven-segment",
+      "digits",
+      "low"
+     ],
+     [
+      "Character LCD",
+      "text rows",
+      "medium"
+     ],
+     [
+      "Pixel display",
+      "anything",
+      "high"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep08_024",
+   "narration": "There is a subtle problem with updating a display.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Display options",
+    "rows": [
+     [
+      "Type",
+      "Shows",
+      "Effort"
+     ],
+     [
+      "Status LED",
+      "on, off, blink",
+      "trivial"
+     ],
+     [
+      "Seven-segment",
+      "digits",
+      "low"
+     ],
+     [
+      "Character LCD",
+      "text rows",
+      "medium"
+     ],
+     [
+      "Pixel display",
+      "anything",
+      "high"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_025",
+   "narration": "If we redraw the frame buffer while it is being sent to the screen, the top half shows the old picture and the bottom half the new one.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Display options",
+    "rows": [
+     [
+      "Type",
+      "Shows",
+      "Effort"
+     ],
+     [
+      "Status LED",
+      "on, off, blink",
+      "trivial"
+     ],
+     [
+      "Seven-segment",
+      "digits",
+      "low"
+     ],
+     [
+      "Character LCD",
+      "text rows",
+      "medium"
+     ],
+     [
+      "Pixel display",
+      "anything",
+      "high"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep08_026",
+   "narration": "That glitch is called tearing.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Display options",
+    "rows": [
+     [
+      "Type",
+      "Shows",
+      "Effort"
+     ],
+     [
+      "Status LED",
+      "on, off, blink",
+      "trivial"
+     ],
+     [
+      "Seven-segment",
+      "digits",
+      "low"
+     ],
+     [
+      "Character LCD",
+      "text rows",
+      "medium"
+     ],
+     [
+      "Pixel display",
+      "anything",
+      "high"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep08_027",
+   "narration": "The fix is the same idea as with DMA: two buffers. Draw into one while the other is being sent, then swap.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Double-buffered display",
+    "nodes": [
+     {
+      "name": "Draw here",
+      "sub": "back buffer",
+      "to": [
+       {
+        "n": "Swap",
+        "label": "when complete"
+       }
+      ]
+     },
+     {
+      "name": "Swap",
+      "to": [
+       {
+        "n": "Send this (front buffer)",
+        "label": "SPI"
+       }
+      ]
+     },
+     {
+      "name": "Send this",
+      "sub": "front buffer",
+      "to": [
+       {
+        "n": "Display"
+       }
+      ]
+     },
+     {
+      "name": "Display"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_028",
+   "narration": "It doubles the memory cost, so on a tiny chip, you might instead only redraw areas that are not being sent.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Double-buffered display",
+    "nodes": [
+     {
+      "name": "Draw here",
+      "sub": "back buffer",
+      "to": [
+       {
+        "n": "Swap",
+        "label": "when complete"
+       }
+      ]
+     },
+     {
+      "name": "Swap",
+      "to": [
+       {
+        "n": "Send this (front buffer)",
+        "label": "SPI"
+       }
+      ]
+     },
+     {
+      "name": "Send this",
+      "sub": "front buffer",
+      "to": [
+       {
+        "n": "Display"
+       }
+      ]
+     },
+     {
+      "name": "Display"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep08_029",
+   "narration": "Or use a display with its own memory, which keeps the picture even when the chip stops sending.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Double-buffered display",
+    "nodes": [
+     {
+      "name": "Draw here",
+      "sub": "back buffer",
+      "to": [
+       {
+        "n": "Swap",
+        "label": "when complete"
+       }
+      ]
+     },
+     {
+      "name": "Swap",
+      "to": [
+       {
+        "n": "Send this (front buffer)",
+        "label": "SPI"
+       }
+      ]
+     },
+     {
+      "name": "Send this",
+      "sub": "front buffer",
+      "to": [
+       {
+        "n": "Display"
+       }
+      ]
+     },
+     {
+      "name": "Display"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_030",
+   "narration": "Then we only send changes, and the chip can sleep while the screen keeps showing the moisture level.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Double-buffered display",
+    "nodes": [
+     {
+      "name": "Draw here",
+      "sub": "back buffer",
+      "to": [
+       {
+        "n": "Swap",
+        "label": "when complete"
+       }
+      ]
+     },
+     {
+      "name": "Swap",
+      "to": [
+       {
+        "n": "Send this (front buffer)",
+        "label": "SPI"
+       }
+      ]
+     },
+     {
+      "name": "Send this",
+      "sub": "front buffer",
+      "to": [
+       {
+        "n": "Display"
+       }
+      ]
+     },
+     {
+      "name": "Display"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep08_031",
+   "narration": "Ada designs the screens: a moisture bar, a water drop icon, a clock. Many elements repeat. The same drop icon appears on four different screens.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Three",
+    "sub": "Flyweights and Factories",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep08_032",
+   "narration": "If each screen stored its own copy of every icon, we would run out of memory. Instead, we store each icon once, in flash, and screens just point to it.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep08_033",
+   "narration": "That is the flyweight pattern: share the heavy, unchanging part, keep only the small varying part separate.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep08_034",
+   "narration": "Each screen keeps only where to draw the icon. The pixels live in one place. With dozens of icons and characters, the savings are enormous.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Flyweight icons",
+    "nodes": [
+     {
+      "name": "Home screen",
+      "sub": "x=10",
+      "to": [
+       {
+        "n": "Drop icon (stored once)"
+       }
+      ]
+     },
+     {
+      "name": "History screen",
+      "sub": "x=40",
+      "to": [
+       {
+        "n": "Drop icon (stored once)"
+       }
+      ]
+     },
+     {
+      "name": "Settings screen",
+      "sub": "x=70",
+      "to": [
+       {
+        "n": "Drop icon (stored once)"
+       }
+      ]
+     },
+     {
+      "name": "Drop icon",
+      "sub": "stored once"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_035",
+   "narration": "And to create those screen elements, we use a factory: a single function that takes a description, like a button with this label at this position, and builds the right object.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Flyweight icons",
+    "nodes": [
+     {
+      "name": "Home screen",
+      "sub": "x=10",
+      "to": [
+       {
+        "n": "Drop icon (stored once)"
+       }
+      ]
+     },
+     {
+      "name": "History screen",
+      "sub": "x=40",
+      "to": [
+       {
+        "n": "Drop icon (stored once)"
+       }
+      ]
+     },
+     {
+      "name": "Settings screen",
+      "sub": "x=70",
+      "to": [
+       {
+        "n": "Drop icon (stored once)"
+       }
+      ]
+     },
+     {
+      "name": "Drop icon",
+      "sub": "stored once"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep08_036",
+   "narration": "The rest of the code never deals with construction details.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Flyweight icons",
+    "nodes": [
+     {
+      "name": "Home screen",
+      "sub": "x=10",
+      "to": [
+       {
+        "n": "Drop icon (stored once)"
+       }
+      ]
+     },
+     {
+      "name": "History screen",
+      "sub": "x=40",
+      "to": [
+       {
+        "n": "Drop icon (stored once)"
+       }
+      ]
+     },
+     {
+      "name": "Settings screen",
+      "sub": "x=70",
+      "to": [
+       {
+        "n": "Drop icon (stored once)"
+       }
+      ]
+     },
+     {
+      "name": "Drop icon",
+      "sub": "stored once"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_037",
+   "narration": "So if we change how icons are built, only the factory changes. Every screen keeps calling ui make.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "A tiny widget factory",
+    "lines": [
+     "widget_t *ui_make(widget_kind_t kind, int x, int y, const char *text) {",
+     "  switch (kind) {",
+     "  case W_LABEL:  return label_create(x, y, text);",
+     "  case W_BAR:    return bar_create(x, y);",
+     ">  case W_ICON:   return icon_create(x, y, icon_lookup(text));",
+     "  }",
+     "  return NULL;",
+     "}"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_038",
+   "narration": "Sprout Pro must remember its settings and watering history when the batteries are swapped. RAM forgets everything without power. So the data goes into flash memory.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Four",
+    "sub": "Memory That Remembers",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep08_039",
+   "narration": "Flash has strange rules. You cannot simply overwrite a byte. Writing can only change ones to zeros.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Flash memory rules",
+    "items": [
+     "Erased flash reads as all ones",
+     "Writing can only turn ones into zeros",
+     "Erasing works on whole sectors",
+     "Each sector survives limited erases"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_040",
+   "narration": "To get ones back, you must erase an entire sector, often four kilobytes at once.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Flash memory rules",
+    "items": [
+     "Erased flash reads as all ones",
+     "Writing can only turn ones into zeros",
+     "Erasing works on whole sectors",
+     "Each sector survives limited erases"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep08_041",
+   "narration": "And each sector can only be erased so many times, perhaps ten thousand to a hundred thousand.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Flash memory rules",
+    "items": [
+     "Erased flash reads as all ones",
+     "Writing can only turn ones into zeros",
+     "Erasing works on whole sectors",
+     "Each sector survives limited erases"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_042",
+   "narration": "So if we save the settings every minute in the same spot, we wear it out?",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "cut": "flash",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "shock",
+     "face": "shock"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Flash memory rules",
+    "items": [
+     "Erased flash reads as all ones",
+     "Writing can only turn ones into zeros",
+     "Erasing works on whole sectors",
+     "Each sector survives limited erases"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.04,
+     "type": "thud",
+     "vol": 0.6
+    }
+   ]
+  },
+  {
+   "id": "ep08_043",
+   "narration": "In about a week, for some chips. Which is why we need to spread the writes around.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Flash memory rules",
+    "items": [
+     "Erased flash reads as all ones",
+     "Writing can only turn ones into zeros",
+     "Erasing works on whole sectors",
+     "Each sector survives limited erases"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep08_044",
+   "narration": "One approach is EEPROM emulation: a small library that makes flash behave like a byte-writable memory.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Flash memory rules",
+    "items": [
+     "Erased flash reads as all ones",
+     "Writing can only turn ones into zeros",
+     "Erasing works on whole sectors",
+     "Each sector survives limited erases"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep08_045",
+   "narration": "It writes new values to fresh locations and only erases a sector when it fills up, spreading the wear.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Flash memory rules",
+    "items": [
+     "Erased flash reads as all ones",
+     "Writing can only turn ones into zeros",
+     "Erasing works on whole sectors",
+     "Each sector survives limited erases"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep08_046",
+   "narration": "For settings, a key-value store is even friendlier. Save a value under a name, like water amount, and read it back by name.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "memory",
+    "title": "Wear leveling with a log",
+    "regions": [
+     {
+      "addr": "Sector B",
+      "name": "Newer records",
+      "size": 1.0,
+      "note": "fills next"
+     },
+     {
+      "addr": "Sector A",
+      "name": "Older records",
+      "size": 1.0,
+      "note": "erased when full"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_047",
+   "narration": "Internally, it appends records and keeps the latest one for each key.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "memory",
+    "title": "Wear leveling with a log",
+    "regions": [
+     {
+      "addr": "Sector B",
+      "name": "Newer records",
+      "size": 1.0,
+      "note": "fills next"
+     },
+     {
+      "addr": "Sector A",
+      "name": "Older records",
+      "size": 1.0,
+      "note": "erased when full"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep08_048",
+   "narration": "For larger data, like a long watering history, a small file system designed for flash handles wear leveling, and crucially, survives power loss in the middle of a write without corrupting everything.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "memory",
+    "title": "Wear leveling with a log",
+    "regions": [
+     {
+      "addr": "Sector B",
+      "name": "Newer records",
+      "size": 1.0,
+      "note": "fills next"
+     },
+     {
+      "addr": "Sector A",
+      "name": "Older records",
+      "size": 1.0,
+      "note": "erased when full"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep08_049",
+   "narration": "Power loss is the real test. Pull the batteries mid-save, a hundred times. If the data comes back sane every time, you have a storage design you can trust.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "memory",
+    "title": "Wear leveling with a log",
+    "regions": [
+     {
+      "addr": "Sector B",
+      "name": "Newer records",
+      "size": 1.0,
+      "note": "fills next"
+     },
+     {
+      "addr": "Sector A",
+      "name": "Older records",
+      "size": 1.0,
+      "note": "erased when full"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_050",
+   "narration": "Now the light sensor. Ben has two options: an analog light sensor that outputs a voltage, and a digital one that speaks I squared C.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Five",
+    "sub": "Sensors: Analog and Digital",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep08_051",
+   "narration": "Analog sensors are simple and cheap, but the code must convert voltages into meaningful units, and calibrate for each sensor's quirks.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Analog vs digital sensors",
+    "rows": [
+     [
+      "",
+      "Analog",
+      "Digital"
+     ],
+     [
+      "Output",
+      "a voltage",
+      "numbers over a bus"
+     ],
+     [
+      "Needs",
+      "ADC + calibration",
+      "a driver"
+     ],
+     [
+      "Noise",
+      "picks it up on wires",
+      "mostly immune"
+     ],
+     [
+      "Price",
+      "cheaper",
+      "more features"
+     ]
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_052",
+   "narration": "Electrical noise on the wire becomes noise in your data.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Analog vs digital sensors",
+    "rows": [
+     [
+      "",
+      "Analog",
+      "Digital"
+     ],
+     [
+      "Output",
+      "a voltage",
+      "numbers over a bus"
+     ],
+     [
+      "Needs",
+      "ADC + calibration",
+      "a driver"
+     ],
+     [
+      "Noise",
+      "picks it up on wires",
+      "mostly immune"
+     ],
+     [
+      "Price",
+      "cheaper",
+      "more features"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 20,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep08_053",
+   "narration": "Digital sensors do the conversion internally and send calibrated numbers. Many add features: configurable ranges, alerts, low power modes. The cost is a driver, and reading a longer datasheet.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Analog vs digital sensors",
+    "rows": [
+     [
+      "",
+      "Analog",
+      "Digital"
+     ],
+     [
+      "Output",
+      "a voltage",
+      "numbers over a bus"
+     ],
+     [
+      "Needs",
+      "ADC + calibration",
+      "a driver"
+     ],
+     [
+      "Noise",
+      "picks it up on wires",
+      "mostly immune"
+     ],
+     [
+      "Price",
+      "cheaper",
+      "more features"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep08_054",
+   "narration": "We go digital for light. But the soil probe stays analog, because there are no cheap digital soil sensors that survive being buried in mud.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Analog vs digital sensors",
+    "rows": [
+     [
+      "",
+      "Analog",
+      "Digital"
+     ],
+     [
+      "Output",
+      "a voltage",
+      "numbers over a bus"
+     ],
+     [
+      "Needs",
+      "ADC + calibration",
+      "a driver"
+     ],
+     [
+      "Noise",
+      "picks it up on wires",
+      "mostly immune"
+     ],
+     [
+      "Price",
+      "cheaper",
+      "more features"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep08_055",
+   "narration": "Ada wants different watering behavior for different plants. A cactus wants rare, deep watering. A fern wants frequent, gentle sips. Same inputs, different decisions.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Six",
+    "sub": "The Strategy Pattern",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep08_056",
+   "narration": "Instead of an enormous if statement, we use the strategy pattern: each watering style is a separate, swappable algorithm with the same interface.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_057",
+   "narration": "The watering logic calls the current strategy's dose function. Choosing cactus mode just switches a pointer. New plant types do not touch the core logic.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Watering strategies",
+    "lines": [
+     "typedef struct {",
+     "  const char *name;",
+     "  uint16_t (*dose_ml)(uint16_t moisture, uint16_t light);",
+     "} strategy_t;",
+     "",
+     "const strategy_t fern   = { \"fern\",   fern_dose };",
+     ">const strategy_t cactus = { \"cactus\", cactus_dose };"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_058",
+   "narration": "We can sell plant packs! Orchid mode, three ninety-nine!",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Watering strategies",
+    "lines": [
+     "typedef struct {",
+     "  const char *name;",
+     "  uint16_t (*dose_ml)(uint16_t moisture, uint16_t light);",
+     "} strategy_t;",
+     "",
+     "const strategy_t fern   = { \"fern\",   fern_dose };",
+     ">const strategy_t cactus = { \"cactus\", cactus_dose };"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep08_059",
+   "narration": "And there it is.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "smug",
+     "face": "smug"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Watering strategies",
+    "lines": [
+     "typedef struct {",
+     "  const char *name;",
+     "  uint16_t (*dose_ml)(uint16_t moisture, uint16_t light);",
+     "} strategy_t;",
+     "",
+     "const strategy_t fern   = { \"fern\",   fern_dose };",
+     ">const strategy_t cactus = { \"cactus\", cactus_dose };"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_060",
+   "narration": "Sensor data rarely arrives ready to use. It needs cleaning, converting, and combining.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Seven",
+    "sub": "Pipelines and Filters",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep08_061",
+   "narration": "A clean way to organize that is a pipeline: a chain of small stages, each doing one job.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   }
+  },
+  {
+   "id": "ep08_062",
+   "narration": "Each stage takes data in, transforms it, and passes it on. Remove spikes throws out readings that are wildly different from their neighbors. Average smooths the noise. Convert applies calibration.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "The moisture pipeline",
+    "nodes": [
+     {
+      "name": "ADC samples",
+      "to": [
+       {
+        "n": "Remove spikes"
+       }
+      ]
+     },
+     {
+      "name": "Remove spikes",
+      "to": [
+       {
+        "n": "Average"
+       }
+      ]
+     },
+     {
+      "name": "Average",
+      "to": [
+       {
+        "n": "Convert to percent"
+       }
+      ]
+     },
+     {
+      "name": "Convert to percent",
+      "to": [
+       {
+        "n": "Decide"
+       }
+      ]
+     },
+     {
+      "name": "Decide"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_063",
+   "narration": "Decide uses the result.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "The moisture pipeline",
+    "nodes": [
+     {
+      "name": "ADC samples",
+      "to": [
+       {
+        "n": "Remove spikes"
+       }
+      ]
+     },
+     {
+      "name": "Remove spikes",
+      "to": [
+       {
+        "n": "Average"
+       }
+      ]
+     },
+     {
+      "name": "Average",
+      "to": [
+       {
+        "n": "Convert to percent"
+       }
+      ]
+     },
+     {
+      "name": "Convert to percent",
+      "to": [
+       {
+        "n": "Decide"
+       }
+      ]
+     },
+     {
+      "name": "Decide"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep08_064",
+   "narration": "Because stages share a simple interface, you can test each one alone, reorder them, or insert a new one, like temperature compensation, without rewriting the others.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "The moisture pipeline",
+    "nodes": [
+     {
+      "name": "ADC samples",
+      "to": [
+       {
+        "n": "Remove spikes"
+       }
+      ]
+     },
+     {
+      "name": "Remove spikes",
+      "to": [
+       {
+        "n": "Average"
+       }
+      ]
+     },
+     {
+      "name": "Average",
+      "to": [
+       {
+        "n": "Convert to percent"
+       }
+      ]
+     },
+     {
+      "name": "Convert to percent",
+      "to": [
+       {
+        "n": "Decide"
+       }
+      ]
+     },
+     {
+      "name": "Decide"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     6,
+     0,
+     -10
+    ],
+    "az": -32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep08_065",
+   "narration": "And it matches how engineers think about signals. You can draw it on a whiteboard, and the code looks just like the drawing.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "The moisture pipeline",
+    "nodes": [
+     {
+      "name": "ADC samples",
+      "to": [
+       {
+        "n": "Remove spikes"
+       }
+      ]
+     },
+     {
+      "name": "Remove spikes",
+      "to": [
+       {
+        "n": "Average"
+       }
+      ]
+     },
+     {
+      "name": "Average",
+      "to": [
+       {
+        "n": "Convert to percent"
+       }
+      ]
+     },
+     {
+      "name": "Convert to percent",
+      "to": [
+       {
+        "n": "Decide"
+       }
+      ]
+     },
+     {
+      "name": "Decide"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep08_066",
+   "narration": "Finally, the question that ties a system together: is it fast enough, and is there room?",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Eight",
+    "sub": "Speeds and Feeds",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep08_067",
+   "narration": "Engineers sometimes call this speeds and feeds: how much data flows through each part, and how fast each part can handle it.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   }
+  },
+  {
+   "id": "ep08_068",
+   "narration": "For each path, compare the rate you need with the rate available, and leave a healthy margin.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Sprout Pro's data budget",
+    "rows": [
+     [
+      "Path",
+      "Rate needed",
+      "Capacity"
+     ],
+     [
+      "Soil ADC",
+      "10 samples / s",
+      "1,000,000 / s"
+     ],
+     [
+      "Light sensor",
+      "1 read / s",
+      "400 kbit/s bus"
+     ],
+     [
+      "Display refresh",
+      "1 KB, 5 times / s",
+      "8 Mbit/s SPI"
+     ],
+     [
+      "History log",
+      "1 record / min",
+      "flash: ok"
+     ]
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_069",
+   "narration": "Sending one kilobyte to the display five times a second over an eight megabit SPI bus takes about five milliseconds per second. That is fine.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Sprout Pro's data budget",
+    "rows": [
+     [
+      "Path",
+      "Rate needed",
+      "Capacity"
+     ],
+     [
+      "Soil ADC",
+      "10 samples / s",
+      "1,000,000 / s"
+     ],
+     [
+      "Light sensor",
+      "1 read / s",
+      "400 kbit/s bus"
+     ],
+     [
+      "Display refresh",
+      "1 KB, 5 times / s",
+      "8 Mbit/s SPI"
+     ],
+     [
+      "History log",
+      "1 record / min",
+      "flash: ok"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_070",
+   "narration": "The danger is in the combinations.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Sprout Pro's data budget",
+    "rows": [
+     [
+      "Path",
+      "Rate needed",
+      "Capacity"
+     ],
+     [
+      "Soil ADC",
+      "10 samples / s",
+      "1,000,000 / s"
+     ],
+     [
+      "Light sensor",
+      "1 read / s",
+      "400 kbit/s bus"
+     ],
+     [
+      "Display refresh",
+      "1 KB, 5 times / s",
+      "8 Mbit/s SPI"
+     ],
+     [
+      "History log",
+      "1 record / min",
+      "flash: ok"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep08_071",
+   "narration": "The display update, the sensor read, and a flash write can all want the same bus, or the same processor time, at the same moment.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Sprout Pro's data budget",
+    "rows": [
+     [
+      "Path",
+      "Rate needed",
+      "Capacity"
+     ],
+     [
+      "Soil ADC",
+      "10 samples / s",
+      "1,000,000 / s"
+     ],
+     [
+      "Light sensor",
+      "1 read / s",
+      "400 kbit/s bus"
+     ],
+     [
+      "Display refresh",
+      "1 KB, 5 times / s",
+      "8 Mbit/s SPI"
+     ],
+     [
+      "History log",
+      "1 record / min",
+      "flash: ok"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep08_072",
+   "narration": "So, those two spikes?",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Processor load over one second",
+    "xl": [
+     "0",
+     "0.1",
+     "0.2",
+     "0.3",
+     "0.4",
+     "0.5",
+     "0.6",
+     "0.7",
+     "0.8",
+     "0.9"
+    ],
+    "series": [
+     {
+      "type": "bar",
+      "name": "Busy percent",
+      "v": [
+       12.0,
+       15.0,
+       64.0,
+       14.0,
+       12.0,
+       18.0,
+       13.0,
+       71.0,
+       12.0,
+       14.0
+      ]
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_073",
+   "narration": "Flash writes landing on top of display refreshes. The average load is low, but the peaks are what break deadlines. We stagger them so they never coincide.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Processor load over one second",
+    "xl": [
+     "0",
+     "0.1",
+     "0.2",
+     "0.3",
+     "0.4",
+     "0.5",
+     "0.6",
+     "0.7",
+     "0.8",
+     "0.9"
+    ],
+    "series": [
+     {
+      "type": "bar",
+      "name": "Busy percent",
+      "v": [
+       12.0,
+       15.0,
+       64.0,
+       14.0,
+       12.0,
+       18.0,
+       13.0,
+       71.0,
+       12.0,
+       14.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep08_074",
+   "narration": "That is the heart of system design: knowing the worst case, not just the average. Measure peak loads, not just totals.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Processor load over one second",
+    "xl": [
+     "0",
+     "0.1",
+     "0.2",
+     "0.3",
+     "0.4",
+     "0.5",
+     "0.6",
+     "0.7",
+     "0.8",
+     "0.9"
+    ],
+    "series": [
+     {
+      "type": "bar",
+      "name": "Busy percent",
+      "v": [
+       12.0,
+       15.0,
+       64.0,
+       14.0,
+       12.0,
+       18.0,
+       13.0,
+       71.0,
+       12.0,
+       14.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep08_075",
+   "narration": "Memory gets the same treatment. We add up every buffer: the display frame, the ring buffers, the stacks, the history cache.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Processor load over one second",
+    "xl": [
+     "0",
+     "0.1",
+     "0.2",
+     "0.3",
+     "0.4",
+     "0.5",
+     "0.6",
+     "0.7",
+     "0.8",
+     "0.9"
+    ],
+    "series": [
+     {
+      "type": "bar",
+      "name": "Busy percent",
+      "v": [
+       12.0,
+       15.0,
+       64.0,
+       14.0,
+       12.0,
+       18.0,
+       13.0,
+       71.0,
+       12.0,
+       14.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep08_076",
+   "narration": "Then we compare against the eight kilobytes the chip has.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "chart",
+    "title": "Processor load over one second",
+    "xl": [
+     "0",
+     "0.1",
+     "0.2",
+     "0.3",
+     "0.4",
+     "0.5",
+     "0.6",
+     "0.7",
+     "0.8",
+     "0.9"
+    ],
+    "series": [
+     {
+      "type": "bar",
+      "name": "Busy percent",
+      "v": [
+       12.0,
+       15.0,
+       64.0,
+       14.0,
+       12.0,
+       18.0,
+       13.0,
+       71.0,
+       12.0,
+       14.0
+      ]
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_077",
+   "narration": "Roughly forty percent free. That margin is not waste. It is the space where next year's features will live, and the cushion that keeps a surprise from becoming a crash.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Sprout Pro's RAM budget",
+    "rows": [
+     [
+      "Item",
+      "Bytes"
+     ],
+     [
+      "Display frame buffer",
+      "1024"
+     ],
+     [
+      "Serial ring buffers",
+      "256"
+     ],
+     [
+      "Task stacks",
+      "2048"
+     ],
+     [
+      "Settings + history cache",
+      "1536"
+     ],
+     [
+      "Free for growth",
+      "3328"
+     ]
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_078",
+   "narration": "Can we use the free part for the plant music?",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Sprout Pro's RAM budget",
+    "rows": [
+     [
+      "Item",
+      "Bytes"
+     ],
+     [
+      "Display frame buffer",
+      "1024"
+     ],
+     [
+      "Serial ring buffers",
+      "256"
+     ],
+     [
+      "Task stacks",
+      "2048"
+     ],
+     [
+      "Settings + history cache",
+      "1536"
+     ],
+     [
+      "Free for growth",
+      "3328"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep08_079",
+   "narration": "No.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "smug",
+     "face": "smug"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Sprout Pro's RAM budget",
+    "rows": [
+     [
+      "Item",
+      "Bytes"
+     ],
+     [
+      "Display frame buffer",
+      "1024"
+     ],
+     [
+      "Serial ring buffers",
+      "256"
+     ],
+     [
+      "Task stacks",
+      "2048"
+     ],
+     [
+      "Settings + history cache",
+      "1536"
+     ],
+     [
+      "Free for growth",
+      "3328"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_080",
+   "narration": "To recap. A key matrix reads many buttons with few pins. Displays need memory for frames and fonts, and flyweights keep shared images from multiplying.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Recap",
+    "sub": "Assembling the Pro",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Key matrices save pins; scan and debounce",
+     "Displays need frame buffers and fonts",
+     "Flyweights share heavy data; factories build objects",
+     "Flash wears out: spread the writes",
+     "Analog sensors are cheap; digital are easier",
+     "Strategy swaps algorithms; pipelines chain stages",
+     "Budget data rates, and watch the peaks"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    },
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep08_081",
+   "narration": "Flash memory wears out, so wear leveling, key-value stores, and power-safe file systems protect your data. Analog sensors trade simplicity for calibration work; digital ones trade price for convenience.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Key matrices save pins; scan and debounce",
+     "Displays need frame buffers and fonts",
+     "Flyweights share heavy data; factories build objects",
+     "Flash wears out: spread the writes",
+     "Analog sensors are cheap; digital are easier",
+     "Strategy swaps algorithms; pipelines chain stages",
+     "Budget data rates, and watch the peaks"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep08_082",
+   "narration": "The strategy pattern swaps decisions cleanly, pipelines chain small processing stages, and speeds and feeds keeps every data path within budget.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Key matrices save pins; scan and debounce",
+     "Displays need frame buffers and fonts",
+     "Flyweights share heavy data; factories build objects",
+     "Flash wears out: spread the writes",
+     "Analog sensors are cheap; digital are easier",
+     "Strategy swaps algorithms; pipelines chain stages",
+     "Budget data rates, and watch the peaks"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     17,
+     0,
+     -8.5
+    ],
+    "az": 10,
+    "move": "crane"
+   }
+  },
+  {
+   "id": "ep08_083",
+   "narration": "Investor day is going to be amazing.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Key matrices save pins; scan and debounce",
+     "Displays need frame buffers and fonts",
+     "Flyweights share heavy data; factories build objects",
+     "Flash wears out: spread the writes",
+     "Analog sensors are cheap; digital are easier",
+     "Strategy swaps algorithms; pipelines chain stages",
+     "Budget data rates, and watch the peaks"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "cy",
+    "az": 22,
+    "move": "orbit"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep08_084",
+   "narration": "Investor day is in three weeks, and Sprout Pro just rebooted by itself. Twice.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Key matrices save pins; scan and debounce",
+     "Displays need frame buffers and fonts",
+     "Flyweights share heavy data; factories build objects",
+     "Flash wears out: spread the writes",
+     "Analog sensors are cheap; digital are easier",
+     "Strategy swaps algorithms; pipelines chain stages",
+     "Budget data rates, and watch the peaks"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 26,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep08_085",
+   "narration": "Next time: bugs that should be impossible.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "cut": "flash",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "shock",
+     "face": "shock"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Key matrices save pins; scan and debounce",
+     "Displays need frame buffers and fonts",
+     "Flyweights share heavy data; factories build objects",
+     "Flash wears out: spread the writes",
+     "Analog sensors are cheap; digital are easier",
+     "Strategy swaps algorithms; pipelines chain stages",
+     "Budget data rates, and watch the peaks"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -28,
+    "move": "pull",
+    "shake": 0.25
+   },
+   "sfx": [
+    {
+     "at": 0.04,
+     "type": "thud",
+     "vol": 0.6
+    }
+   ]
+  }
+ ]
+}
