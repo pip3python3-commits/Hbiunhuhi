@@ -1,0 +1,8476 @@
+{
+ "title": "Episode 4 - One Bit at a Time",
+ "format": "long",
+ "voice": "bf_emma",
+ "lang": "en-gb",
+ "speed": 1.0,
+ "cast": {
+  "ada": {
+   "type": "engineer"
+  },
+  "ben": {
+   "type": "worker"
+  },
+  "cy": {
+   "type": "boss"
+  }
+ },
+ "beats": [
+  {
+   "id": "ep04_001",
+   "narration": "Sprout now has a working board. But a working board that does nothing is just a very expensive coaster. Today it learns to sense and to act.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Episode 4",
+    "sub": "One Bit at a Time",
+    "dur": 3.4
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     17,
+     0,
+     -8.5
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_002",
+   "narration": "I want three things. A light that shows Sprout is happy. A button to water on demand. And the pump, running gently, not like a fire hose.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "present",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "close",
+    "f": "cy",
+    "az": 38,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep04_003",
+   "narration": "Those three things are the whole foundation of embedded programming. Outputs, inputs, and timers. Let us start with the light.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "wave",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 10,
+    "move": "orbit"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep04_004",
+   "narration": "Inside the microcontroller, everything is controlled through registers. A register is a small piece of memory, usually thirty-two bits wide, wired directly to hardware.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter One",
+    "sub": "Registers",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_005",
+   "narration": "When code writes a value into a particular address, it is not storing data. It is flipping physical switches. One bit might connect a pin to power.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Registers are switches",
+    "nodes": [
+     {
+      "name": "Your code",
+      "to": [
+       {
+        "n": "Register",
+        "label": "write bits"
+       }
+      ]
+     },
+     {
+      "name": "Register",
+      "to": [
+       {
+        "n": "Hardware",
+        "label": "wires"
+       }
+      ]
+     },
+     {
+      "name": "Hardware",
+      "to": [
+       {
+        "n": "LED",
+        "label": "3.3 V"
+       }
+      ]
+     },
+     {
+      "name": "LED"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_006",
+   "narration": "Another might start a timer.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Registers are switches",
+    "nodes": [
+     {
+      "name": "Your code",
+      "to": [
+       {
+        "n": "Register",
+        "label": "write bits"
+       }
+      ]
+     },
+     {
+      "name": "Register",
+      "to": [
+       {
+        "n": "Hardware",
+        "label": "wires"
+       }
+      ]
+     },
+     {
+      "name": "Hardware",
+      "to": [
+       {
+        "n": "LED",
+        "label": "3.3 V"
+       }
+      ]
+     },
+     {
+      "name": "LED"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_007",
+   "narration": "So memory addresses are secretly light switches?",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Registers are switches",
+    "nodes": [
+     {
+      "name": "Your code",
+      "to": [
+       {
+        "n": "Register",
+        "label": "write bits"
+       }
+      ]
+     },
+     {
+      "name": "Register",
+      "to": [
+       {
+        "n": "Hardware",
+        "label": "wires"
+       }
+      ]
+     },
+     {
+      "name": "Hardware",
+      "to": [
+       {
+        "n": "LED",
+        "label": "3.3 V"
+       }
+      ]
+     },
+     {
+      "name": "LED"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep04_008",
+   "narration": "Some of them. The chip's memory map has regions for flash, for RAM, and a region for peripherals, where each address is a register with a hardware job.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "Registers are switches",
+    "nodes": [
+     {
+      "name": "Your code",
+      "to": [
+       {
+        "n": "Register",
+        "label": "write bits"
+       }
+      ]
+     },
+     {
+      "name": "Register",
+      "to": [
+       {
+        "n": "Hardware",
+        "label": "wires"
+       }
+      ]
+     },
+     {
+      "name": "Hardware",
+      "to": [
+       {
+        "n": "LED",
+        "label": "3.3 V"
+       }
+      ]
+     },
+     {
+      "name": "LED"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep04_009",
+   "narration": "The reference manual lists every register: its address, what each bit does, and whether you can read it, write it, or both.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "memory",
+    "title": "The chip's address space",
+    "regions": [
+     {
+      "addr": "0x4000_0000",
+      "name": "Peripheral registers",
+      "size": 1.2,
+      "note": "timers, pins, serial"
+     },
+     {
+      "addr": "0x2000_0000",
+      "name": "RAM",
+      "size": 1.0,
+      "note": "variables"
+     },
+     {
+      "addr": "0x0800_0000",
+      "name": "Flash",
+      "size": 1.5,
+      "note": "your program"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_010",
+   "narration": "It is the true instruction manual for the chip.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "memory",
+    "title": "The chip's address space",
+    "regions": [
+     {
+      "addr": "0x4000_0000",
+      "name": "Peripheral registers",
+      "size": 1.2,
+      "note": "timers, pins, serial"
+     },
+     {
+      "addr": "0x2000_0000",
+      "name": "RAM",
+      "size": 1.0,
+      "note": "variables"
+     },
+     {
+      "addr": "0x0800_0000",
+      "name": "Flash",
+      "size": 1.5,
+      "note": "your program"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep04_011",
+   "narration": "To work with registers, you need to think in binary. Each bit is a zero or a one.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Two",
+    "sub": "Binary and Hex",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_012",
+   "narration": "Eight bits make a byte, and a thirty-two bit register is four bytes.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep04_013",
+   "narration": "Binary gets long fast, so we write it in hexadecimal. Each hex digit stands for exactly four bits. So one byte is always two hex digits.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "bits",
+    "title": "One byte",
+    "bits": "10100101",
+    "names": [
+     "b7",
+     "b6",
+     "b5",
+     "b4",
+     "b3",
+     "b2",
+     "b1",
+     "b0"
+    ],
+    "label": "1010 0101 = hex A5 = 165"
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_014",
+   "narration": "So hex A5 is one zero one zero, zero one zero one. Once you learn the sixteen patterns, you can read registers like a newspaper.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Hex digits",
+    "rows": [
+     [
+      "Hex",
+      "Binary",
+      "Decimal"
+     ],
+     [
+      "0",
+      "0000",
+      "0"
+     ],
+     [
+      "5",
+      "0101",
+      "5"
+     ],
+     [
+      "9",
+      "1001",
+      "9"
+     ],
+     [
+      "A",
+      "1010",
+      "10"
+     ],
+     [
+      "F",
+      "1111",
+      "15"
+     ]
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_015",
+   "narration": "A very boring newspaper.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "smug",
+     "face": "smug"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Hex digits",
+    "rows": [
+     [
+      "Hex",
+      "Binary",
+      "Decimal"
+     ],
+     [
+      "0",
+      "0000",
+      "0"
+     ],
+     [
+      "5",
+      "0101",
+      "5"
+     ],
+     [
+      "9",
+      "1001",
+      "9"
+     ],
+     [
+      "A",
+      "1010",
+      "10"
+     ],
+     [
+      "F",
+      "1111",
+      "15"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "cy",
+    "az": -46,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep04_016",
+   "narration": "A newspaper where every headline turns something on.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "smug",
+     "face": "smug"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Hex digits",
+    "rows": [
+     [
+      "Hex",
+      "Binary",
+      "Decimal"
+     ],
+     [
+      "0",
+      "0000",
+      "0"
+     ],
+     [
+      "5",
+      "0101",
+      "5"
+     ],
+     [
+      "9",
+      "1001",
+      "9"
+     ],
+     [
+      "A",
+      "1010",
+      "10"
+     ],
+     [
+      "F",
+      "1111",
+      "15"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "low",
+    "f": "ada",
+    "az": 36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_017",
+   "narration": "Here is the core problem. A register controls many things at once. To change one bit, you must leave all the others alone. That is what bitwise operations are for.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Three",
+    "sub": "Bitwise Operations",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_018",
+   "narration": "One shifted left by five makes a mask with only bit five set. Or-ing it in sets that bit. And-ing with the inverted mask clears it. Exclusive-or flips it.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "The four essential moves",
+    "lines": [
+     "reg & (1 << 5)        // test:   is bit 5 set?",
+     "reg |= (1 << 5);      // set:    turn bit 5 on",
+     ">reg &= ~(1 << 5);     // clear:  turn bit 5 off",
+     "reg ^= (1 << 5);      // toggle: flip bit 5"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_019",
+   "narration": "And-ing the mask tests it.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "The four essential moves",
+    "lines": [
+     "reg & (1 << 5)        // test:   is bit 5 set?",
+     "reg |= (1 << 5);      // set:    turn bit 5 on",
+     ">reg &= ~(1 << 5);     // clear:  turn bit 5 off",
+     "reg ^= (1 << 5);      // toggle: flip bit 5"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_020",
+   "narration": "The key is that each operation only touches the bits in the mask. Every other bit, controlling some other piece of hardware, keeps its value.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "bits",
+    "title": "Setting bit 5",
+    "bits": "00100000",
+    "names": [
+     "-",
+     "-",
+     "LED",
+     "-",
+     "-",
+     "-",
+     "-",
+     "-"
+    ],
+    "hl": [
+     5
+    ],
+    "label": "reg |= (1 << 5)"
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_021",
+   "narration": "What happens if you just write the number thirty-two into the register instead?",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "cut": "flash",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "shock",
+     "face": "shock"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "bits",
+    "title": "Setting bit 5",
+    "bits": "00100000",
+    "names": [
+     "-",
+     "-",
+     "LED",
+     "-",
+     "-",
+     "-",
+     "-",
+     "-"
+    ],
+    "hl": [
+     5
+    ],
+    "label": "reg |= (1 << 5)",
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -36,
+    "move": "push",
+    "shake": 0.25
+   },
+   "sfx": [
+    {
+     "at": 0.04,
+     "type": "thud",
+     "vol": 0.6
+    }
+   ]
+  },
+  {
+   "id": "ep04_022",
+   "narration": "Then bit five turns on, and every other bit turns off. If those bits were running the pump or the serial port, they just stopped. It is a classic mistake.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "bits",
+    "title": "Setting bit 5",
+    "bits": "00100000",
+    "names": [
+     "-",
+     "-",
+     "LED",
+     "-",
+     "-",
+     "-",
+     "-",
+     "-"
+    ],
+    "hl": [
+     5
+    ],
+    "label": "reg |= (1 << 5)",
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_023",
+   "narration": "So the lesson is, never be blunt with registers.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "bits",
+    "title": "Setting bit 5",
+    "bits": "00100000",
+    "names": [
+     "-",
+     "-",
+     "LED",
+     "-",
+     "-",
+     "-",
+     "-",
+     "-"
+    ],
+    "hl": [
+     5
+    ],
+    "label": "reg |= (1 << 5)",
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "cy",
+    "az": -46,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep04_024",
+   "narration": "The lesson is, change only what you mean to change.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "bits",
+    "title": "Setting bit 5",
+    "bits": "00100000",
+    "names": [
+     "-",
+     "-",
+     "LED",
+     "-",
+     "-",
+     "-",
+     "-",
+     "-"
+    ],
+    "hl": [
+     5
+    ],
+    "label": "reg |= (1 << 5)",
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_025",
+   "narration": "Now, the hello world of embedded systems: the blinking LED. It takes three steps.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Four",
+    "sub": "Blinking the LED",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_026",
+   "narration": "Turn on the pin's clock, configure the pin as an output, then toggle it in a loop.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   }
+  },
+  {
+   "id": "ep04_027",
+   "narration": "Step one surprises people. On many chips, peripherals are unpowered by default to save energy.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "blink.c",
+    "lines": [
+     "int main(void) {",
+     "  RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block",
+     "  GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output",
+     "  while (1) {",
+     ">    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_028",
+   "narration": "Until you enable the clock to the pin block, writes to it do nothing at all.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "blink.c",
+    "lines": [
+     "int main(void) {",
+     "  RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block",
+     "  GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output",
+     "  while (1) {",
+     ">    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep04_029",
+   "narration": "Classic first-day bug. The code looks perfect. The LED stays dark. Somebody forgot the clock.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "blink.c",
+    "lines": [
+     "int main(void) {",
+     "  RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block",
+     "  GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output",
+     "  while (1) {",
+     ">    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_030",
+   "narration": "Step two configures the pin as an output. Pins usually start as inputs, which is the safest choice: an input does not push current anywhere.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "blink.c",
+    "lines": [
+     "int main(void) {",
+     "  RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block",
+     "  GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output",
+     "  while (1) {",
+     ">    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": 10,
+    "move": "crane"
+   }
+  },
+  {
+   "id": "ep04_031",
+   "narration": "Outputs come in flavors too. A push-pull output actively drives the pin both high and low. An open-drain output can only pull low, and lets a resistor pull it high.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "blink.c",
+    "lines": [
+     "int main(void) {",
+     "  RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block",
+     "  GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output",
+     "  while (1) {",
+     ">    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_032",
+   "narration": "Open drain is useful when several chips share one wire.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "blink.c",
+    "lines": [
+     "int main(void) {",
+     "  RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block",
+     "  GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output",
+     "  while (1) {",
+     ">    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -4,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep04_033",
+   "narration": "And many pins have an alternate function mode, where the pin is handed over to a peripheral, like a timer or a serial port, instead of being controlled bit by bit.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "blink.c",
+    "lines": [
+     "int main(void) {",
+     "  RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block",
+     "  GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output",
+     "  while (1) {",
+     ">    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 4,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep04_034",
+   "narration": "We will need that for the pump.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "blink.c",
+    "lines": [
+     "int main(void) {",
+     "  RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block",
+     "  GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output",
+     "  while (1) {",
+     ">    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_035",
+   "narration": "There is also the electrical side. An LED needs a resistor in series to limit its current, and a microcontroller pin can only supply a few milliamps safely.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "blink.c",
+    "lines": [
+     "int main(void) {",
+     "  RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block",
+     "  GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output",
+     "  while (1) {",
+     ">    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_036",
+   "narration": "A pump motor needs far more, so the pin drives a transistor, and the transistor switches the pump.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "blink.c",
+    "lines": [
+     "int main(void) {",
+     "  RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block",
+     "  GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output",
+     "  while (1) {",
+     ">    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep04_037",
+   "narration": "And step three toggles it forever, with a half-second pause. Let us flash it.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "wave",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "blink.c",
+    "lines": [
+     "int main(void) {",
+     "  RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block",
+     "  GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output",
+     "  while (1) {",
+     ">    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 4,
+    "move": "drift"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep04_038",
+   "narration": "The LED blinks. Ben, a grown adult, cheers like his team just won a final.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "world": {
+    "droop": [
+     0.0,
+     0.0
+    ]
+   },
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "wave",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "blink.c",
+    "lines": [
+     "int main(void) {",
+     "  RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block",
+     "  GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output",
+     "  while (1) {",
+     ">    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED",
+     "    delay_ms(500);",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep04_039",
+   "narration": "The blink works, but the code is full of register names and magic numbers.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Five",
+    "sub": "Hiding the Hardware",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_040",
+   "narration": "If Ben moves the LED to another pin on the next board, Ada must hunt through every file.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep04_041",
+   "narration": "The first fix is a board header file. Every pin assignment lives in one place. A new board revision means one new header, not a scavenger hunt.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "board.h",
+    "lines": [
+     "// Sprout board, revision B",
+     "#define LED_PORT      GPIOB",
+     "#define LED_PIN       5",
+     "#define PUMP_PORT     GPIOA",
+     "#define PUMP_PIN      8",
+     ">#define BUTTON_PIN    3"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_042",
+   "narration": "The second fix is a facade: a simple interface that hides a complicated subsystem behind friendly functions.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "board.h",
+    "lines": [
+     "// Sprout board, revision B",
+     "#define LED_PORT      GPIOB",
+     "#define LED_PIN       5",
+     "#define PUMP_PORT     GPIOA",
+     "#define PUMP_PIN      8",
+     ">#define BUTTON_PIN    3"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep04_043",
+   "narration": "The application says, led toggle. It does not know about clocks, modes, or bit five. The facade does all of that inside.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "led.h: a facade",
+    "lines": [
+     "void led_init(void);",
+     "void led_on(void);",
+     "void led_off(void);",
+     ">void led_toggle(void);"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_044",
+   "narration": "So when the next board uses a different chip entirely, only the inside of the facade changes.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "led.h: a facade",
+    "lines": [
+     "void led_init(void);",
+     "void led_on(void);",
+     "void led_off(void);",
+     ">void led_toggle(void);"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_045",
+   "narration": "It is like me. I am the facade of this company. Friendly on the outside.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "led.h: a facade",
+    "lines": [
+     "void led_init(void);",
+     "void led_on(void);",
+     "void led_off(void);",
+     ">void led_toggle(void);"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "cy",
+    "az": -46,
+    "move": "pull"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep04_046",
+   "narration": "And the inside is held together with jumper wires.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "smug",
+     "face": "smug"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "led.h: a facade",
+    "lines": [
+     "void led_init(void);",
+     "void led_on(void);",
+     "void led_off(void);",
+     ">void led_toggle(void);"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_047",
+   "narration": "Most simple embedded programs share the same skeleton: initialize everything once, then loop forever, checking inputs and updating outputs.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Six",
+    "sub": "The Main Loop",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_048",
+   "narration": "There is no exit. An embedded program that returns from main has nowhere to go. So the loop runs until the power goes away.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "The classic main loop",
+    "lines": [
+     "int main(void) {",
+     "  board_init();",
+     "  led_init(); pump_init(); button_init();",
+     "  while (1) {",
+     "    if (button_pressed()) pump_on(100);",
+     ">    watering_step();",
+     "    led_update();",
+     "  }",
+     "}"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_049",
+   "narration": "This style is easy to understand. Its weakness is that every task in the loop waits for the others. If one step takes too long, everything else is late.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "The classic main loop",
+    "lines": [
+     "int main(void) {",
+     "  board_init();",
+     "  led_init(); pump_init(); button_init();",
+     "  while (1) {",
+     "    if (button_pressed()) pump_on(100);",
+     ">    watering_step();",
+     "    led_update();",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_050",
+   "narration": "Later episodes cover the alternatives.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "The classic main loop",
+    "lines": [
+     "int main(void) {",
+     "  board_init();",
+     "  led_init(); pump_init(); button_init();",
+     "  while (1) {",
+     "    if (button_pressed()) pump_on(100);",
+     ">    watering_step();",
+     "    led_update();",
+     "  }",
+     "}"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep04_051",
+   "narration": "Now, input. The button connects a pin to ground when pressed. When released, a resistor gently pulls the pin up to the supply voltage.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Seven",
+    "sub": "Reading a Button",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_052",
+   "narration": "So released reads as one, pressed reads as zero.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep04_053",
+   "narration": "That pull-up resistor is important. Without it, a released button leaves the pin floating, and a floating pin reads random noise, picking up signals from your hand, the lights, anything.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Button: what you expect",
+    "rows": [
+     {
+      "name": "Finger",
+      "wave": "0001111111110000"
+     },
+     {
+      "name": "Pin",
+      "wave": "1110000000001111"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_054",
+   "narration": "Most chips have built-in pull-up resistors you can enable with one register bit. Saves a part on the board.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Button: what you expect",
+    "rows": [
+     {
+      "name": "Finger",
+      "wave": "0001111111110000"
+     },
+     {
+      "name": "Pin",
+      "wave": "1110000000001111"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_055",
+   "narration": "To read the button, the code tests the pin's bit in the input register. Simple. Except the first time Ada tries, one press waters Gerald five times.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Button: what you expect",
+    "rows": [
+     {
+      "name": "Finger",
+      "wave": "0001111111110000"
+     },
+     {
+      "name": "Pin",
+      "wave": "1110000000001111"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_056",
+   "narration": "Five times! Gerald is drowning!",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#4f8f88",
+    "floor": "#9aa4b4",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "cut": "flash",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "shock",
+     "face": "shock"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Button: what you expect",
+    "rows": [
+     {
+      "name": "Finger",
+      "wave": "0001111111110000"
+     },
+     {
+      "name": "Pin",
+      "wave": "1110000000001111"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "cy",
+    "az": -30,
+    "move": "push",
+    "shake": 0.25
+   },
+   "sfx": [
+    {
+     "at": 0.04,
+     "type": "thud",
+     "vol": 0.6
+    }
+   ]
+  },
+  {
+   "id": "ep04_057",
+   "narration": "The culprit is physics. A mechanical button does not close cleanly. Its metal contacts bounce against each other for a few milliseconds, making and breaking the connection many times.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Eight",
+    "sub": "Debouncing",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_058",
+   "narration": "To a human, it is one press. To a chip checking millions of times a second, it is a burst of presses.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "What really happens",
+    "rows": [
+     {
+      "name": "Finger",
+      "wave": "0001111111111110000"
+     },
+     {
+      "name": "Pin",
+      "wave": "1110101000000001011"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_059",
+   "narration": "So we debounce: we only believe the button after it has been steady for a while.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "What really happens",
+    "rows": [
+     {
+      "name": "Finger",
+      "wave": "0001111111111110000"
+     },
+     {
+      "name": "Pin",
+      "wave": "1110101000000001011"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_060",
+   "narration": "Sample the pin every millisecond. If it changed, reset the counter. Only when it has been the same for ten samples in a row do we accept the new state.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Debouncing by waiting for stability",
+    "lines": [
+     "static uint8_t stable_count = 0;",
+     "bool raw = pin_read(BUTTON_PIN) == 0;   // pressed = low",
+     "if (raw != last_raw) stable_count = 0;  // still bouncing",
+     "else if (stable_count < 10) stable_count++;",
+     ">if (stable_count == 10) pressed = raw;  // steady for 10 ms",
+     "last_raw = raw;"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_061",
+   "narration": "There are many debouncing strategies, in hardware with capacitors, or in software with counters or timers.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Debouncing by waiting for stability",
+    "lines": [
+     "static uint8_t stable_count = 0;",
+     "bool raw = pin_read(BUTTON_PIN) == 0;   // pressed = low",
+     "if (raw != last_raw) stable_count = 0;  // still bouncing",
+     "else if (stable_count < 10) stable_count++;",
+     ">if (stable_count == 10) pressed = raw;  // steady for 10 ms",
+     "last_raw = raw;"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_062",
+   "narration": "The principle is the same: wait for the contact to settle before you trust it.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Debouncing by waiting for stability",
+    "lines": [
+     "static uint8_t stable_count = 0;",
+     "bool raw = pin_read(BUTTON_PIN) == 0;   // pressed = low",
+     "if (raw != last_raw) stable_count = 0;  // still bouncing",
+     "else if (stable_count < 10) stable_count++;",
+     ">if (stable_count == 10) pressed = raw;  // steady for 10 ms",
+     "last_raw = raw;"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep04_063",
+   "narration": "You could also use an interrupt that fires when the pin changes. But a bouncing button fires the interrupt many times too, so you still need to debounce.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Debouncing by waiting for stability",
+    "lines": [
+     "static uint8_t stable_count = 0;",
+     "bool raw = pin_read(BUTTON_PIN) == 0;   // pressed = low",
+     "if (raw != last_raw) stable_count = 0;  // still bouncing",
+     "else if (stable_count < 10) stable_count++;",
+     ">if (stable_count == 10) pressed = raw;  // steady for 10 ms",
+     "last_raw = raw;"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep04_064",
+   "narration": "Interrupts get their own episode.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labWarm",
+   "setColors": {
+    "wall": "#b88a6a",
+    "floor": "#a89a8a",
+    "accent": "#3ec1a8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Debouncing by waiting for stability",
+    "lines": [
+     "static uint8_t stable_count = 0;",
+     "bool raw = pin_read(BUTTON_PIN) == 0;   // pressed = low",
+     "if (raw != last_raw) stable_count = 0;  // still bouncing",
+     "else if (stable_count < 10) stable_count++;",
+     ">if (stable_count == 10) pressed = raw;  // steady for 10 ms",
+     "last_raw = raw;"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_065",
+   "narration": "Ada wants to test the debounce logic in the sandbox on her laptop. But the code calls pin read directly, and the laptop has no pins.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Nine",
+    "sub": "Dependency Injection",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_066",
+   "narration": "The fix is to pass in what a module depends on, instead of having it reach out and grab it. That is called dependency injection.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_067",
+   "narration": "On the board, we give the button module the real pin reader. In a test, we hand it a fake that replays a recorded bounce pattern.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Injecting the pin reader",
+    "lines": [
+     "typedef bool (*read_fn)(void);",
+     "void button_init(read_fn reader);    // who reads the pin?",
+     "",
+     "button_init(real_pin_read);          // on the board",
+     ">button_init(fake_pin_read);          // in the laptop test"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_068",
+   "narration": "The debounce logic never knows the difference.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Injecting the pin reader",
+    "lines": [
+     "typedef bool (*read_fn)(void);",
+     "void button_init(read_fn reader);    // who reads the pin?",
+     "",
+     "button_init(real_pin_read);          // on the board",
+     ">button_init(fake_pin_read);          // in the laptop test"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 36,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep04_069",
+   "narration": "So we can test every weird bounce the button could ever make, without pressing it ten thousand times.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Injecting the pin reader",
+    "lines": [
+     "typedef bool (*read_fn)(void);",
+     "void button_init(read_fn reader);    // who reads the pin?",
+     "",
+     "button_init(real_pin_read);          // on the board",
+     ">button_init(fake_pin_read);          // in the laptop test"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -36,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_070",
+   "narration": "Please do not press it ten thousand times. Gerald has suffered enough.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labBlue",
+   "setColors": {
+    "wall": "#4a64b0",
+    "floor": "#9a9ab4",
+    "accent": "#f2d04a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "smug",
+     "face": "smug"
+    }
+   ],
+   "visual": {
+    "t": "code",
+    "title": "Injecting the pin reader",
+    "lines": [
+     "typedef bool (*read_fn)(void);",
+     "void button_init(read_fn reader);    // who reads the pin?",
+     "",
+     "button_init(real_pin_read);          // on the board",
+     ">button_init(fake_pin_read);          // in the laptop test"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_071",
+   "narration": "The blink loop used a delay that simply burns time doing nothing. That is wasteful, and imprecise. Real systems use hardware timers.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Ten",
+    "sub": "Timers",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     0,
+     0,
+     -9
+    ],
+    "az": 20,
+    "move": "drift",
+    "dist": 17
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_072",
+   "narration": "A timer is a counter driven by a clock. A prescaler divides the clock down first.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "How a timer counts",
+    "nodes": [
+     {
+      "name": "System clock",
+      "sub": "8 MHz",
+      "to": [
+       {
+        "n": "Prescaler (\u00f7 8000)"
+       }
+      ]
+     },
+     {
+      "name": "Prescaler",
+      "sub": "\u00f7 8000",
+      "to": [
+       {
+        "n": "Counter",
+        "label": "1 kHz ticks"
+       }
+      ]
+     },
+     {
+      "name": "Counter",
+      "to": [
+       {
+        "n": "Compare = 500",
+        "label": "match!"
+       }
+      ]
+     },
+     {
+      "name": "Compare = 500"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_073",
+   "narration": "When the counter reaches a compare value, the timer raises a flag, or flips a pin, all by itself.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "How a timer counts",
+    "nodes": [
+     {
+      "name": "System clock",
+      "sub": "8 MHz",
+      "to": [
+       {
+        "n": "Prescaler (\u00f7 8000)"
+       }
+      ]
+     },
+     {
+      "name": "Prescaler",
+      "sub": "\u00f7 8000",
+      "to": [
+       {
+        "n": "Counter",
+        "label": "1 kHz ticks"
+       }
+      ]
+     },
+     {
+      "name": "Counter",
+      "to": [
+       {
+        "n": "Compare = 500",
+        "label": "match!"
+       }
+      ]
+     },
+     {
+      "name": "Compare = 500"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "orbit"
+   }
+  },
+  {
+   "id": "ep04_074",
+   "narration": "The math is simple. Timer ticks per second equal the clock frequency divided by the prescaler. The time until a match equals the compare value divided by the tick rate.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "blocks",
+    "title": "How a timer counts",
+    "nodes": [
+     {
+      "name": "System clock",
+      "sub": "8 MHz",
+      "to": [
+       {
+        "n": "Prescaler (\u00f7 8000)"
+       }
+      ]
+     },
+     {
+      "name": "Prescaler",
+      "sub": "\u00f7 8000",
+      "to": [
+       {
+        "n": "Counter",
+        "label": "1 kHz ticks"
+       }
+      ]
+     },
+     {
+      "name": "Counter",
+      "to": [
+       {
+        "n": "Compare = 500",
+        "label": "match!"
+       }
+      ]
+     },
+     {
+      "name": "Compare = 500"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep04_075",
+   "narration": "Eight megahertz divided by eight thousand gives one thousand ticks per second. A compare value of five hundred means a match every half second. Perfect for blinking.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "point",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Timer math",
+    "rows": [
+     [
+      "Clock",
+      "Prescaler",
+      "Tick rate",
+      "Compare",
+      "Period"
+     ],
+     [
+      "8 MHz",
+      "8000",
+      "1 kHz",
+      "500",
+      "0.5 s"
+     ],
+     [
+      "8 MHz",
+      "8",
+      "1 MHz",
+      "1000",
+      "1 ms"
+     ],
+     [
+      "8 MHz",
+      "1",
+      "8 MHz",
+      "400",
+      "50 \u00b5s"
+     ]
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_076",
+   "narration": "Why not just use the fastest clock and a huge compare value?",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Timer math",
+    "rows": [
+     [
+      "Clock",
+      "Prescaler",
+      "Tick rate",
+      "Compare",
+      "Period"
+     ],
+     [
+      "8 MHz",
+      "8000",
+      "1 kHz",
+      "500",
+      "0.5 s"
+     ],
+     [
+      "8 MHz",
+      "8",
+      "1 MHz",
+      "1000",
+      "1 ms"
+     ],
+     [
+      "8 MHz",
+      "1",
+      "8 MHz",
+      "400",
+      "50 \u00b5s"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -20,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_077",
+   "narration": "Because the counter has a limit. A sixteen bit counter stops at sixty-five thousand five hundred and thirty-five. Pick a prescaler that gets you the precision you need, without overflowing.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Timer math",
+    "rows": [
+     [
+      "Clock",
+      "Prescaler",
+      "Tick rate",
+      "Compare",
+      "Period"
+     ],
+     [
+      "8 MHz",
+      "8000",
+      "1 kHz",
+      "500",
+      "0.5 s"
+     ],
+     [
+      "8 MHz",
+      "8",
+      "1 MHz",
+      "1000",
+      "1 ms"
+     ],
+     [
+      "8 MHz",
+      "1",
+      "8 MHz",
+      "400",
+      "50 \u00b5s"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 20,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep04_078",
+   "narration": "Watch out for off-by-one errors. On many timers, the counter includes zero, so a period of five hundred ticks needs a compare value of four hundred ninety-nine.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Timer math",
+    "rows": [
+     [
+      "Clock",
+      "Prescaler",
+      "Tick rate",
+      "Compare",
+      "Period"
+     ],
+     [
+      "8 MHz",
+      "8000",
+      "1 kHz",
+      "500",
+      "0.5 s"
+     ],
+     [
+      "8 MHz",
+      "8",
+      "1 MHz",
+      "1000",
+      "1 ms"
+     ],
+     [
+      "8 MHz",
+      "1",
+      "8 MHz",
+      "400",
+      "50 \u00b5s"
+     ]
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -6,
+     0,
+     -10
+    ],
+    "az": 32,
+    "move": "push",
+    "dist": 14,
+    "ty": 5.5
+   }
+  },
+  {
+   "id": "ep04_079",
+   "narration": "The reference manual will tell you which.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labMint",
+   "setColors": {
+    "wall": "#5aa874",
+    "floor": "#a8a49a",
+    "accent": "#ef6f9a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -9.8,
+      0,
+      -9.0
+     ],
+     "rot": 28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      9.8,
+      0,
+      -9.0
+     ],
+     "rot": -28,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      13.2,
+      0,
+      -5.4
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "table",
+    "title": "Timer math",
+    "rows": [
+     [
+      "Clock",
+      "Prescaler",
+      "Tick rate",
+      "Compare",
+      "Period"
+     ],
+     [
+      "8 MHz",
+      "8000",
+      "1 kHz",
+      "500",
+      "0.5 s"
+     ],
+     [
+      "8 MHz",
+      "8",
+      "1 MHz",
+      "1000",
+      "1 ms"
+     ],
+     [
+      "8 MHz",
+      "1",
+      "8 MHz",
+      "400",
+      "50 \u00b5s"
+     ]
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_080",
+   "narration": "Now Cy's last wish: run the pump gently. A pin is either fully on or fully off.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Eleven",
+    "sub": "PWM: Gentle Power",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_081",
+   "narration": "But if you switch it on and off very fast, the average power is somewhere in between. That is pulse width modulation, or PWM.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "wide",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -14,
+    "move": "push",
+    "dist": 17
+   }
+  },
+  {
+   "id": "ep04_082",
+   "narration": "The fraction of time the signal is on is called the duty cycle. At fifty percent, the pump gets roughly half its power. At twenty-five, it barely trickles.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Duty cycle",
+    "rows": [
+     {
+      "name": "25 percent",
+      "wave": "1000100010001000"
+     },
+     {
+      "name": "50 percent",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "75 percent",
+      "wave": "1110111011101110"
+     }
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_083",
+   "narration": "Timers make PWM easy. The timer's period sets the frequency. A second compare value sets when the pin turns off. The hardware does the switching;",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Duty cycle",
+    "rows": [
+     {
+      "name": "25 percent",
+      "wave": "1000100010001000"
+     },
+     {
+      "name": "50 percent",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "75 percent",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_084",
+   "narration": "the code only changes a number.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Duty cycle",
+    "rows": [
+     {
+      "name": "25 percent",
+      "wave": "1000100010001000"
+     },
+     {
+      "name": "50 percent",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "75 percent",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": [
+     -16.5,
+     0,
+     -9
+    ],
+    "az": -24,
+    "move": "orbit",
+    "dist": 12
+   }
+  },
+  {
+   "id": "ep04_085",
+   "narration": "The frequency matters. Too slow, and the pump stutters. In the audible range, it whines. A few tens of kilohertz is usually silent and smooth.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Duty cycle",
+    "rows": [
+     {
+      "name": "25 percent",
+      "wave": "1000100010001000"
+     },
+     {
+      "name": "50 percent",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "75 percent",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ben",
+    "az": -20,
+    "move": "pull"
+   }
+  },
+  {
+   "id": "ep04_086",
+   "narration": "Ben sets the duty cycle to thirty percent. The pump hums quietly. A gentle stream reaches Gerald's roots.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "world": {
+    "protoDroop": [
+     0.0,
+     0.0
+    ]
+   },
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Duty cycle",
+    "rows": [
+     {
+      "name": "25 percent",
+      "wave": "1000100010001000"
+     },
+     {
+      "name": "50 percent",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "75 percent",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep04_087",
+   "narration": "Beautiful. Like a tiny, efficient rain cloud.",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labPlum",
+   "setColors": {
+    "wall": "#8a4a8e",
+    "floor": "#a496a8",
+    "accent": "#7fd36b"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      -19.0,
+      0,
+      -8.2
+     ],
+     "rot": 12,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      -15.2,
+      0,
+      -7.8
+     ],
+     "rot": -12,
+     "anim": "idle",
+     "face": "grin"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      -11.8,
+      0,
+      -5.6
+     ],
+     "rot": -38,
+     "anim": "wave",
+     "face": "grin"
+    }
+   ],
+   "visual": {
+    "t": "timing",
+    "title": "Duty cycle",
+    "rows": [
+     {
+      "name": "25 percent",
+      "wave": "1000100010001000"
+     },
+     {
+      "name": "50 percent",
+      "wave": "1100110011001100"
+     },
+     {
+      "name": "75 percent",
+      "wave": "1110111011101110"
+     }
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "cy",
+    "az": -46,
+    "move": "drift"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "type": "ding",
+     "vol": 0.3
+    }
+   ]
+  },
+  {
+   "id": "ep04_088",
+   "narration": "So, we have a light, a button, and a gentle pump. Can we ship?",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Chapter Twelve",
+    "sub": "Ready to Ship?",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "present",
+     "face": "smile",
+     "then": [
+      {
+       "at": 0.55,
+       "anim": "point"
+      }
+     ]
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "close",
+    "f": "cy",
+    "az": 38,
+    "move": "orbit"
+   },
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ep04_089",
+   "narration": "Not yet. A prototype that works on the bench is the beginning, not the end. Shipping code has to work every time, on every unit.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "logo",
+    "text": "SPROUT",
+    "sub": "smart plant waterer"
+   },
+   "shot": {
+    "type": "medium",
+    "f": "ada",
+    "az": 10,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_090",
+   "narration": "One easily missed check: what does the pump pin do during the few milliseconds after power-on, before the code configures it?",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Before shipping I O code",
+    "items": [
+     "Remove debug hacks and test pins",
+     "Check every pin's default state at power-up",
+     "Confirm timer math on the real clock",
+     "Test with the slowest, oldest button",
+     "Write down what each pin does"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_091",
+   "narration": "If it floats, the pump might twitch at every boot.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Before shipping I O code",
+    "items": [
+     "Remove debug hacks and test pins",
+     "Check every pin's default state at power-up",
+     "Confirm timer math on the real clock",
+     "Test with the slowest, oldest button",
+     "Write down what each pin does"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_092",
+   "narration": "A pull-down resistor on that line keeps the pump off until the software is ready. Hardware and software, working together again.",
+   "set": "lab",
+   "voice": "am_michael",
+   "lang": "en-us",
+   "grade": "labTeal",
+   "setColors": {
+    "wall": "#c9a860",
+    "floor": "#a89888",
+    "accent": "#4a8fe8"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Before shipping I O code",
+    "items": [
+     "Remove debug hacks and test pins",
+     "Check every pin's default state at power-up",
+     "Confirm timer math on the real clock",
+     "Test with the slowest, oldest button",
+     "Write down what each pin does"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ben",
+    "az": -12,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep04_093",
+   "narration": "To recap. Registers are switches wired to hardware. Bitwise masks change exactly the bits you mean, and nothing else.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "title": {
+    "text": "Recap",
+    "sub": "Bits, Buttons, and Timers",
+    "dur": 2.8
+   },
+   "cut": "whip",
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "smile"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Registers are hardware switches at addresses",
+     "Hex packs four bits per digit",
+     "Test, set, clear, toggle with masks",
+     "Board headers and facades hide hardware",
+     "Debounce buttons before trusting them",
+     "Inject dependencies to test anywhere",
+     "Timers count; PWM averages power"
+    ]
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12,
+   "sfx": [
+    {
+     "at": 0.02,
+     "type": "whoosh",
+     "vol": 0.5,
+     "dur": 0.5
+    },
+    {
+     "at": 0.05,
+     "type": "pop",
+     "vol": 0.35
+    }
+   ]
+  },
+  {
+   "id": "ep04_094",
+   "narration": "Board header files and facades keep hardware details in one place. Buttons bounce, so debounce them. Dependency injection lets the same logic run on the board and in a test.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Registers are hardware switches at addresses",
+     "Hex packs four bits per digit",
+     "Test, set, clear, toggle with masks",
+     "Board headers and facades hide hardware",
+     "Debounce buttons before trusting them",
+     "Inject dependencies to test anywhere",
+     "Timers count; PWM averages power"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "high",
+    "f": [
+     17,
+     0,
+     -8.5
+    ],
+    "az": 10,
+    "move": "crane"
+   }
+  },
+  {
+   "id": "ep04_095",
+   "narration": "Timers count clock ticks, so you can calculate periods precisely. And PWM switches quickly to deliver any average power you like.",
+   "set": "lab",
+   "voice": "bf_emma",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Registers are hardware switches at addresses",
+     "Hex packs four bits per digit",
+     "Test, set, clear, toggle with masks",
+     "Board headers and facades hide hardware",
+     "Debounce buttons before trusting them",
+     "Inject dependencies to test anywhere",
+     "Timers count; PWM averages power"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      -2.2,
+      7.2,
+      4.2
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      1.6,
+      7.4,
+      3.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  },
+  {
+   "id": "ep04_096",
+   "narration": "Next time, we stop checking the button in a loop, and let the hardware interrupt us instead. It is powerful, and it is dangerous.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "present",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Registers are hardware switches at addresses",
+     "Hex packs four bits per digit",
+     "Test, set, clear, toggle with masks",
+     "Board headers and facades hide hardware",
+     "Debounce buttons before trusting them",
+     "Inject dependencies to test anywhere",
+     "Timers count; PWM averages power"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "close",
+    "f": "ada",
+    "az": 26,
+    "move": "push"
+   }
+  },
+  {
+   "id": "ep04_097",
+   "narration": "Dangerous how?",
+   "set": "lab",
+   "voice": "bm_george",
+   "lang": "en-gb",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "smile"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "worried"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Registers are hardware switches at addresses",
+     "Hex packs four bits per digit",
+     "Test, set, clear, toggle with masks",
+     "Board headers and facades hide hardware",
+     "Debounce buttons before trusting them",
+     "Inject dependencies to test anywhere",
+     "Timers count; PWM averages power"
+    ],
+    "full": true
+   },
+   "shot": {
+    "type": "medium",
+    "f": "cy",
+    "az": 22,
+    "move": "drift"
+   }
+  },
+  {
+   "id": "ep04_098",
+   "narration": "Let us just say Gerald will need to be very patient.",
+   "set": "lab",
+   "voice": "af_heart",
+   "lang": "en-us",
+   "grade": "labNight",
+   "setColors": {
+    "wall": "#3a3a7a",
+    "floor": "#7a7a96",
+    "accent": "#f29a3a"
+   },
+   "pad": 0.3,
+   "actors": [
+    {
+     "id": "ada",
+     "pos": [
+      14.6,
+      0,
+      -7.4
+     ],
+     "rot": 18,
+     "anim": "smug",
+     "face": "smug"
+    },
+    {
+     "id": "ben",
+     "pos": [
+      19.6,
+      0,
+      -6.8
+     ],
+     "rot": -20,
+     "anim": "idle",
+     "face": "neutral"
+    },
+    {
+     "id": "cy",
+     "pos": [
+      10.8,
+      0,
+      -4.8
+     ],
+     "rot": 30,
+     "anim": "idle",
+     "face": "neutral"
+    }
+   ],
+   "visual": {
+    "t": "list",
+    "title": "Today we learned",
+    "items": [
+     "Registers are hardware switches at addresses",
+     "Hex packs four bits per digit",
+     "Test, set, clear, toggle with masks",
+     "Board headers and facades hide hardware",
+     "Debounce buttons before trusting them",
+     "Inject dependencies to test anywhere",
+     "Timers count; PWM averages power"
+    ],
+    "full": true
+   },
+   "cam": {
+    "from": {
+     "p": [
+      0,
+      7.5,
+      4.6
+     ],
+     "t": [
+      0,
+      7.4,
+      -14
+     ],
+     "fov": 40
+    },
+    "to": {
+     "p": [
+      0,
+      7.5,
+      3.0
+     ],
+     "t": [
+      0,
+      7.45,
+      -14
+     ],
+     "fov": 40
+    },
+    "ease": "inOut",
+    "shake": 0.0
+   },
+   "paint": 0.12
+  }
+ ]
+}
