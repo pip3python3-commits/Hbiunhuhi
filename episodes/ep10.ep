@@ -1,0 +1,177 @@
+title: Episode 10 | Sprout Goes Online
+narrator: bf_emma en-gb
+cast: ada=engineer:af_heart, ben=worker:am_michael, cy=boss:bm_george:en-gb
+---
+@zone screen
+N: Investor day went well. Very well. Sprout Labs now has money, a manufacturing partner, and a promise to ship five thousand connected Sprouts by autumn.
+cy^: Connected! Owners will see their plant's moisture on their phones. They will get alerts. We will push new features while they sleep!
+ada?: Every one of those sentences makes me nervous.
+N: Connecting a device changes everything. It can now be reached by its owner, by its makers, and by anyone else on the internet who is curious, bored, or malicious. Today: building a connected device that stays robust and safe.
+# Chapter One | Choosing a Connection
+@zone screen
+%table Ways to connect
+- Option | Range | Power | Needs
+- Wi-Fi | a home | high | a router + password
+- Bluetooth LE | a room | very low | a phone nearby
+- Cellular | almost anywhere | high | a SIM + data plan
+- Low-power radio | kilometres | very low | a gateway
+ada: Each wireless option trades range, power, cost, and convenience. Wi-Fi is everywhere in homes, but power hungry. Bluetooth Low Energy sips power, but needs a phone nearby. Cellular works anywhere, at a monthly cost.
+ben: We pick Wi-Fi for the data, and Bluetooth for setup. The phone app connects over Bluetooth, hands Sprout the Wi-Fi password, and gets out of the way.
+N: A connected device usually talks to a cloud server, not directly to the phone. The server stores history, sends alerts, and relays commands. That makes the server part of the product, and its failures become the device's failures.
+%blocks Connected Sprout
+- Sprout > Home router:Wi-Fi
+- Home router > Cloud server:internet
+- Cloud server > Phone app:<>alerts + commands
+- Phone app > Sprout:Bluetooth setup
+cy?: What happens when the internet goes down?
+ada: Sprout must keep watering. Offline is normal, not an emergency. The connected features are a bonus layered on top of a device that works on its own.
+N: Offline-first has practical consequences. Sprout stores its readings locally while disconnected and uploads them later, in order, when the connection returns. Its clock must keep reasonable time without the network, and it must never wait on the server before making a watering decision.
+ben: Wi-Fi also costs power. Connecting to a router can take a few seconds at full current. So Sprout does not stay connected. It wakes, connects, sends a batch of readings, checks for messages, and disconnects.
+%timing Batching radio use
+- Radio on: 0001100000000110
+- Sensing: 1010101010101010
+ada: Batching is the key idea. One connection every hour, carrying sixty readings, costs far less energy than sixty connections carrying one reading each. We will dig into the power math in a later episode.
+# Chapter Two | Robust Communication
+@zone screen
+N: Networks lose messages, duplicate them, deliver them late, and occasionally corrupt them. Robust communication plans for all of it.
+%list Rules for robust messages
+- Every message has a type and a version
+- Every message has a sequence number
+- Important messages need acknowledgement
+- Retry with increasing delays
+- Handle duplicates gracefully
+- Check integrity with a CRC
+ada: Version numbers matter more than people expect. Next year, the message format will change. Old Sprouts and new servers must still understand each other. A version field in every message lets each side know what it is reading.
+%code A message header
+| typedef struct {
+|   uint8_t  version;     // format version, starts at 1
+|   uint8_t  type;        // MOISTURE_REPORT, SET_SCHEDULE, ...
+|   uint16_t length;      // bytes of payload that follow
+|   uint32_t sequence;    // detects loss and duplicates
+|>  uint32_t crc;         // integrity check over all of it
+| } msg_header_t;
+N: Sequence numbers detect lost and duplicated messages. If the server receives report forty-one twice, it ignores the second. If it never receives forty-two, it can ask for it.
+ben: And retries should back off. If a thousand Sprouts lose the server at once and all retry every second, they knock it over again the moment it comes back.
+# Chapter Three | Checking Integrity
+@zone screen
+N: A CRC, or cyclic redundancy check, is a short number computed from a block of data. The sender computes it and attaches it. The receiver computes it again. If they differ, the data changed in transit.
+%blocks How a CRC is used
+- Data block > CRC calculation:compute
+- CRC calculation > Send data + CRC
+- Send data + CRC > Receiver recomputes
+- Receiver recomputes > Match? accept : reject
+- Match? accept : reject
+ada: A CRC is excellent at catching accidental errors, like flipped bits from noise. A thirty-two bit CRC catches all short bursts of errors and almost all random ones.
+N: But a CRC is not a security measure. Anyone who changes the data on purpose can just compute a new CRC. Detecting tampering requires cryptography.
+cy~: So the CRC is like a seal on a jar. It shows if the jar was dropped, not if someone carefully resealed it.
+ada: That is surprisingly accurate, Cy.
+# Chapter Four | Encryption and Trust
+@zone screen
+N: Connected devices need two security properties above all. Confidentiality: nobody else can read the messages. And authenticity: messages really come from who they claim, unchanged.
+%table What protects what
+- Tool | Protects against
+- Encryption | eavesdroppers reading data
+- Authentication codes | tampering with messages
+- Digital signatures | fake firmware, fake servers
+- Unique device keys | one hack spreading to all
+ada: For network traffic, we use a standard secure protocol, the same family your web browser uses. We do not invent our own cryptography. Ever.
+ben?: Why not? I bet I could make a clever cipher.
+ada: Because the hard part of cryptography is not scrambling data. It is all the small mistakes around it: reused nonces, weak random numbers, timing leaks, broken key handling.
+N: Random numbers deserve a special mention. Keys and nonces must be unpredictable. A microcontroller that seeds its random generator from the same value at every boot produces the same keys on every unit. Use a hardware random number generator if the chip has one.
+ada: Everyone thinks that, and almost everyone is wrong. Standard algorithms have survived decades of attacks by experts. Homemade ones usually survive until the first curious teenager.
+N: Keys matter as much as algorithms. If every Sprout shares one secret key, extracting it from one unit compromises all five thousand. Each device should have its own identity, created during manufacturing and stored where it is hard to read out.
+# Chapter Five | Thinking Like an Attacker
+@zone bench
+N: Before adding security features at random, the team does a risk analysis: what are we protecting, from whom, and what happens if we fail?
+%table Sprout risk analysis
+- Threat | Impact | Likelihood | Response
+- Neighbor floods plant | annoying | low | auth on commands
+- Wi-Fi password leaked | serious | medium | encrypt storage
+- Fake firmware installed | severe | low | signed updates
+- All units hijacked | disaster | low | unique keys
+ada: For each threat, we estimate how bad it would be and how likely. Then we spend effort where the product of the two is largest.
+ben: The scary one is not someone overwatering a fern. It is someone using five thousand Sprouts as a botnet, or stealing the Wi-Fi passwords of five thousand homes.
+N: Notice the device holds the owner's Wi-Fi password. That makes Sprout a guest in someone's home network, with all the responsibility of a guest. Treat that data like it matters, because it does.
+cy?: Can we skip the security stuff for version one and add it later?
+ada: Security added later is usually security never added. And some of it, like unique keys, can only be done at the factory. We do it now.
+# Chapter Six | Updating the Code
+@zone screen
+N: The most powerful feature of a connected device is the ability to update its firmware remotely. It is also the most dangerous. A bad update can turn five thousand working devices into five thousand plant-shaped bricks.
+%memory Flash with two slots
+- 0x0801_0000 | Slot B: new firmware | 2 | downloading
+- 0x0800_8000 | Slot A: running firmware | 2 | known good
+- 0x0800_0000 | Bootloader | 1 | never updated
+ada: The safe design uses a small bootloader that never changes, and two slots for firmware. The device runs from slot A while it downloads the new version into slot B.
+%list A safe update
+- Download the new image to the spare slot
+- Verify its size, CRC, and signature
+- Mark it as try once
+- Reboot into the new image
+- New image runs its self test
+- If healthy, mark it confirmed
+- If not, bootloader falls back to the old slot
+N: If power fails during download, nothing is lost: the old firmware is untouched. If the new firmware crashes on boot, the bootloader notices it was never confirmed, and goes back to the old slot.
+ben: That old slot is the lifeboat. As long as it is there and intact, no update can sink the ship.
+# Chapter Seven | Signed Updates
+@zone screen
+N: How does Sprout know an update really came from Sprout Labs? Not from an attacker who got onto the network? Digital signatures.
+%blocks Signing firmware
+- Firmware image > Sign with private key:at Sprout Labs
+- Sign with private key > Image + signature
+- Image + signature > Verify with public key:on the device
+- Verify with public key > Install or reject
+- Install or reject
+ada: Sprout Labs signs each image with a private key that never leaves a locked-down server. Every device holds the matching public key, which can check signatures but cannot make them.
+N: The bootloader verifies the signature before running anything. Firmware without a valid signature is rejected, no matter how it arrived.
+ada: Guard that private key with your life. If it leaks, attackers can sign anything. And plan how you would replace it, before you ever need to.
+ben: Also, block downgrades. Otherwise an attacker could install an old, genuine, signed firmware that has a known security hole.
+ada: Right. Each image carries a version number inside the signed part, and the bootloader refuses anything older than what is installed. A small counter in protected memory remembers the minimum allowed version.
+N: Secure boot ties it together. From the first instruction after reset, each stage verifies the next before running it: the bootloader verifies the application, and nothing unverified ever executes.
+# Chapter Eight | Rolling Out Carefully
+@zone screen
+N: Even a verified, signed, well-tested update can have a bug that only appears in real homes. So you never update everyone at once.
+%chart Staged rollout
+- line Devices updated percent: 1,1,5,5,25,25,100
+xl Day 1,Day 2,Day 3,Day 4,Day 5,Day 6,Day 7
+yl percent
+ada: Start with one percent of devices, ideally including your own. Watch crash reports, connection rates, and battery drain. If all is well, expand to five, then twenty-five, then everyone.
+N: Each stage is a checkpoint. A bad update that reaches one percent of devices is an embarrassing week. One that reaches everyone at once can end a company.
+cy!: One percent? But the new feature is ready now!
+ada~: And it will still be ready in a week, Cy. With five thousand happy customers instead of five thousand angry ones.
+# Chapter Nine | Many Devices and Manufacturing
+@zone bench
+N: With thousands of devices, new problems appear. The fleet needs monitoring: which versions are running where, which units crash, which ones went quiet.
+%list Fleet basics
+- Report firmware version on connect
+- Upload crash records
+- Track battery and signal health
+- Spread out check-in times
+- Have a plan to retire devices
+ben: Spread out the check-ins. If every Sprout reports at exactly midnight, the server gets five thousand visitors in one second and falls over.
+N: And it all starts at the factory. Each unit must be programmed, tested, given its unique identity and keys, and recorded, all in a few minutes on a production line.
+%blocks Factory line
+- Program bootloader > Run self test
+- Run self test > Inject unique keys
+- Inject unique keys > Record serial number
+- Record serial number > Box it
+- Box it
+ada: The factory test uses the command line we built in episode three. The same commands, run automatically by a test station. If any step fails, that unit goes to a repair bin, not into a box.
+N: Factories have their own constraints. Every second on the line costs money, so programming and testing must be fast. Test fixtures with spring pins press against test pads on the board, so no one has to plug in cables by hand.
+ben: And the factory must be able to tell us which unit failed which test, months later, by serial number. When a batch of field returns appears, those records tell you whether it was a bad batch of parts or a design problem.
+cy?: Can we just skip the test for the cheap units?
+ada~: Every unit is the cheap unit, Cy. That is the point of manufacturing.
+# Recap | Connected, Carefully
+@zone green
+%list Today we learned
+- Pick a radio by range, power, and cost
+- Work offline first; connect as a bonus
+- Version, sequence, acknowledge, retry with backoff
+- CRC for accidents; cryptography for attackers
+- Analyze risks; use unique keys
+- A/B slots, a fixed bootloader, signed images
+- Roll out in stages; watch the fleet
+N: To recap. Choose a connection that fits your device's range and power budget, and make sure it works offline. Robust messages carry versions, sequence numbers, and integrity checks, and retry politely.
+N: CRCs catch accidents; cryptography catches attackers. Analyze your risks, use standard protocols, and give every device its own keys.
+N: Updates need a never-changing bootloader, two slots so there is always a lifeboat, signed images, and staged rollouts watched closely.
+cy^: Five thousand connected Sprouts! Imagine the data!
+ada: Imagine the memory. The new features do not fit. Next time, we learn to do more with less.
