@@ -140,7 +140,7 @@ T.code = (g, W, H, s, p, t) => {
 T.blocks = (g, W, H, s, p, t) => {
   const y0 = header(g, W, H, s, p), nodes = s.nodes || [], n = nodes.length;
   const top = y0 + 10, bot = H * 0.80, left = W * 0.06, right = W * 0.94;
-  let cols = s.cols || (n <= 4 ? n : n <= 6 ? 3 : 4); const rows = Math.ceil(n / cols);
+  let cols = s.cols || (n <= 3 ? n : n === 4 ? 2 : n <= 6 ? 3 : 4); const rows = Math.ceil(n / cols);
   const cw = (right - left) / cols, rh = (bot - top) / rows;
   const bw = Math.min(cw * (n <= 4 && rows === 1 ? 0.6 : 0.72), 290), bh = Math.min(rh * 0.6, 110);
   const pos = {};

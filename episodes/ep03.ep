@@ -1,0 +1,192 @@
+title: Episode 3 | The Boards Arrive
+narrator: bf_emma en-gb
+cast: ada=engineer:af_heart, ben=worker:am_michael, cy=boss:bm_george:en-gb
+---
+@zone bench
+N: A cardboard box sits on the bench. Inside: ten freshly manufactured circuit boards, the first ones with the Sprout name printed on them.
+ben^: Our boards! Our very own boards! Look at the little logo!
+cy^: Wonderful. Plug one in and let us see Gerald get watered.
+ada!: No! Nobody plugs anything in. Not yet.
+N: Ada is right to panic. A brand-new board has never been powered. It might have a short circuit, a part soldered backwards, or a design mistake. Plug it in carelessly, and you can cook the only working prototype.
+ada: Today we do bring-up. Slowly, carefully, one piece at a time. It is the most nerve-racking day in any hardware project.
+# Chapter One | Where Hardware Meets Software
+@zone screen
+N: In an ideal project, hardware and software are designed together, reviewed together, and tested together, long before the boards are built.
+%list The ideal flow
+- Agree on requirements together
+- Software reviews the schematic
+- Code is ready on a dev board
+- Boards arrive with a test plan
+- Bring up one subsystem at a time
+ada: The software person should review the schematic. Which pins connect to what? Is the button on a pin that can wake the chip from sleep? Is the debug port actually reachable?
+ben: And the hardware person should understand what the software needs. If Ada needs a spare pin for debugging, I should leave one free.
+N: In real projects, schedules slip and corners get cut. But every hour spent reviewing together before manufacturing saves days of confusion after.
+cy?: And if we skipped all of that?
+ada~: Then today will be more exciting than it needs to be.
+# Chapter Two | Bring-Up, Step by Step
+@zone bench
+%list Bring-up order
+- Look: inspect for obvious problems
+- Measure: check for shorts before power
+- Power: current-limited supply, watch it
+- Clock: is the chip alive?
+- Debugger: can we connect?
+- Blink: one LED, one pin
+- Then each peripheral, one at a time
+N: Step one: look. Ben checks every board under a magnifier for solder bridges, missing parts, and chips rotated the wrong way.
+ben>: Board three has a capacitor that is just floating in the air. Board seven looks like someone sneezed solder on it.
+N: Step two: measure, before power. A multimeter checks the resistance between the power supply rail and ground. If it reads nearly zero, there is a short, and powering it would be a mistake.
+N: Step three: power, carefully. Instead of a wall adapter, Ben uses a lab power supply with a current limit. If something is wrong, the supply limits the damage instead of letting the board burn.
+%chart Current at power-on
+- line Healthy board: 2,8,12,12,12,12
+- line Shorted board: 2,95,100,100,100,100
+xl 0s,0.1s,0.2s,0.3s,0.4s,0.5s
+yl milliamps
+ben?: Twelve milliamps. Steady. That is about what the datasheet promises when the chip is idle.
+ada^: That number is music. Now the clock. Then the debugger.
+N: Once the chip is confirmed alive and the debugger can connect, Ada writes the smallest program possible: turn on one LED. If that works, the processor, the clock, the memory, the programmer, and one output pin all work.
+ben^: It blinks! It blinks!
+N: From there, each peripheral gets its own small test, one by one. Sensor, button, pump driver. Never everything at once.
+# Chapter Three | Reading Datasheets
+@zone screen
+N: The microcontroller's documentation is enormous. There is a datasheet with electrical facts, and a reference manual that describes every peripheral in detail, often more than a thousand pages.
+cy!: A thousand pages? For a chip the size of my fingernail?
+ada: Nobody reads it front to back. You learn to navigate it.
+%list How to read a datasheet
+- First page: what the chip is for
+- Pinout: what connects where
+- Absolute maximum ratings: what kills it
+- Electrical characteristics: typical vs worst case
+- Application notes: how others use it
+- Errata: the known bugs
+ada>: Start at the first page, the summary. Then the pinout. Then the absolute maximum ratings, which tell you what destroys the chip. Respect those numbers like a cliff edge.
+N: The electrical characteristics tables list typical values and worst case limits. Design for the worst case. Typical is what one chip did on a good day in the lab.
+ben: And never skip the errata. That is the list of bugs the manufacturer found in their own chip. Yes, chips have bugs too.
+N: Vendors also publish application notes and example code. These are often the fastest way to understand a peripheral. Treat them as hints, not gospel; examples are written to be short, not robust.
+ada: One more habit: think of your processor as a language. Each chip family has its own dialect: how its timers work, how its pins are configured, how its interrupts are named. The first project on a new chip is slow. The second is twice as fast.
+# Chapter Four | Reading Schematics
+@zone screen
+N: The schematic is the circuit diagram of the board. Software engineers who can read one are dramatically more useful in a crisis.
+%blocks Reading a schematic
+- Power section > Microcontroller:3.3 V
+- Microcontroller > LED + resistor:pin PB5, Pump driver:pin PA8
+- Moisture probe > Microcontroller:pin PA0
+- LED + resistor
+- Pump driver
+ada: You do not need to design circuits. You need to answer questions. Which pin is the LED on? Does the button pull the pin high or low when pressed? What voltage does the sensor output?
+ben>: Symbols help. A zigzag or box is a resistor. Two parallel lines, a capacitor. A triangle with a bar, a diode. Lines that meet with a dot are connected. Lines that cross without a dot are not.
+N: Schematics are usually split across pages, with labels connecting nets between them. A wire named moisture on page one is the same wire as moisture on page three.
+ada: My trick: print the schematic, and highlight every net I touch from software. By the end of bring-up, it is a map of everything the code controls.
+cy~: I printed it too. I made a poster. It is very decorative.
+# Chapter Five | Practice on a Hobby Board
+@zone bench
+N: Reading datasheets and schematics is a skill, and skills need practice. One of the best places to practice is a cheap hobby board, the kind with a huge community and thousands of tutorials.
+ben: That is how I started. A hobby board, a starter kit, and a weekend of making lights blink in the wrong order.
+ada: Here is an exercise I give every new engineer. Take a hobby board's schematic, find the chip's datasheet, and trace one pin all the way through.
+%list The pin-tracing exercise
+- Find the LED on the board's schematic
+- Note which chip pin drives it
+- Look up that pin in the chip's datasheet
+- Find the register that controls it
+- Toggle it yourself, without the library
+ada>: Hobby libraries hide all of this behind friendly functions, which is great for getting started. But once you trace a pin from the schematic to the register and toggle it yourself, the magic turns into understanding.
+N: That exercise connects every layer we drew in the last episode: from the copper on the board, through the chip's pin, into a register, up to a function call. It is the whole stack in miniature.
+cy?: Can I do the exercise?
+ben^: Absolutely. Step one: find the LED. Hint, it is the thing that lights up.
+# Chapter Five | Keep the Board Alive
+@zone bench
+N: Hardware is fragile in ways software is not. A mistake in code can be undone. A mistake in a circuit can release a little puff of expensive smoke.
+%list Board safety habits
+- Ground yourself: static kills chips
+- Power off before changing wires
+- Check voltages before connecting
+- Never let probes slip
+- Keep drinks off the bench
+ben: Static electricity is the silent killer. You can zap a chip without even feeling the spark. That is why we wear a wrist strap connected to ground.
+ada: Power off before changing connections. And check the voltage of anything you connect. A five volt signal into a three point three volt pin can damage it.
+N: The most common accident is a slipping probe: a multimeter tip that skids and shorts two neighboring pins. Clip on wherever you can, instead of holding probes by hand.
+cy?: And the coffee?
+ben~: The coffee lives on the other table, Cy. Forever.
+# Chapter Six | The Debugging Toolbox
+@zone bench
+N: When hardware misbehaves, software tools cannot see the problem. You need instruments that measure the physical world.
+%table The toolbox
+- Tool | Measures | Best for
+- Multimeter | volts, ohms, amps | is it powered?
+- Oscilloscope | voltage over time | analog, noise, edges
+- Logic analyzer | many digital lines | protocols, timing
+- Debugger | inside the chip | code state
+ben>: The multimeter is the first tool you reach for. Is the power rail at the right voltage? Is this wire connected to that pin? Is something shorted?
+N: An oscilloscope draws voltage over time. It shows whether a signal is clean, noisy, too slow, or ringing. It is how you see the electrical truth behind a digital ones and zeros.
+ada: A logic analyzer watches many digital lines at once and decodes them. It can show the bytes passing between the chip and a sensor, with timestamps.
+N: Each tool answers a different question. Learning which one to grab is half of the skill.
+ben: There is a cheaper trick too. Spare pins as debug signals. Ada sets a pin high when a function starts and low when it ends. On the scope, you can see exactly how long the function takes.
+%timing A debug pin on the scope
+- Debug pin: 0011110000111100
+- Sensor read: 0001100000011000
+ada: That trick costs one line of code and one wire, and it reveals timing that no print statement could ever show, because printing itself takes time.
+N: Instruments can also lie to you. A scope probe adds a tiny load that can change a sensitive circuit. A loose ground clip turns clean signals into noise. When a measurement looks impossible, check the measurement first.
+ada^: Let us use them. I think the moisture sensor is not responding.
+# Chapter Seven | Testing Hardware with Software
+@zone screen
+N: Once a board works, you need to know it keeps working, and that every board coming off the production line works too. That means tests that software runs on the hardware itself.
+%list Kinds of hardware tests
+- Power-on self test: quick checks at every boot
+- Manufacturing test: thorough checks per unit
+- On-demand test: run by a technician
+ada: A power-on self test runs at every boot. It must be fast: check memory, check that sensors respond, then get on with the job.
+N: A manufacturing test can be thorough. Each unit gets checked on the factory line before it goes in a box. Here, minutes per unit are affordable; returns are not.
+ada: Let me show a classic: testing an external flash memory chip. There are three ways it can fail: the data lines, the address lines, or the memory cells themselves.
+%code Walking-ones test on the data bus
+| for (int bit = 0; bit < 8; bit++) {
+|   uint8_t pattern = 1 << bit;     // 00000001, 00000010, ...
+|   flash_write(TEST_ADDR, pattern);
+|>  if (flash_read(TEST_ADDR) != pattern) return FAIL_DATA_LINE;
+| }
+ada>: First, the data lines. Write a value with exactly one bit set, read it back, and move the bit along. If a data line is stuck or shorted, one pattern comes back wrong.
+N: For address lines, write unique values at addresses that are powers of two, then check none overwrote another. A broken address line makes two addresses secretly the same location.
+ben: And finally, the cells. Fill the memory with a pattern, read it all back. That one is slow, so it is for the factory, not every boot.
+cy~: And if a test fails?
+ada: Then the test must say what failed, clearly. A test that reports, error, is nearly useless. A test that reports, data line three stuck low, sends the technician straight to the fault.
+# Chapter Eight | Commands and Responses
+@zone screen
+N: To run these tests, the team needs a way to talk to the board. The simplest is a command line over the serial port: type a command, get an answer.
+%code A tiny command table
+| typedef struct { const char *name; int (*run)(void); const char *help; } command_t;
+| static const command_t commands[] = {
+|   { "ver",    cmd_version,    "show firmware version" },
+|   { "flash",  cmd_flash_test, "test external flash" },
+|>  { "pump",   cmd_pump_test,  "run pump for one second" },
+| };
+ada: Each command is a row in a table: a name, a function to run, and help text. The command line reads what you type, finds the matching row, and calls its function.
+N: This is the command pattern: wrapping actions as objects that can be stored, listed, and invoked by name. Adding a command means adding one row, not rewriting the parser.
+ben^: Type help, and it lists every command. Type pump, and Gerald gets a drink. I love this.
+# Chapter Nine | When Things Go Wrong
+@zone bench
+N: Every function that talks to hardware can fail. Sensors disconnect. Memory wears out. Communication gets garbled. How the code reports errors matters.
+%list Error handling rules
+- Pick one style and use it everywhere
+- Return error codes; check them
+- Fail loudly in development
+- Recover gracefully in the field
+- Log what happened
+ada: The worst thing is inconsistency. One function returns minus one on failure, another returns zero, another returns true. Callers get it wrong, and errors vanish silently.
+N: In development, fail loudly, with an assert that stops everything, so bugs are impossible to ignore. In the field, a device should recover: retry, use a safe default, and log the problem for later.
+ben?: What about timing bugs? Our sensor works on my desk, but fails on board four.
+ada: Timing errors are sneaky. Maybe board four's sensor takes a few milliseconds longer to wake up. The code asks too early, gets garbage, and decides the soil is a desert.
+N: The oscilloscope catches it: on board four, the sensor's reply arrives two milliseconds after the code stopped waiting. Ada adds a proper wait and a retry. Board four joins the team.
+# Recap | Bring-Up Survived
+@zone green
+%list Today we learned
+- Review hardware and software together
+- Bring up one piece at a time
+- Navigate datasheets: pinout, limits, errata
+- Read schematics well enough to ask questions
+- Use the right instrument for the question
+- Test hardware with software, and report clearly
+N: Recap time. Bring-up is careful and incremental: look, measure, power with a limit, then clock, debugger, one LED, and each peripheral in turn.
+N: Datasheets are navigated, not read cover to cover. Schematics answer the questions software needs. Multimeters, scopes, and logic analyzers each reveal a different truth.
+N: And good boards come with good tests: quick self tests at boot, thorough ones in the factory, a command line to run them, and errors reported clearly and consistently.
+cy^: So, nine out of ten boards work. Board seven is the sneeze board.
+ben~: Board seven is now a coaster.
+ada: Next week, we make the board do real work: inputs, outputs, and timers. The fun begins with one tiny bit in one register.

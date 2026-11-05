@@ -1,0 +1,148 @@
+title: Episode 9 | Impossible Bugs
+narrator: bf_emma en-gb
+cast: ada=engineer:af_heart, ben=worker:am_michael, cy=boss:bm_george:en-gb
+---
+@zone bench
+@grade labNight
+N: Eleven at night. Sprout Pro reboots, roughly once every two hours, for no visible reason. The display goes blank, the light flickers, and it starts again, as if nothing happened.
+ben?: It never happens when the debugger is attached. Never. I have been watching it for six hours.
+cy!: Investor day is in two weeks! Can we just hide the reboot? Maybe make it look like a feature? A little nap?
+ada: No. A device that reboots randomly is a device that someday reboots with the pump on, or loses a settings write halfway. We find it.
+N: This episode is about the bugs that seem impossible: crashes that vanish under observation, code that works until you turn on optimization, and the hard faults that stop a processor cold.
+# Chapter One | The Optimizer Is Not Your Enemy
+@zone screen
+@grade labNight
+N: First clue. Ben's debug build, with optimization off, never crashes. The release build, with optimization on, does. Cy immediately blames the compiler.
+cy~: Turn off the optimizer. Problem solved.
+ada: The optimizer is almost never the bug. It is the thing that reveals the bug. Optimized code is smaller and faster, and it takes the language rules literally.
+%code What the optimizer saw
+| bool tank_empty = false;             // set by an interrupt
+|
+| void wait_for_refill(void) {
+|>  while (tank_empty) { }             // optimizer: never changes here!
+| }
+ada>: Here, a variable is changed by an interrupt, but it is not marked volatile. The compiler sees a loop that never modifies it, so it reads it once and loops forever, or skips the loop entirely. Both are legal.
+N: The language promises that a normal variable only changes when your code changes it. Interrupts, hardware registers, and other tasks break that promise, so you must tell the compiler, with volatile, or with proper synchronization.
+%list Things optimization exposes
+- Missing volatile on shared variables
+- Reading uninitialized variables
+- Undefined behavior, like signed overflow
+- Timing loops that the compiler deletes
+- Code that relied on a lucky memory layout
+ben: Timing loops too. A delay that counts to a million does nothing useful, so the optimizer removes it. Suddenly the sensor gets asked too early.
+ada: And undefined behavior: overflowing a signed integer, reading past an array, using a pointer after freeing it. Unoptimized code often does something reasonable by accident. Optimized code assumes it never happens, and the results can be bizarre.
+N: The lesson is to build with optimization on early, test that build, and treat any difference between debug and release as a bug in your code, not in the compiler.
+# Chapter Two | Hunting the Impossible
+@zone bench
+@grade labNight
+N: Ada adds volatile to the tank flag. The reboots slow down, but do not stop. Now it is once every five hours. That is the worst kind of progress.
+%list The impossible bug method
+- Write down every symptom, exactly
+- Find what makes it more frequent
+- Make it reproducible on demand
+- Change one thing at a time
+- Explain it fully before you fix it
+ada: When a bug seems impossible, one of your assumptions is wrong. The job is to find which one. So we stop guessing, and we collect facts.
+ben: Fact one: it only reboots while the display is refreshing. Fact two: it is worse when the history log is long. Fact three: never with the debugger attached.
+ada^: Fact three is the best clue. The debugger changes timing and keeps the chip awake. So this is likely timing or memory related, not pure logic.
+N: A powerful trick is to make the bug happen faster. Ben fills the history log artificially, and sets the display to refresh constantly. Now Sprout reboots every three minutes. A bug you can trigger in three minutes is a bug you can catch.
+cy?: Can you not just add print statements everywhere?
+ada: Printing changes timing too, and might make it vanish again. Better to record cheaply, in RAM, and read the record after the crash.
+# Chapter Three | Hard Faults
+@zone screen
+@grade labNight
+N: The reboot is not a power glitch. Ada finds it is the processor hitting a hard fault: a condition so wrong that the processor refuses to continue, jumps to a fault handler, and, in Sprout's code, the fault handler resets the chip.
+%list Common hard fault causes
+- Dereferencing a bad pointer
+- Writing past the end of the stack
+- Misaligned memory access
+- Executing from invalid memory
+- Dividing by zero, if trapping is on
+- Calling an invalid function pointer
+ada: On processors like Sprout's, many errors that would print a message on a laptop instead cause a fault. A null pointer, a corrupted function pointer, an access to memory that does not exist.
+N: Stack overflow is a sneaky one. The stack grows downward as functions call functions. If it grows too far, it silently tramples whatever sits below it in RAM, often global variables. Nothing complains until some trampled value causes chaos later.
+%memory RAM, stack growing down
+- 0x2000_2000 | Stack top | 0.6 | grows down
+- 0x2000_1A00 | Stack growing... | 1 | danger zone
+- 0x2000_1000 | Display buffer | 1 | 1 KB
+- 0x2000_0000 | Globals | 1 | settings, log index
+ben!: The display buffer sits right below the stack. If the stack overflows, it scribbles over the screen data.
+ada: Or the other way around. If the display code writes past the end of its buffer, it might corrupt something else. Let us find out exactly.
+# Chapter Four | Reading the Crime Scene
+@zone screen
+@grade labNight
+N: When a fault happens on these processors, the hardware has already saved the registers on the stack, including the address of the instruction that was running. The fault handler can read that crime scene.
+%code A fault handler that records evidence
+| void HardFault_Handler(void) {
+|   uint32_t *sp = get_stack_pointer();
+|   crash.pc   = sp[6];          // instruction that faulted
+|   crash.lr   = sp[5];          // where it was called from
+|   crash.cfsr = FAULT_STATUS;   // why: bad address? bad alignment?
+|>  crash.magic = 0xDEADBEEF;    // mark the record as valid
+|   system_reset();
+| }
+ada>: The program counter tells us where the crash happened. The link register tells us who called that code. The fault status register tells us what kind of fault it was.
+N: The record goes into a small area of RAM that the startup code is told not to clear. After the reset, the code checks for the magic number, finds a crash record, and logs it to flash.
+ben: So the device tells us what happened to it. Like a flight recorder.
+ada: Exactly like a flight recorder. Look up the program counter in the map file, and you know the exact function.
+%table The crash record
+- Field | Value | Meaning
+- PC | 0x0800_3A42 | in font_draw_char
+- LR | 0x0800_3B10 | called by display_text
+- CFSR | precise bus fault | bad address written
+- Fault address | 0x2000_2010 | just past the end of RAM
+N: Font draw char, writing just past the end of RAM. The display code is not the victim. It is the culprit.
+# Chapter Five | The Culprit
+@zone bench
+@grade labWarm
+N: Ada reads font draw char line by line. The history screen draws the watering count, a number that, for long logs, has more digits than the text buffer was sized for.
+%code The bug
+| char text[6];                       // room for 5 digits + end
+|>sprintf(text, "%lu ml", total);      // "123456 ml" = 10 chars!
+| display_text(10, 40, text);
+ada: The text buffer has room for six characters. A long history produces ten. Sprintf writes past the end, overwrites the stack, and the corrupted return address sends the processor into the wilderness.
+ben!: And it only happened with a long log, because only then did the number get big enough!
+N: And the debugger? With it attached, the build used a different stack layout, so the overflow trampled something harmless. Impossible, until it is obvious.
+%code The fix
+| char text[16];
+|>snprintf(text, sizeof text, "%lu ml", total);   // never overflows
+ada: A bigger buffer, and snprintf, which never writes more than the size you give it. And a test: draw the history screen with the largest possible numbers, every time we build.
+cy^: Two weeks to investor day, and the impossible bug is dead. I knew we would find it.
+ben~: You suggested making the reboots look like a nap.
+# Chapter Six | Core Dumps and Defenses
+@zone screen
+@grade labTeal
+N: Ada wants more than a crash record next time. She sets up a core dump: on a fault, the device saves a snapshot of RAM and registers to flash. Later, the snapshot is copied to a laptop and loaded into the debugger, as if the crash just happened.
+%blocks Core dump flow
+- Fault > Save RAM + registers:to flash
+- Save RAM + registers > Reset
+- Reset > Upload dump:next boot
+- Upload dump > Debugger on laptop:inspect
+- Debugger on laptop
+ada: With a core dump, you can inspect every variable, walk the call stack, and see exactly what the device was doing when it died, even if it died a thousand kilometers away.
+N: And there are defenses that catch problems earlier, before they become mysteries.
+%list Defenses against impossible bugs
+- Fill the stack with a pattern; check the high water mark
+- Use the memory protection unit to guard the stack
+- Turn on compiler warnings; treat them as errors
+- Use static analysis tools
+- Assert assumptions in code
+- Keep crash records in the field
+ben: The stack pattern trick is great. Fill the stack with a known value at boot. Later, see how much of the pattern was overwritten. That tells you how close you have come to overflowing.
+ada: Many processors also have a memory protection unit. Mark a small guard region below the stack as forbidden, and an overflow causes an immediate, precise fault, right at the guilty line, instead of corruption that surfaces an hour later.
+# Recap | Nothing Is Impossible
+@zone green
+@grade labMint
+%list Today we learned
+- Optimization exposes bugs; it rarely causes them
+- Volatile for anything changed outside normal flow
+- Make bugs frequent, then reproducible
+- Hard faults: bad pointers, stack overflow, alignment
+- Record PC, LR, and fault status for the post-mortem
+- Core dumps and guard regions catch the rest
+N: To recap. When a bug only appears with optimization, look for missing volatile, undefined behavior, or deleted timing loops. The optimizer is usually the messenger.
+N: Impossible bugs fall to a method: collect exact facts, make the bug happen more often, change one thing at a time, and explain it before you fix it.
+N: Hard faults leave evidence. Save the program counter, the caller, and the fault status, then look them up in the map file. Core dumps, stack watermarks, and memory protection catch the rest.
+cy: So Sprout is stable. We can show it to investors?
+ada: We can show it to investors. Next, we connect it to the internet, which means everything we just fixed can now break remotely.
+N@ben?: Ben stares at the wireless module like it owes him money.

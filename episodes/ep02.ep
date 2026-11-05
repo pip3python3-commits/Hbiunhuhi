@@ -1,0 +1,212 @@
+title: Episode 2 | Draw the Map First
+narrator: bf_emma en-gb
+cast: ada=engineer:af_heart, ben=worker:am_michael, cy=boss:bm_george:en-gb
+---
+@zone bench
+N: Monday morning. Cy bursts into the lab holding a printout from a competitor's website.
+cy!: Their plant pot has a phone app. And a light sensor. And it plays music to the plant. We need all of that by Friday.
+ben?: Music. For the plant.
+ada: Cy, if I add features to the code we have now, it will collapse like a sandcastle at high tide. We need an architecture first.
+cy?: Is architecture the thing with the columns?
+N: Not that kind. Software architecture is the big picture: what the pieces of a system are, what each one is responsible for, and how they talk to each other.
+ada: Today, before any more code, we draw the map. Because when the features arrive, and they always arrive, the map tells us where they go.
+# Chapter One | Start With the Outside
+@zone screen
+N: The first drawing is the simplest, and the most often skipped. A context diagram shows your device as one box, surrounded by everything it interacts with.
+%blocks Context: Sprout and its world
+- Sprout @0.5,0.5 > Pump:water
+- Soil @0.12,0.2 > Sprout:moisture
+- Owner @0.12,0.8 > Sprout:button
+- Phone app @0.88,0.8 > Sprout:<>settings
+- Pump @0.88,0.2
+ada>: Sprout in the middle. Around it: the soil it measures, the pump it drives, the human who presses the button, and later, a phone app.
+ben: No wires, no chips. Just who talks to whom.
+N: Notice what a context diagram forces you to ask. What comes in? What goes out? What happens if one of those outside things misbehaves, like a phone that disconnects mid-update?
+cy~: I like this one. It looks like a solar system and we are the sun.
+N: A context diagram is also a great tool for talking to people who are not engineers. Investors, designers, and the support team can all read it, and they will spot missing pieces you never thought of.
+ben: Like the water tank. Where does the pump get its water from?
+ada!: Oh. Right. There is no water tank on this diagram.
+N: Exactly the kind of mistake that is free to fix on a whiteboard, and expensive to fix after a thousand units ship.
+ada~: Fine. The next drawing has more boxes, and a water tank.
+# Chapter Two | Block Diagrams
+@zone screen
+N: Next, we open the box. A block diagram breaks the device into its major parts, both hardware and software, and connects them.
+%blocks Inside Sprout cols=3
+- Moisture sensor > ADC driver
+- ADC driver > Watering logic
+- Button > GPIO driver
+- GPIO driver > Watering logic
+- Watering logic > Pump driver:on/off, Logger:events
+- Pump driver
+- Logger
+ada: Sensor readings come in through an analog driver. The button comes in through a pin driver. Both feed the watering logic, which decides, and the pump driver acts.
+ben>: And the logger writes down what happened, so when Gerald dies, we know whose fault it was.
+cy?: Why is the pump driver separate from the watering logic? It's all just the pump.
+ada: Because they change for different reasons. The watering rules change when we learn about plants. The pump driver changes when you buy a different pump.
+N: That is one of the most useful ideas in design. Group together the things that change together. Separate the things that change for different reasons.
+# Chapter Three | Who Is in Charge?
+@zone screen
+N: A third drawing shows control. Instead of data flow, it shows hierarchy: which module calls which. Think of it as an organization chart for code.
+%blocks Who calls whom
+- main @0.5,0.12 > Watering logic
+- Watering logic @0.5,0.45 > ADC driver, Pump driver, Logger
+- ADC driver @0.15,0.82
+- Pump driver @0.5,0.82
+- Logger @0.85,0.82
+ada>: Main starts the watering logic. The watering logic uses the drivers. The drivers never call upward into the logic.
+ben: Arrows pointing down. Like a company where the boss gives orders and the interns do not email the board of directors.
+cy~: I am the board of directors.
+ben~: Yes, and you keep emailing the interns.
+N: When a low-level module starts calling high-level code directly, the diagram tangles into a web. Tangled diagrams become tangled code. Keeping the arrows pointing one way is a quiet superpower.
+# Chapter Four | Layers
+@zone screen
+N: The fourth view slices the system into layers, from the hardware at the bottom to the application at the top.
+%layers Sprout in layers
+- Application | when and how much to water
+- Services | logging, settings, scheduling
+- Drivers | ADC, GPIO, pump, serial
+- Hardware abstraction | registers wrapped in functions
+- Hardware | the actual chip and board
+ada: Each layer only talks to the one directly below it. The application never touches a register. It asks a driver.
+N: The payoff is portability. If we switch to a different microcontroller, we rewrite the bottom layers. The application, the part that knows about plants, stays the same.
+ben: Like replacing the engine without redesigning the steering wheel.
+ada: Real systems cheat a little. Sometimes a service talks straight to hardware for speed. That is fine, as long as you decide it on purpose and write down why.
+%list Four views of one system
+- Context: what surrounds it
+- Block: its major parts
+- Hierarchy: who controls whom
+- Layers: from hardware up
+N: Four drawings, four questions. None of them needs fancy software. A whiteboard and a phone camera will do. The point is to think, and to share that thinking with the team.
+cy?: How many diagrams is too many? Do I need to hire an architect?
+ada: For a small device, these four drawings on a single wall are enough. Update them when the design changes. An old diagram that lies is worse than no diagram.
+# Chapter Five | Designing for Change
+@zone bench
+cy: Fine. Maps are nice. But I need features by Friday. How does a drawing help me?
+ada: Because the features you will ask for next month are unknown. Good architecture is not about predicting them. It is about making change cheap when it comes.
+%list Making change cheap
+- Hide details inside modules
+- Talk through small interfaces
+- Keep hardware specifics at the edges
+- Pass dependencies in, do not hardcode them
+N: The first tool is encapsulation. Each module hides its details behind a small set of functions. Outside code uses those functions and never pokes at the internals.
+%code pump.h: the outside view
+| // Everything the rest of the code may know
+| void pump_init(void);
+| void pump_on(uint16_t milliliters);
+| void pump_off(void);
+| bool pump_is_running(void);
+ada>: Here is our pump module, from the outside. Four functions. Nobody else knows which pin drives it, or how fast it pumps.
+ben: So when I swap the aquarium pump for a better one, I only change the inside of the pump module.
+ada: Exactly. The watering logic still calls pump on, with a number of milliliters, and has no idea anything changed.
+N: The second tool is delegation. A module that needs a job done hands it to another module that specializes in it, instead of doing everything itself.
+cy^: Delegation! Finally, something I am good at.
+ada~: Delegation means giving the job to someone who can do it, Cy. Not giving it to whoever is nearest.
+N: There is a balance to strike. Too few modules, and everything is tangled together. Too many, and the code becomes a maze of tiny files that each do almost nothing.
+%list Signs of a good module
+- You can describe its job in one sentence
+- Its interface fits on one screen
+- It can be tested alone
+- Changing its insides breaks nobody
+ada: My rule of thumb: if I cannot describe a module's job in one sentence without the word and, it probably wants to be two modules.
+ben: And if I need to open six files to change one behavior, we probably have too many.
+# Chapter Six | Drivers with a Familiar Shape
+@zone screen
+N: When you write many drivers, it helps if they all look alike. One classic shape comes from operating systems: open, close, read, write, and a catch-all for special settings.
+%code A common driver shape
+| int  dev_open(dev_t *d);
+| int  dev_close(dev_t *d);
+| int  dev_read(dev_t *d, uint8_t *buf, int len);
+| int  dev_write(dev_t *d, const uint8_t *buf, int len);
+|>int  dev_ioctl(dev_t *d, int command, void *arg);
+ada: Open prepares the device. Read and write move data. Close shuts it down. And the last one, often called I O control, handles everything that does not fit, like setting a baud rate.
+ben?: Does every driver need all five?
+ada: No. A button driver has nothing to write. But when drivers share a shape, new team members learn them faster, and higher layers can treat devices more uniformly.
+N: The risk is forcing a square peg into a round interface. If a device needs something unusual, an honest specific function beats a tortured generic one.
+# Chapter Seven | Adapters
+@zone bench
+N: Wednesday. Ben finds a cheaper moisture sensor. It talks over a serial bus instead of giving an analog voltage. Different chip, different protocol, different everything.
+ben!: Same job, totally different interface. Do we rewrite the watering logic?
+ada: No. We write an adapter. A small module that makes the new sensor look like the old one from the outside.
+%blocks Adapter pattern
+- Watering logic > Sensor interface:moisture_read()
+- Sensor interface > Analog adapter, Serial adapter
+- Analog adapter > ADC sensor
+- Serial adapter > Serial sensor
+- ADC sensor
+- Serial sensor
+ada>: The watering logic calls moisture read. Behind that, one adapter talks to the old analog sensor, another talks to the new serial one. The logic cannot tell the difference.
+N: That is the adapter pattern: translate one interface into another, so that code written for the first keeps working with the second.
+cy~: So we could support both sensors? In different models?
+ada: In C, one common way to build that shared interface is a small table of function pointers. Each adapter fills in the table with its own functions.
+%code A sensor interface in C
+| typedef struct {
+|   void     (*init)(void);
+|   uint16_t (*read)(void);   // moisture, 0 to 1000
+| } moisture_sensor_t;
+|
+|>const moisture_sensor_t *sensor = &serial_sensor;
+| uint16_t m = sensor->read();
+N: The watering logic holds a pointer to whichever sensor is installed and calls read through it. Swapping sensors means changing one line at startup, not hunting through the whole program.
+ben?: Is there a cost?
+ada: A tiny one. Calling through a pointer is slightly slower, and the compiler cannot always optimize across it. For a sensor read every few minutes, it does not matter at all.
+ada: Yes. That is the kind of flexibility a few lines of design buys. And it is why we drew the map on Monday.
+# Chapter Eight | Interfaces and a Logger
+@zone screen
+N: Let us build one module properly, end to end. Every embedded system needs a logger: a way to record what happened, especially when nobody was watching.
+ada: First, the interface. What does the rest of the code need from a logger? Not much: say something, and say how important it is.
+%code log.h
+| typedef enum { LOG_DEBUG, LOG_INFO, LOG_WARN, LOG_ERROR } log_level_t;
+| void log_init(void);
+| void log_set_level(log_level_t min);
+|>void log_msg(log_level_t lvl, const char *module, const char *msg);
+N: Levels let us control the noise. During development, show everything. In the field, record only warnings and errors, to save time and space.
+ben: And the module name tells you who complained. Pump said this, sensor said that.
+ada: Here is the important part. Where do log messages go? Today, a serial cable to my laptop. Next month, flash memory. Later, maybe the phone app.
+%blocks One interface, many outputs
+- log_msg() > Serial output, Flash storage, Radio uplink
+- Serial output
+- Flash storage
+- Radio uplink
+ada>: None of the callers care. They call log message. The logger decides where it goes, and we can change that decision in one place.
+N: Notice a subtle trap. Logging takes time. A log call inside a fast timing loop can slow it down, or change the very bug you are chasing. So keep logs out of the tightest code, or make them cheap.
+cy?: Can the logger tell me which of you broke the build?
+ada~: The version control system already does that, Cy. It is usually you, editing the readme.
+# Chapter Nine | The Sandbox
+@zone bench
+N: Here is the final idea, and perhaps the most practical. If your architecture separates hardware from logic, you can run the logic somewhere else entirely: on your laptop.
+%blocks Two builds, same logic
+- Watering logic > Real drivers, Fake drivers
+- Real drivers > Sprout board
+- Fake drivers > Laptop test
+- Sprout board
+- Laptop test
+ada: On the board, the watering logic talks to real drivers. On my laptop, it talks to fake ones. A fake sensor that reports whatever moisture I type. A fake pump that just prints, pump on.
+ben^: So you can test a whole week of watering in one second, without drowning the lab.
+N: That is a sandbox: a safe place to run and test code without the target hardware. It speeds up development, and lets software start before the boards even exist.
+ada: The sandbox will not catch everything. Timing, electrical noise, real sensor weirdness, those only show up on hardware. But it catches the logic mistakes early, while they are cheap.
+cy^: Fine. No music for the plant. But the sensor adapter and the logger I can sell.
+N: A sandbox pairs naturally with unit tests: small automatic checks that feed a module known inputs and confirm its outputs.
+%code A unit test in the sandbox
+| void test_dry_soil_starts_pump(void) {
+|   fake_sensor_set(120);        // very dry
+|   watering_step();
+|>  assert(fake_pump_was_started());
+| }
+ada: Here, the fake sensor reports dry soil, we run one step of the watering logic, and we check that the fake pump was started. If anyone breaks that rule later, the test fails within seconds.
+ben: Tests also explain the code. That test says, out loud, dry soil should start the pump. Better than any comment.
+ben~: That is the most reasonable thing you have said all week.
+# Recap | The Map Before the City
+@zone green
+%list Architecture toolkit
+- Draw context, block, hierarchy, and layer views
+- Group things that change together
+- Hide details behind small interfaces
+- Use adapters to swap parts
+- Log through one interface
+- Test the logic in a sandbox
+N: Time to recap. Before code, draw the map: the context around the device, the blocks inside it, who controls whom, and the layers from hardware up.
+N: Design for change by hiding details in modules, keeping interfaces small, and putting hardware specifics at the edges. Adapters let you swap parts without rewriting logic.
+N: A shared driver shape makes code familiar. A logger with one interface can send messages anywhere. And a sandbox lets you test logic on your laptop, long before the boards arrive.
+ada: Next week, the boards arrive. Real hardware. Real datasheets. Real smoke, if we are unlucky.
+ben^: I have been waiting for this my entire life.
+N@cy?: Cy quietly orders a fire extinguisher. Just in case.

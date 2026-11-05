@@ -1,0 +1,185 @@
+title: Episode 6 | Who Runs Next?
+narrator: bf_emma en-gb
+cast: ada=engineer:af_heart, ben=worker:am_michael, cy=boss:bm_george:en-gb
+---
+@zone green
+@world droop=0.4>0.6
+N: Sprout is doing many things now. Reading the soil, blinking the light, polling the button, driving the pump, logging events. And yesterday, for eleven seconds, it did none of them.
+ben?: The light froze. The button did nothing. Then everything came back like nothing happened.
+ada: Something in the loop held on too long. Which means it is time to think seriously about how a program shares one processor among many jobs.
+cy: Explain it like I run a restaurant. Because one day, I will.
+ada~: Good. Restaurants are exactly the right picture. One kitchen, many orders, and somebody has to decide what gets cooked next.
+# Chapter One | Tasks
+@zone screen
+N: In embedded systems, a task is a unit of work with its own job and its own timing. Sprout's tasks each have different needs.
+%table Sprout's tasks
+- Task | How often | How urgent
+- Tank guard | constantly | critical
+- Button | every 10 ms | snappy
+- Pump control | while watering | steady
+- Soil check | every minute | relaxed
+- Logger | when there is news | whenever
+ada: There are two ways for tasks to share the processor. Cooperative, where each task runs until it voluntarily gives control back. And preemptive, where a scheduler can pause a task in the middle and switch to a more important one.
+%blocks Two ways to share
+- Cooperative > Simple + predictable:pro, One slow task blocks all:con
+- Preemptive > Urgent work runs fast:pro, Shared data gets risky:con
+- Simple + predictable
+- One slow task blocks all
+- Urgent work runs fast
+- Shared data gets risky
+N: Our scheduler from the last episode is cooperative. And the eleven-second freeze? The logger was waiting for a slow flash write to finish, and every other task waited with it.
+ben: So in the restaurant, one cook was holding the only frying pan, staring at an egg.
+# Chapter Two | Preemption and an Operating System
+@zone screen
+N: A real-time operating system, or RTOS, is a small scheduler that provides preemption. Each task gets its own stack, and the RTOS switches between them, often on every timer tick or whenever a higher priority task becomes ready.
+%timing Preemptive switching
+- Tank guard: 0000110000001100
+- Pump control: 1100001100110000
+- Logger: 0011000011000011
+ada: With an RTOS, the logger can wait for flash without blocking anyone. While it waits, the scheduler runs other tasks. The urgent tank guard always gets the processor the moment it needs it.
+cy^: Great. Install the operating system.
+ada: Hold on. An RTOS costs memory, since every task needs its own stack. It costs learning time. And it makes a whole category of bugs possible that a simple loop never has.
+N: Those bugs come from one fact: in a preemptive system, a task can be paused at any instruction, and another task can run and touch the same data. Exactly like interrupts, but everywhere.
+# Chapter Three | Race Conditions
+@zone bench
+N: A race condition is a bug whose outcome depends on the timing of events: who gets there first. Sprout has a lovely one.
+%code Two tasks, one variable
+| // Soil task:                     // Button task:
+| if (!pump_busy) {                 if (!pump_busy) {
+|>   pump_busy = true;                 pump_busy = true;
+|    pump_on(100);                     pump_on(100);
+| }                                 }
+ada: Both tasks check whether the pump is busy. Both see it is free. Both claim it. Gerald gets double the water, but only when the timing lines up just so. Maybe once a month.
+ben!: That is the ghost! That is the overwatering ghost from last Tuesday!
+N: The cure is to make the check-and-claim indivisible. In an RTOS, you use a mutex: a lock that only one task can hold at a time. Others that ask must wait.
+%code With a mutex
+| if (mutex_try_lock(&pump_lock)) {
+|>  pump_on(100);
+|   mutex_unlock(&pump_lock);
+| }
+ada>: Only one task can hold the pump lock. The other finds it taken and skips watering this time. No double dose.
+N: Other tools solve related problems. A semaphore counts available resources or signals events between tasks. A queue passes messages safely from one task to another. Most RTOS designs lean heavily on queues, because tasks that only share messages rarely race.
+# Chapter Four | Priority Inversion
+@zone screen
+N: Locks fix races, but they introduce a stranger problem, one famous enough to have nearly doomed a spacecraft. It is called priority inversion.
+%list Priority inversion, step by step
+- Low priority logger takes the flash lock
+- High priority task needs flash, waits
+- Medium priority task becomes ready
+- Medium preempts low; low never finishes
+- High waits behind medium, indefinitely
+ada: The high priority task waits for a lock held by the low priority task. That alone is fine, the low task will finish soon. But a medium priority task arrives, preempts the low one, and keeps running.
+%timing The inversion
+- High: 0011111111111100
+- Medium: 0000111111110000
+- Low: 1100000000001100
+ada>: Now the most important task in the system is effectively waiting on the medium task, which has nothing to do with it. Priorities have been turned upside down.
+N: The common fix is priority inheritance: while a low priority task holds a lock that a high priority task wants, the low task temporarily borrows the high priority. It finishes quickly, releases the lock, and drops back down.
+ben?: So the intern gets a temporary VIP pass, just long enough to give the boss back the stapler?
+ada^: That is a perfect description of priority inheritance.
+cy~: I am always the boss in these metaphors. I like that.
+# Chapter Five | State Machines
+@zone screen
+N: Ada steps back from the scheduling problem. Much of Sprout's tangled logic is really one question: what mode is it in? Idle, checking, watering, waiting for the soil to soak, or out of water.
+%states Sprout's watering machine on=Idle
+- Idle > Checking:timer
+- Checking > Watering:too dry, Idle:fine
+- Watering > Soaking:dose done, Tank empty:no water
+- Soaking > Checking:wait over
+- Tank empty > Idle:refilled
+ada>: A state machine says: the system is always in exactly one state. Events cause transitions to other states. And each state defines what the system does and what it is waiting for.
+N: Drawing it first catches mistakes. What happens if the tank runs dry while soaking? What if the button is pressed while watering? Every state, every event, one decision each.
+ben: And it gets rid of the soup of flags. No more is watering, was watering, about to water, almost watering.
+# Chapter Six | Coding a State Machine
+@zone screen
+N: There are several ways to turn a state diagram into code. The simplest is a switch statement on the current state.
+%code A switch-based state machine
+| switch (state) {
+| case IDLE:     if (timer_fired) state = CHECKING; break;
+| case CHECKING: state = soil_dry() ? WATERING : IDLE; break;
+| case WATERING: if (tank_empty()) state = TANK_EMPTY;
+|                else if (dose_done()) state = SOAKING; break;
+|>case SOAKING:  if (soak_over()) state = CHECKING; break;
+| }
+ada: Easy to read for small machines. As machines grow, the switch grows into a long, fragile block.
+N: A second approach makes each state a function. The current state is simply a pointer to the function that handles events in that state, and a transition is just pointing somewhere else.
+%code States as functions
+| typedef void (*state_fn)(event_t e);
+| static state_fn state = idle_state;
+|
+| void watering_state(event_t e) {
+|   if (e == EV_TANK_EMPTY) state = tank_empty_state;
+|>  else if (e == EV_DOSE_DONE) state = soaking_state;
+| }
+ada>: Each state lives in its own small function. Adding a state means adding a function, without touching the others.
+N: A third approach puts the whole machine in a table: for each current state and each event, the next state and an action. The code that runs it is tiny and never changes; only the table does.
+%table A transition table
+- State | Event | Next | Action
+- Idle | timer | Checking | read soil
+- Checking | dry | Watering | pump on
+- Watering | dose done | Soaking | pump off
+- Watering | tank empty | Tank empty | alarm
+- Soaking | wait over | Checking | read soil
+ben^: That table is basically the diagram, but the chip can read it.
+ada: Which makes it easy to review, and even to generate from a drawing tool. The cost is that unusual behavior, like a special case in one state, can feel awkward to express.
+N: Larger systems sometimes use hierarchical state machines, where states contain sub-states that share common behavior, like every state reacting to the tank running dry the same way. Pick the simplest form that fits.
+# Chapter Seven | The Watchdog
+@zone bench
+N: Now back to the freeze. Ada can fix that specific bug. But what about the next one, the bug nobody has found yet? For that, embedded systems keep a guard dog.
+%timing The watchdog
+- Kick: 1010101010000000
+- Counter: 0000000000001111
+- Reset: 0000000000000001
+ada: A watchdog is a hardware timer that counts down independently of the processor. The software must kick it regularly, resetting the countdown. If the software hangs and stops kicking, the timer runs out and resets the chip.
+cy!: It reboots on purpose? That sounds terrible.
+ada: It is a last resort. A device that reboots after a rare hang is far better than a device that sits frozen for weeks, with the pump stuck on.
+N: Where you kick matters. Kicking from a timer interrupt is a classic mistake: the interrupt keeps firing even when the main loop is stuck, so the dog is fed by a corpse.
+%code Kick only when everyone checked in
+| void main_loop_end(void) {
+|   if (soil_alive && button_alive && pump_alive) {
+|>    watchdog_kick();
+|     soil_alive = button_alive = pump_alive = false;
+|   }
+| }
+ada>: Better: each important task sets an I am alive flag. Only when all of them have checked in does the loop kick the dog. If any one task hangs, the dog bites.
+ben: And after a watchdog reset, the code should notice and log it. A device that silently reboots every night is hiding a bug from you.
+# Chapter Eight | Main Loop Styles
+@zone screen
+N: Stepping back, there are a few common overall shapes for embedded programs. Each one suits different devices.
+%table Program shapes
+- Style | How it works | Good for
+- Super loop | poll everything, forever | simple devices
+- Interrupt-driven | sleep until an event | low power
+- Cooperative scheduler | timed tasks that yield | medium devices
+- RTOS | preemptive tasks | complex devices
+ada: A super loop is the plain main loop. An interrupt-driven design sleeps most of the time and wakes on events, which is wonderful for batteries.
+N: A cooperative scheduler organizes the loop into timed tasks. And an RTOS adds preemption for systems with many concurrent, independent jobs.
+ben?: Which one for Sprout?
+ada: For now, an interrupt-driven cooperative scheduler, with the state machine at its heart. We might move to an RTOS when we add wireless. The point is to choose on purpose.
+# Chapter Nine | Active Objects
+@zone screen
+N: One more design deserves a mention, because it combines the best ideas of this episode. An active object is a module that owns its own data, runs in its own task, and communicates only through a message queue.
+%blocks Active objects talk in messages
+- Button object > Watering object:WATER_NOW
+- Soil object > Watering object:SOIL_DRY
+- Watering object > Pump object:PUMP_ON
+- Pump object > Watering object:DOSE_DONE
+ada: Inside, each active object is usually a state machine. Nobody reaches into its variables; they post messages to its queue, and it processes them one at a time.
+N: Because each object handles one message at a time, and nothing else touches its data, most race conditions simply cannot happen. Concurrency becomes a conversation instead of a fight.
+cy^: That sounds like the most civilized office ever.
+ben~: It sounds like the opposite of our office.
+# Recap | Order in the Kitchen
+@zone green
+@world droop=0.6>0
+%list Today we learned
+- Tasks share the processor, cooperatively or preemptively
+- Races: protect shared data with locks or queues
+- Priority inversion; inheritance fixes it
+- State machines: switch, functions, or tables
+- Watchdogs recover from the unknown hang
+- Choose a program shape on purpose
+N: To recap. Tasks share one processor, either by politely yielding or by being preempted. Preemption brings speed, and race conditions.
+N: Locks, semaphores, and queues protect shared data. Priority inversion can stall urgent work, and priority inheritance fixes it.
+N: State machines turn tangled flags into clear modes, and can be coded as switches, functions, or tables. Watchdogs rescue the system from hangs you have not found yet. And active objects make concurrency a conversation.
+ada: Next time, Sprout learns to talk. Serial ports, buses, and a dozen ways for chips to gossip.
+N@ben^: Ben has already ordered six new sensors. All of them speak different languages.

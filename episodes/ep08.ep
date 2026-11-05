@@ -1,0 +1,157 @@
+title: Episode 8 | Sprout Grows Up
+narrator: bf_emma en-gb
+cast: ada=engineer:af_heart, ben=worker:am_michael, cy=boss:bm_george:en-gb
+---
+@zone green
+N: Investor day is in three weeks. Cy has promised a Sprout Pro: a keypad to set schedules, a small display, a watering history stored in memory, and a light sensor so Sprout knows night from day.
+cy^: Everything we have learned, all in one device. How hard can it be?
+ada: Each piece is easy. Putting them together is the hard part. Today is about systems: how parts fit, how data flows, and how fast it all needs to go.
+# Chapter One | A Keypad Without Many Pins
+@zone screen
+N: First, the keypad. Twelve buttons: the digits, a star, and a hash. Wiring each to its own pin would use twelve pins. The trick is a key matrix.
+%blocks A 4 by 3 key matrix cols=3
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- *
+- 0
+- #
+ada: The buttons sit at the crossings of four row wires and three column wires. Seven pins instead of twelve. A sixteen key pad needs eight pins instead of sixteen.
+%timing Scanning the rows
+- Row 1: 0111011101110111
+- Row 2: 1011101110111011
+- Row 3: 1101110111011101
+- Row 4: 1110111011101110
+N: To read it, the code drives one row low at a time and reads the columns. If a column reads low while row two is driven, the key at row two, that column, is pressed. Scanning all rows takes a fraction of a millisecond.
+ben?: What if someone presses three keys at once?
+ada: With some combinations, a phantom fourth key appears, because current sneaks through the pressed switches. Diodes on each key prevent that ghosting. For a schedule keypad, we will simply ignore multiple presses.
+N: Each key still bounces, so the matrix scan runs from a timer every few milliseconds, with the same debounce logic as before, just for twelve keys at once.
+# Chapter Two | Displays
+@zone screen
+N: Next, the display. There are many kinds: single LEDs, seven-segment digits, character screens, and pixel displays.
+%table Display options
+- Type | Shows | Effort
+- Status LED | on, off, blink | trivial
+- Seven-segment | digits | low
+- Character LCD | text rows | medium
+- Pixel display | anything | high
+ada: A pixel display, even a small one, holds a lot of data. A one hundred twenty-eight by sixty-four monochrome screen is eight thousand one hundred ninety-two pixels, a kilobyte of memory just for one frame.
+N: The code keeps a frame buffer in RAM, draws text and icons into it, and sends it to the display over SPI. Only changed areas need to be resent, which saves time.
+ben: Fonts eat flash. Every character of every size is a little bitmap. Choose one or two fonts, not twelve.
+# Chapter Three | Flyweights and Factories
+@zone screen
+N: Ada designs the screens: a moisture bar, a water drop icon, a clock. Many elements repeat. The same drop icon appears on four different screens.
+ada: If each screen stored its own copy of every icon, we would run out of memory. Instead, we store each icon once, in flash, and screens just point to it. That is the flyweight pattern: share the heavy, unchanging part, keep only the small varying part separate.
+%blocks Flyweight icons
+- Home screen (x=10) > Drop icon (stored once)
+- History screen (x=40) > Drop icon (stored once)
+- Settings screen (x=70) > Drop icon (stored once)
+- Drop icon (stored once)
+N: Each screen keeps only where to draw the icon. The pixels live in one place. With dozens of icons and characters, the savings are enormous.
+ada: And to create those screen elements, we use a factory: a single function that takes a description, like a button with this label at this position, and builds the right object. The rest of the code never deals with construction details.
+%code A tiny widget factory
+| widget_t *ui_make(widget_kind_t kind, int x, int y, const char *text) {
+|   switch (kind) {
+|   case W_LABEL:  return label_create(x, y, text);
+|   case W_BAR:    return bar_create(x, y);
+|>  case W_ICON:   return icon_create(x, y, icon_lookup(text));
+|   }
+|   return NULL;
+| }
+ben: So if we change how icons are built, only the factory changes. Every screen keeps calling ui make.
+# Chapter Four | Memory That Remembers
+@zone screen
+N: Sprout Pro must remember its settings and watering history when the batteries are swapped. RAM forgets everything without power. So the data goes into flash memory.
+%list Flash memory rules
+- Erased flash reads as all ones
+- Writing can only turn ones into zeros
+- Erasing works on whole sectors
+- Each sector survives limited erases
+ada: Flash has strange rules. You cannot simply overwrite a byte. Writing can only change ones to zeros. To get ones back, you must erase an entire sector, often four kilobytes at once. And each sector can only be erased so many times, perhaps ten thousand to a hundred thousand.
+cy!: So if we save the settings every minute in the same spot, we wear it out?
+ada: In about a week, for some chips. Which is why we need to spread the writes around.
+N: One approach is EEPROM emulation: a small library that makes flash behave like a byte-writable memory. It writes new values to fresh locations and only erases a sector when it fills up, spreading the wear.
+%memory Wear leveling with a log
+- Sector B | Newer records | 1 | fills next
+- Sector A | Older records | 1 | erased when full
+ben: For settings, a key-value store is even friendlier. Save a value under a name, like water amount, and read it back by name. Internally, it appends records and keeps the latest one for each key.
+N: For larger data, like a long watering history, a small file system designed for flash handles wear leveling, and crucially, survives power loss in the middle of a write without corrupting everything.
+ada: Power loss is the real test. Pull the batteries mid-save, a hundred times. If the data comes back sane every time, you have a storage design you can trust.
+# Chapter Five | Sensors: Analog and Digital
+@zone bench
+N: Now the light sensor. Ben has two options: an analog light sensor that outputs a voltage, and a digital one that speaks I squared C.
+%table Analog vs digital sensors
+- | Analog | Digital
+- Output | a voltage | numbers over a bus
+- Needs | ADC + calibration | a driver
+- Noise | picks it up on wires | mostly immune
+- Price | cheaper | more features
+ada: Analog sensors are simple and cheap, but the code must convert voltages into meaningful units, and calibrate for each sensor's quirks. Electrical noise on the wire becomes noise in your data.
+N: Digital sensors do the conversion internally and send calibrated numbers. Many add features: configurable ranges, alerts, low power modes. The cost is a driver, and reading a longer datasheet.
+ben: We go digital for light. But the soil probe stays analog, because there are no cheap digital soil sensors that survive being buried in mud.
+# Chapter Six | The Strategy Pattern
+@zone screen
+N: Ada wants different watering behavior for different plants. A cactus wants rare, deep watering. A fern wants frequent, gentle sips. Same inputs, different decisions.
+ada: Instead of an enormous if statement, we use the strategy pattern: each watering style is a separate, swappable algorithm with the same interface.
+%code Watering strategies
+| typedef struct {
+|   const char *name;
+|   uint16_t (*dose_ml)(uint16_t moisture, uint16_t light);
+| } strategy_t;
+|
+| const strategy_t fern   = { "fern",   fern_dose };
+|>const strategy_t cactus = { "cactus", cactus_dose };
+ada>: The watering logic calls the current strategy's dose function. Choosing cactus mode just switches a pointer. New plant types do not touch the core logic.
+cy^: We can sell plant packs! Orchid mode, three ninety-nine!
+ben~: And there it is.
+# Chapter Seven | Pipelines and Filters
+@zone screen
+N: Sensor data rarely arrives ready to use. It needs cleaning, converting, and combining. A clean way to organize that is a pipeline: a chain of small stages, each doing one job.
+%blocks The moisture pipeline
+- ADC samples > Remove spikes
+- Remove spikes > Average
+- Average > Convert to percent
+- Convert to percent > Decide
+- Decide
+ada: Each stage takes data in, transforms it, and passes it on. Remove spikes throws out readings that are wildly different from their neighbors. Average smooths the noise. Convert applies calibration. Decide uses the result.
+N: Because stages share a simple interface, you can test each one alone, reorder them, or insert a new one, like temperature compensation, without rewriting the others.
+ben: And it matches how engineers think about signals. You can draw it on a whiteboard, and the code looks just like the drawing.
+# Chapter Eight | Speeds and Feeds
+@zone screen
+N: Finally, the question that ties a system together: is it fast enough, and is there room? Engineers sometimes call this speeds and feeds: how much data flows through each part, and how fast each part can handle it.
+%table Sprout Pro's data budget
+- Path | Rate needed | Capacity
+- Soil ADC | 10 samples / s | 1,000,000 / s
+- Light sensor | 1 read / s | 400 kbit/s bus
+- Display refresh | 1 KB, 5 times / s | 8 Mbit/s SPI
+- History log | 1 record / min | flash: ok
+ada: For each path, compare the rate you need with the rate available, and leave a healthy margin. Sending one kilobyte to the display five times a second over an eight megabit SPI bus takes about five milliseconds per second. That is fine.
+N: The danger is in the combinations. The display update, the sensor read, and a flash write can all want the same bus, or the same processor time, at the same moment.
+%chart Processor load over one second
+- bar Busy percent: 12,15,64,14,12,18,13,71,12,14
+xl 0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9
+ben?: So, those two spikes?
+ada: Flash writes landing on top of display refreshes. The average load is low, but the peaks are what break deadlines. We stagger them so they never coincide.
+N: That is the heart of system design: knowing the worst case, not just the average. Measure peak loads, not just totals.
+# Recap | Assembling the Pro
+@zone green
+%list Today we learned
+- Key matrices save pins; scan and debounce
+- Displays need frame buffers and fonts
+- Flyweights share heavy data; factories build objects
+- Flash wears out: spread the writes
+- Analog sensors are cheap; digital are easier
+- Strategy swaps algorithms; pipelines chain stages
+- Budget data rates, and watch the peaks
+N: To recap. A key matrix reads many buttons with few pins. Displays need memory for frames and fonts, and flyweights keep shared images from multiplying.
+N: Flash memory wears out, so wear leveling, key-value stores, and power-safe file systems protect your data. Analog sensors trade simplicity for calibration work; digital ones trade price for convenience.
+N: The strategy pattern swaps decisions cleanly, pipelines chain small processing stages, and speeds and feeds keeps every data path within budget.
+cy^: Investor day is going to be amazing.
+ada?: Investor day is in three weeks, and Sprout Pro just rebooted by itself. Twice.
+N@ben!: Next time: bugs that should be impossible.

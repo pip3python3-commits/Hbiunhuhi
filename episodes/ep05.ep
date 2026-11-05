@@ -1,0 +1,205 @@
+title: Episode 5 | Excuse Me, Processor
+narrator: bf_emma en-gb
+cast: ada=engineer:af_heart, ben=worker:am_michael, cy=boss:bm_george:en-gb
+---
+@zone bench
+N: Sprout's main loop checks the button over and over, millions of times a second. Ninety-nine point nine nine percent of those checks find nothing. It is like checking your front door every second in case a parcel arrived.
+cy?: Is that bad? It works.
+ada: It works, but it wastes energy, and when the loop gets busy, a quick press can be missed entirely. There is a better way: let the hardware tap the processor on the shoulder.
+N: That tap is called an interrupt. Today's episode is about how interrupts work, why they are wonderful, and why they cause some of the strangest bugs in all of programming.
+# Chapter One | What Is an Interrupt?
+@zone screen
+N: An interrupt is a signal from hardware that says, stop what you are doing, something needs attention now. The processor pauses its current work, runs a special function, then resumes exactly where it left off.
+%timing Main code, interrupted
+- Main code: 1111110000011111
+- Button: 0000011000000000
+- Handler: 0000001111100000
+ada: That special function is the interrupt service routine, or ISR. The main code does not call it. The hardware does, whenever the event happens.
+ben: So the doorbell rings, you answer the door, sign for the parcel, and go back to your book, at exactly the same page.
+%list Things that raise interrupts
+- A pin changes level
+- A timer reaches its compare value
+- A byte arrives on the serial port
+- An analog conversion finishes
+- A data transfer completes
+N: Almost every peripheral can raise an interrupt. Each source is identified by a number, often called the interrupt request number, or IRQ.
+# Chapter Two | Who Goes First?
+@zone screen
+N: What if two interrupts arrive at once? Or a new one arrives while a handler is running? The interrupt controller decides, using priorities.
+%table Sprout's priorities
+- Source | Priority | Why
+- Tank empty | highest | stop the pump now
+- Timer tick | high | keeps time
+- Serial byte | medium | do not lose data
+- Button | low | humans are slow
+ada: Higher priority interrupts are served first. And on many chips, a higher priority interrupt can interrupt a lower priority handler that is already running. That is called nesting.
+%blocks Nested interrupts
+- Main code > Button handler:interrupted
+- Button handler > Tank empty handler:interrupted again
+- Tank empty handler
+ada>: The main code is interrupted by the button handler, which is itself interrupted by the tank empty handler. When that finishes, the button handler resumes, and then main.
+cy~: Like a meeting about a meeting, interrupted by an emergency.
+N: Nesting keeps urgent work fast, but each nested level uses more stack memory, and it makes timing harder to reason about. Use priorities thoughtfully, not generously.
+# Chapter Three | Saving Your Place
+@zone screen
+N: For the main code to resume as if nothing happened, the processor must save its exact state before running the handler. That means the registers it was using, and the address of the next instruction.
+%list Interrupt sequence
+- Finish the current instruction
+- Save registers onto the stack
+- Look up the handler's address
+- Run the handler
+- Restore the registers
+- Resume the main code
+ada: On many modern microcontrollers, the hardware saves the most important registers automatically, which is why you can write handlers as ordinary C functions.
+N: The lookup step uses the vector table: a list of addresses stored at a known place in memory, one entry per interrupt. Entry number seven might point to the timer handler, entry twelve to the serial handler.
+%memory The vector table
+- 0x0000_0040 | Timer handler addr | 1 | IRQ 7
+- 0x0000_0010 | Fault handlers | 1 | system
+- 0x0000_0004 | Reset handler addr | 1 | where code starts
+- 0x0000_0000 | Initial stack pointer | 1 | top of RAM
+ben?: And if an interrupt fires that has no handler?
+ada: Then the table points to a default handler, which usually just loops forever. A chip that mysteriously freezes is often stuck in a default handler for an interrupt someone enabled by accident.
+# Chapter Four | Writing a Handler
+@zone screen
+%code A button interrupt handler
+| volatile bool button_flag = false;
+|
+| void EXTI3_IRQHandler(void) {        // name from the vector table
+|   EXTI->PR = (1 << 3);               // clear the pending flag
+|>  button_flag = true;                // tell the main loop
+| }
+ada>: Here is our button handler. Its name matches an entry in the vector table. First, it clears the interrupt's pending flag. If it forgets, the interrupt fires again the instant the handler returns, forever.
+N: Then it sets a flag and leaves. That is the golden rule of handlers: get in, do the minimum, get out. The main loop sees the flag and does the slow work later.
+ben!: Why not just run the pump right there in the handler?
+ada: Because while the handler runs, lower priority interrupts wait. If the pump code takes fifty milliseconds, serial bytes arriving during that time could be lost.
+%list Handler rules
+- Keep it short
+- Clear the interrupt flag
+- No long loops or waiting
+- No printing over slow serial
+- Hand work to the main loop
+N: And note the word volatile on the flag. That tells the compiler this variable can change at any moment, outside the normal flow of code. Without it, the compiler might keep a stale copy in a register and never see the handler's update.
+# Chapter Five | Critical Sections
+@zone bench
+N: Now for the dangerous part. The handler and the main code share data. And sharing data between them, carelessly, is how ghosts get into machines.
+cy?: Ghosts?
+ada: Bugs that appear once a week, cannot be reproduced, and vanish when you add a print statement. Watch this.
+%code A counter shared with an interrupt
+| volatile uint16_t presses = 0;
+|
+| void button_isr(void) { presses++; }
+|
+| // main loop:
+|>presses = presses - handled;   // read, subtract, write
+N: In the main loop, this one line is really three steps: read presses, subtract, write the result back. If the interrupt fires between the read and the write, its increment is overwritten and lost forever.
+%timing The lost update
+- Main reads: 0110000000000000
+- ISR adds 1: 0000111000000000
+- Main writes: 0000000110000000
+ada: The fix is a critical section: a short stretch of code during which interrupts are temporarily disabled, so the read-modify-write cannot be split.
+%code Protecting the shared variable
+| uint32_t state = disable_interrupts();
+|>presses = presses - handled;
+| restore_interrupts(state);
+ada>: Disable, update, restore. Keep it as short as possible, because while interrupts are off, the whole system is deaf.
+ben: And restore the previous state, rather than blindly enabling. If interrupts were already off when you started, you should leave them off.
+N: Some updates are atomic, meaning the processor completes them in one indivisible step, like writing a single aligned thirty-two bit value on a thirty-two bit chip. But read-modify-write sequences, and anything larger than the processor's native size, usually are not.
+# Chapter Six | Configuring Interrupts
+@zone screen
+N: Getting an interrupt to fire takes several layers of permission. Miss one, and nothing happens, with no error to tell you why.
+%layers Permissions to interrupt
+- Global interrupts enabled | the master switch
+- Controller enables this IRQ | with a priority
+- Peripheral enables its event | e.g. falling edge on pin 3
+- Pin and clock configured | the hardware is alive
+ada: The peripheral must be told to generate the event, like a falling edge on pin three. The interrupt controller must enable that IRQ number, with a priority. And interrupts must be enabled globally.
+ben: And the handler must be named exactly right, or the vector table will not point to it. One typo, and the default handler eats your interrupt.
+N: The order matters too. Clear any stale pending flag before enabling, or an old event from power-up will fire immediately and confuse everyone.
+N: There is one more choice when configuring a pin interrupt: edge or level. An edge-triggered interrupt fires once, at the moment the signal changes. A level-triggered one keeps firing for as long as the signal stays in its active state.
+%timing Edge vs level
+- Signal: 1110000000111111
+- Edge fires: 0001000000000000
+- Level fires: 0001111111000000
+ada: Buttons and most pins use edges. Level triggering suits devices that hold a line active until they are serviced, like a sensor that keeps its alert line low until you read its data.
+ben: Get it backwards, and a level interrupt that is never cleared at the source will fire endlessly, and the main loop never runs again. The board looks dead, but it is really just extremely busy.
+# Chapter Seven | When Not to Use Interrupts
+@zone screen
+cy^: Interrupts are amazing. Let us use them for everything.
+ada: Please do not. Interrupts have costs. Every one adds a little overhead, and a system with too many becomes hard to predict.
+%table Polling vs interrupts
+- | Polling | Interrupts
+- Simplicity | very simple | more complex
+- Response time | depends on loop | fast
+- CPU when idle | busy checking | free or asleep
+- Best for | frequent, slow-changing things | rare, urgent events
+ada>: If something happens very frequently, like a sensor that changes every few microseconds, an interrupt per change could overwhelm the processor. Polling it at a steady rate is calmer.
+N: A noisy, bouncing button is another case. Each bounce fires an interrupt. Many designs poll buttons from a regular timer instead, which debounces naturally.
+ben: And sometimes the simplest loop is the right answer. If Sprout checks the soil once a minute, nobody needs an interrupt for that.
+# Chapter Eight | How Fast Is Fast?
+@zone bench
+N: Cy wants a number. How long between the button press and the handler running? That delay is called interrupt latency.
+%list Where latency comes from
+- Finishing the current instruction
+- Saving registers to the stack
+- Fetching the handler address
+- Waiting for higher priority handlers
+- Waiting while interrupts are disabled
+ada: The hardware part is usually tiny, a few dozen clock cycles. At eight megahertz, that is a handful of microseconds. The big, unpredictable part is software: other handlers running, and critical sections where interrupts are switched off.
+N: That is why critical sections must be short. The longest stretch of code with interrupts disabled sets a floor on the worst case latency of every interrupt in the system.
+ben: And we can measure it. Wire the button to one scope channel. In the handler, set a spare pin high on the first line. The gap between the two edges is the real latency.
+%timing Measuring latency
+- Button pin: 1110000000000000
+- Debug pin: 0000001111000000
+ada^: Six microseconds, typically. Thirty in the worst case, when the serial handler was busy. For a button, that is instant. For a motor, it might matter.
+cy~: Six microseconds. I am going to put that in the pitch deck.
+# Chapter Eight | The System Tick
+@zone bench
+N: One interrupt is used by almost every embedded system: the system tick. A timer fires at a steady rate, often a thousand times a second, and the handler simply counts.
+%code The tick
+| volatile uint32_t ticks = 0;
+| void SysTick_Handler(void) { ticks++; }       // every 1 ms
+|
+| uint32_t now(void) { return ticks; }
+|>bool elapsed(uint32_t start, uint32_t ms) { return (now() - start) >= ms; }
+ada: Now any code can ask what time it is, in milliseconds since boot. And it can check whether enough time has passed without blocking.
+N: Notice the subtraction in elapsed. Thirty-two bit milliseconds overflow after about forty-nine days. Subtracting start from now with unsigned numbers still gives the correct difference across the wraparound. Comparing now to start plus ms directly would break.
+ben!: Forty-nine days? So a device that fails after seven weeks of uptime might be this bug?
+ada: It happens in real products more often than anyone would like to admit.
+# Chapter Nine | A Very Small Scheduler
+@zone screen
+N: With a tick, we can build a tiny scheduler: a table of tasks, each with a period. The main loop runs each task when its time comes.
+%code A cooperative scheduler
+| typedef struct { void (*run)(void); uint32_t period, last; } task_t;
+| task_t tasks[] = {
+|   { button_poll,  10,    0 },     // every 10 ms
+|   { led_update,   250,   0 },     // every 250 ms
+|   { soil_check,   60000, 0 },     // every minute
+| };
+| for (;;) for (int i = 0; i < N_TASKS; i++)
+|>  if (elapsed(tasks[i].last, tasks[i].period)) { tasks[i].last = now(); tasks[i].run(); }
+ada>: The button is polled every ten milliseconds, the LED updated four times a second, the soil checked every minute. Each task runs briefly and returns.
+N: This is cooperative scheduling: each task promises to finish quickly and give the processor back. Nobody is forcibly interrupted, so shared data is much safer, and timing is easy to reason about.
+ben: The catch is the promise. If one task hangs, every other task waits. One bad apple stops the whole cart.
+cy~: Sounds like a team. Which is why I bring donuts.
+ada: Next episode, we look at what happens when tasks do not keep their promises, and the different ways to structure the flow of a whole program.
+N: Before we go, one pattern ties everything together. The serial port receives bytes in an interrupt, one at a time, but the main loop wants whole messages. So the handler drops each byte into a small queue, and the main loop takes them out at its own pace.
+%blocks Interrupt to main loop handoff
+- Serial ISR > Byte queue:put()
+- Byte queue > Main loop:get()
+- Main loop
+ada: The handler only ever writes to the queue's head; the main loop only reads from its tail. With careful design, neither has to disable interrupts at all. We will build that queue properly in the episode on peripherals.
+# Recap | Interrupts, Carefully
+@zone green
+%list Today we learned
+- Interrupts let hardware call your code
+- Priorities and nesting order the urgency
+- State is saved, the vector table finds the handler
+- Handlers: short, clear the flag, use volatile
+- Protect shared data with critical sections
+- Poll when it is calmer; tick for time
+N: To recap. An interrupt lets hardware pause your program, run a handler, and resume. Priorities decide who goes first, and higher priorities can nest inside lower ones.
+N: The processor saves its state, looks up the handler in the vector table, and restores everything afterwards. Handlers should be short, clear their flags, and share data through volatile variables.
+N: Shared data needs critical sections to stay consistent. Not everything deserves an interrupt; polling is often calmer. And a system tick, plus a tiny scheduler, can run a whole device.
+@world droop=0>0.4
+N@cy?: Meanwhile, nobody has watered Gerald all episode. He is looking a little sad.
+cy!: Somebody poll Gerald!

@@ -1,0 +1,218 @@
+title: Episode 4 | One Bit at a Time
+narrator: bf_emma en-gb
+cast: ada=engineer:af_heart, ben=worker:am_michael, cy=boss:bm_george:en-gb
+---
+@zone green
+N: Sprout now has a working board. But a working board that does nothing is just a very expensive coaster. Today it learns to sense and to act.
+cy: I want three things. A light that shows Sprout is happy. A button to water on demand. And the pump, running gently, not like a fire hose.
+ada^: Those three things are the whole foundation of embedded programming. Outputs, inputs, and timers. Let us start with the light.
+# Chapter One | Registers
+@zone screen
+N: Inside the microcontroller, everything is controlled through registers. A register is a small piece of memory, usually thirty-two bits wide, wired directly to hardware.
+%blocks Registers are switches
+- Your code > Register:write bits
+- Register > Hardware:wires
+- Hardware > LED:3.3 V
+- LED
+ada: When code writes a value into a particular address, it is not storing data. It is flipping physical switches. One bit might connect a pin to power. Another might start a timer.
+ben?: So memory addresses are secretly light switches?
+ada: Some of them. The chip's memory map has regions for flash, for RAM, and a region for peripherals, where each address is a register with a hardware job.
+%memory The chip's address space
+- 0x4000_0000 | Peripheral registers | 1.2 | timers, pins, serial
+- 0x2000_0000 | RAM | 1 | variables
+- 0x0800_0000 | Flash | 1.5 | your program
+N: The reference manual lists every register: its address, what each bit does, and whether you can read it, write it, or both. It is the true instruction manual for the chip.
+# Chapter Two | Binary and Hex
+@zone screen
+N: To work with registers, you need to think in binary. Each bit is a zero or a one. Eight bits make a byte, and a thirty-two bit register is four bytes.
+%bits One byte
+bits 10100101
+names b7,b6,b5,b4,b3,b2,b1,b0
+label 1010 0101 = hex A5 = 165
+ada: Binary gets long fast, so we write it in hexadecimal. Each hex digit stands for exactly four bits. So one byte is always two hex digits.
+%table Hex digits
+- Hex | Binary | Decimal
+- 0 | 0000 | 0
+- 5 | 0101 | 5
+- 9 | 1001 | 9
+- A | 1010 | 10
+- F | 1111 | 15
+ben: So hex A5 is one zero one zero, zero one zero one. Once you learn the sixteen patterns, you can read registers like a newspaper.
+cy~: A very boring newspaper.
+ada~: A newspaper where every headline turns something on.
+# Chapter Three | Bitwise Operations
+@zone screen
+N: Here is the core problem. A register controls many things at once. To change one bit, you must leave all the others alone. That is what bitwise operations are for.
+%code The four essential moves
+| reg & (1 << 5)        // test:   is bit 5 set?
+| reg |= (1 << 5);      // set:    turn bit 5 on
+|>reg &= ~(1 << 5);     // clear:  turn bit 5 off
+| reg ^= (1 << 5);      // toggle: flip bit 5
+ada>: One shifted left by five makes a mask with only bit five set. Or-ing it in sets that bit. And-ing with the inverted mask clears it. Exclusive-or flips it. And-ing the mask tests it.
+%bits Setting bit 5
+bits 00100000
+names -,-,LED,-,-,-,-,-
+hl 5
+label reg |= (1 << 5)
+N: The key is that each operation only touches the bits in the mask. Every other bit, controlling some other piece of hardware, keeps its value.
+ben!: What happens if you just write the number thirty-two into the register instead?
+ada: Then bit five turns on, and every other bit turns off. If those bits were running the pump or the serial port, they just stopped. It is a classic mistake.
+cy?: So the lesson is, never be blunt with registers.
+ada: The lesson is, change only what you mean to change.
+# Chapter Four | Blinking the LED
+@zone bench
+N: Now, the hello world of embedded systems: the blinking LED. It takes three steps. Turn on the pin's clock, configure the pin as an output, then toggle it in a loop.
+%code blink.c
+| int main(void) {
+|   RCC_ENABLE |= GPIOB_CLOCK;          // 1. power the pin block
+|   GPIOB_MODE |= (1 << (5 * 2));       // 2. pin 5 = output
+|   while (1) {
+|>    GPIOB_OUT ^= (1 << 5);            // 3. toggle the LED
+|     delay_ms(500);
+|   }
+| }
+ada: Step one surprises people. On many chips, peripherals are unpowered by default to save energy. Until you enable the clock to the pin block, writes to it do nothing at all.
+ben: Classic first-day bug. The code looks perfect. The LED stays dark. Somebody forgot the clock.
+N: Step two configures the pin as an output. Pins usually start as inputs, which is the safest choice: an input does not push current anywhere.
+ben: Outputs come in flavors too. A push-pull output actively drives the pin both high and low. An open-drain output can only pull low, and lets a resistor pull it high. Open drain is useful when several chips share one wire.
+ada: And many pins have an alternate function mode, where the pin is handed over to a peripheral, like a timer or a serial port, instead of being controlled bit by bit. We will need that for the pump.
+N: There is also the electrical side. An LED needs a resistor in series to limit its current, and a microcontroller pin can only supply a few milliamps safely. A pump motor needs far more, so the pin drives a transistor, and the transistor switches the pump.
+ada^: And step three toggles it forever, with a half-second pause. Let us flash it.
+@world droop=0>0
+N@ben^: The LED blinks. Ben, a grown adult, cheers like his team just won a final.
+# Chapter Five | Hiding the Hardware
+@zone screen
+N: The blink works, but the code is full of register names and magic numbers. If Ben moves the LED to another pin on the next board, Ada must hunt through every file.
+%code board.h
+| // Sprout board, revision B
+| #define LED_PORT      GPIOB
+| #define LED_PIN       5
+| #define PUMP_PORT     GPIOA
+| #define PUMP_PIN      8
+|>#define BUTTON_PIN    3
+ada: The first fix is a board header file. Every pin assignment lives in one place. A new board revision means one new header, not a scavenger hunt.
+N: The second fix is a facade: a simple interface that hides a complicated subsystem behind friendly functions.
+%code led.h: a facade
+| void led_init(void);
+| void led_on(void);
+| void led_off(void);
+|>void led_toggle(void);
+ada>: The application says, led toggle. It does not know about clocks, modes, or bit five. The facade does all of that inside.
+ben: So when the next board uses a different chip entirely, only the inside of the facade changes.
+cy^: It is like me. I am the facade of this company. Friendly on the outside.
+ada~: And the inside is held together with jumper wires.
+# Chapter Six | The Main Loop
+@zone screen
+N: Most simple embedded programs share the same skeleton: initialize everything once, then loop forever, checking inputs and updating outputs.
+%code The classic main loop
+| int main(void) {
+|   board_init();
+|   led_init(); pump_init(); button_init();
+|   while (1) {
+|     if (button_pressed()) pump_on(100);
+|>    watering_step();
+|     led_update();
+|   }
+| }
+ada: There is no exit. An embedded program that returns from main has nowhere to go. So the loop runs until the power goes away.
+N: This style is easy to understand. Its weakness is that every task in the loop waits for the others. If one step takes too long, everything else is late. Later episodes cover the alternatives.
+# Chapter Seven | Reading a Button
+@zone bench
+N: Now, input. The button connects a pin to ground when pressed. When released, a resistor gently pulls the pin up to the supply voltage. So released reads as one, pressed reads as zero.
+%timing Button: what you expect
+- Finger: 0001111111110000
+- Pin: 1110000000001111
+ben: That pull-up resistor is important. Without it, a released button leaves the pin floating, and a floating pin reads random noise, picking up signals from your hand, the lights, anything.
+ada: Most chips have built-in pull-up resistors you can enable with one register bit. Saves a part on the board.
+N: To read the button, the code tests the pin's bit in the input register. Simple. Except the first time Ada tries, one press waters Gerald five times.
+cy!: Five times! Gerald is drowning!
+# Chapter Eight | Debouncing
+@zone screen
+N: The culprit is physics. A mechanical button does not close cleanly. Its metal contacts bounce against each other for a few milliseconds, making and breaking the connection many times.
+%timing What really happens
+- Finger: 0001111111111110000
+- Pin: 1110101000000001011
+ada: To a human, it is one press. To a chip checking millions of times a second, it is a burst of presses. So we debounce: we only believe the button after it has been steady for a while.
+%code Debouncing by waiting for stability
+| static uint8_t stable_count = 0;
+| bool raw = pin_read(BUTTON_PIN) == 0;   // pressed = low
+| if (raw != last_raw) stable_count = 0;  // still bouncing
+| else if (stable_count < 10) stable_count++;
+|>if (stable_count == 10) pressed = raw;  // steady for 10 ms
+| last_raw = raw;
+ada>: Sample the pin every millisecond. If it changed, reset the counter. Only when it has been the same for ten samples in a row do we accept the new state.
+N: There are many debouncing strategies, in hardware with capacitors, or in software with counters or timers. The principle is the same: wait for the contact to settle before you trust it.
+ben: You could also use an interrupt that fires when the pin changes. But a bouncing button fires the interrupt many times too, so you still need to debounce. Interrupts get their own episode.
+# Chapter Nine | Dependency Injection
+@zone screen
+N: Ada wants to test the debounce logic in the sandbox on her laptop. But the code calls pin read directly, and the laptop has no pins.
+ada: The fix is to pass in what a module depends on, instead of having it reach out and grab it. That is called dependency injection.
+%code Injecting the pin reader
+| typedef bool (*read_fn)(void);
+| void button_init(read_fn reader);    // who reads the pin?
+|
+| button_init(real_pin_read);          // on the board
+|>button_init(fake_pin_read);          // in the laptop test
+ada>: On the board, we give the button module the real pin reader. In a test, we hand it a fake that replays a recorded bounce pattern. The debounce logic never knows the difference.
+ben: So we can test every weird bounce the button could ever make, without pressing it ten thousand times.
+cy~: Please do not press it ten thousand times. Gerald has suffered enough.
+# Chapter Ten | Timers
+@zone screen
+N: The blink loop used a delay that simply burns time doing nothing. That is wasteful, and imprecise. Real systems use hardware timers.
+%blocks How a timer counts
+- System clock (8 MHz) > Prescaler (÷ 8000)
+- Prescaler (÷ 8000) > Counter:1 kHz ticks
+- Counter > Compare = 500:match!
+- Compare = 500
+ada: A timer is a counter driven by a clock. A prescaler divides the clock down first. When the counter reaches a compare value, the timer raises a flag, or flips a pin, all by itself.
+N: The math is simple. Timer ticks per second equal the clock frequency divided by the prescaler. The time until a match equals the compare value divided by the tick rate.
+%table Timer math
+- Clock | Prescaler | Tick rate | Compare | Period
+- 8 MHz | 8000 | 1 kHz | 500 | 0.5 s
+- 8 MHz | 8 | 1 MHz | 1000 | 1 ms
+- 8 MHz | 1 | 8 MHz | 400 | 50 µs
+ada>: Eight megahertz divided by eight thousand gives one thousand ticks per second. A compare value of five hundred means a match every half second. Perfect for blinking.
+ben?: Why not just use the fastest clock and a huge compare value?
+ada: Because the counter has a limit. A sixteen bit counter stops at sixty-five thousand five hundred and thirty-five. Pick a prescaler that gets you the precision you need, without overflowing.
+N: Watch out for off-by-one errors. On many timers, the counter includes zero, so a period of five hundred ticks needs a compare value of four hundred ninety-nine. The reference manual will tell you which.
+# Chapter Eleven | PWM: Gentle Power
+@zone bench
+N: Now Cy's last wish: run the pump gently. A pin is either fully on or fully off. But if you switch it on and off very fast, the average power is somewhere in between. That is pulse width modulation, or PWM.
+%timing Duty cycle
+- 25 percent: 1000100010001000
+- 50 percent: 1100110011001100
+- 75 percent: 1110111011101110
+ada: The fraction of time the signal is on is called the duty cycle. At fifty percent, the pump gets roughly half its power. At twenty-five, it barely trickles.
+N: Timers make PWM easy. The timer's period sets the frequency. A second compare value sets when the pin turns off. The hardware does the switching; the code only changes a number.
+ben: The frequency matters. Too slow, and the pump stutters. In the audible range, it whines. A few tens of kilohertz is usually silent and smooth.
+@world protoDroop=0>0
+N@cy^: Ben sets the duty cycle to thirty percent. The pump hums quietly. A gentle stream reaches Gerald's roots.
+cy^: Beautiful. Like a tiny, efficient rain cloud.
+# Chapter Twelve | Ready to Ship?
+@zone green
+cy: So, we have a light, a button, and a gentle pump. Can we ship?
+ada: Not yet. A prototype that works on the bench is the beginning, not the end. Shipping code has to work every time, on every unit.
+%list Before shipping I O code
+- Remove debug hacks and test pins
+- Check every pin's default state at power-up
+- Confirm timer math on the real clock
+- Test with the slowest, oldest button
+- Write down what each pin does
+N: One easily missed check: what does the pump pin do during the few milliseconds after power-on, before the code configures it? If it floats, the pump might twitch at every boot.
+ben: A pull-down resistor on that line keeps the pump off until the software is ready. Hardware and software, working together again.
+# Recap | Bits, Buttons, and Timers
+@zone green
+%list Today we learned
+- Registers are hardware switches at addresses
+- Hex packs four bits per digit
+- Test, set, clear, toggle with masks
+- Board headers and facades hide hardware
+- Debounce buttons before trusting them
+- Inject dependencies to test anywhere
+- Timers count; PWM averages power
+N: To recap. Registers are switches wired to hardware. Bitwise masks change exactly the bits you mean, and nothing else.
+N: Board header files and facades keep hardware details in one place. Buttons bounce, so debounce them. Dependency injection lets the same logic run on the board and in a test.
+N: Timers count clock ticks, so you can calculate periods precisely. And PWM switches quickly to deliver any average power you like.
+ada: Next time, we stop checking the button in a loop, and let the hardware interrupt us instead. It is powerful, and it is dangerous.
+cy?: Dangerous how?
+ada~: Let us just say Gerald will need to be very patient.

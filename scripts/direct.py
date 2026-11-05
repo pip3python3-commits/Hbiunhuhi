@@ -193,8 +193,12 @@ def main():
         if not ln.strip() or ln.startswith("//"): continue
         if ln.startswith("# "):
             parts = [x.strip() for x in ln[2:].split("|")]
+            if parts[0].startswith("Chapter "):
+                NUM = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen"]
+                nchap = sum(1 for b in beats if b.get("title", {}).get("text", "").startswith("Chapter ")) + (1 if pending_title and pending_title["text"].startswith("Chapter ") else 0)
+                parts[0] = "Chapter " + NUM[min(nchap, 14)]
             pending_title = {"text": parts[0], "sub": parts[1] if len(parts) > 1 else "", "dur": 2.8}
-            chap_i += 1; pal = PALETTES[(chap_i + sum(map(ord, prefix)) % 3) % len(PALETTES)]; grade_override = None
+            visual = None; chap_i += 1; pal = PALETTES[(chap_i + sum(map(ord, prefix)) % 3) % len(PALETTES)]; grade_override = None
             continue
         if ln.startswith("@zone"): zone = ln.split()[1]; continue
         if ln.startswith("@grade"): grade_override = ln.split()[1]; continue
@@ -249,7 +253,7 @@ def main():
             on_screen = False
             if visual and vis_new and ci == 0:
                 b["cam"] = SCREEN_CAMS[vis_count % 2]; on_screen = True; sfx.append({"at": 0.05, "type": "pop", "vol": 0.35})
-            elif visual and (actor is None or shot_i % 3 == 1):
+            elif visual and ((actor is None and shot_i % 2 == 0) or (actor is not None and shot_i % 4 == 1)):
                 b["cam"] = SCREEN_CAMS[(shot_i + 1) % 2]; on_screen = True
             elif actor:
                 pos, rot = marks[order.index(actor)]
@@ -261,9 +265,17 @@ def main():
                 if mood in ("!", "#"): b["shot"]["shake"] = 0.25
             else:
                 f = ZONE_FOCUS.get(zone, [0, 0, -9])
-                st = ["wide", "high", "wide"][shot_i % 3]
-                b["shot"] = {"type": st, "f": f, "az": [-14, 10, 20][shot_i % 3], "move": ["push", "crane", "drift"][shot_i % 3]}
-                if st == "wide": b["shot"]["dist"] = 17
+                k = shot_i % 4
+                if visual and zone == "screen":   # room shots that keep the screen in view
+                    b["shot"] = [{"type": "wide", "f": [0, 0, -10], "az": -18, "move": "drift", "dist": 19, "ty": 5},
+                                 {"type": "medium", "f": [-6, 0, -10], "az": 32, "move": "push", "dist": 14, "ty": 5.5},
+                                 {"type": "wide", "f": [0, 0, -10], "az": 16, "move": "push", "dist": 20, "ty": 5},
+                                 {"type": "medium", "f": [6, 0, -10], "az": -32, "move": "push", "dist": 14, "ty": 5.5}][k]
+                else:
+                    st = ["wide", "high", "wide", "medium"][k]
+                    b["shot"] = {"type": st, "f": f, "az": [-14, 10, 20, -24][k], "move": ["push", "crane", "drift", "orbit"][k]}
+                    if st == "wide": b["shot"]["dist"] = 17
+                    if st == "medium": b["shot"]["dist"] = 12
             if on_screen: b["paint"] = 0.12
             if mood == "^" and ci == 0: sfx.append({"at": 0.5, "type": "ding", "vol": 0.3})
             if sfx: b["sfx"] = sfx
@@ -271,7 +283,7 @@ def main():
             beats.append(b)
         vis_new = False
 
-    story = {"title": title[0] + (" - " + title[1] if len(title) > 1 else ""), "format": "long", "voice": nvoice, "lang": nlang, "speed": 1.05,
+    story = {"title": title[0] + (" - " + title[1] if len(title) > 1 else ""), "format": "long", "voice": nvoice, "lang": nlang, "speed": 1.0,
              "cast": cast, "beats": beats}
     os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
     json.dump(story, open(a.out, "w"), indent=1)

@@ -1,0 +1,158 @@
+title: Episode 7 | How Chips Gossip
+narrator: bf_emma en-gb
+cast: ada=engineer:af_heart, ben=worker:am_michael, cy=boss:bm_george:en-gb
+---
+@zone bench
+N: Ben empties a bag onto the bench. A temperature sensor. A light sensor. A tiny display. A memory chip. A wireless module. And something he describes only as, very promising.
+ben^: Every one of these talks to the microcontroller. But none of them uses the same language.
+cy?: Can we not just connect them all with wires and let them work it out?
+ada: That is roughly what we will do. But the wires have rules. Today we learn the main ways chips talk to each other, and why there are so many.
+N: Every communication method answers the same questions. How many wires? Who decides when bits are sent? How fast? And how many devices can share the line?
+# Chapter One | Serial: One Bit After Another
+@zone screen
+N: The simplest is the asynchronous serial port, often called a UART. Two wires: one to transmit, one to receive. Bits are sent one after another, at a speed both sides agreed on in advance.
+%timing One byte on a UART
+- TX line: 11110=+=+=+=+111 d0,d1,d2,d3,d4,d5,d6,d7
+ada: The line rests high. A start bit pulls it low, announcing a byte is coming. Then eight data bits, lowest first. Then a stop bit returns it high.
+N: There is no clock wire. Both sides must agree on the baud rate, like nine thousand six hundred or one hundred fifteen thousand two hundred bits per second. If their clocks drift too far apart, bits get sampled in the wrong place and bytes arrive garbled.
+ben: Which is why a UART on a cheap internal oscillator can work fine on your desk and fail in a cold garage. Clocks drift with temperature.
+%blocks UART wiring
+- Microcontroller (TX) > Sensor (RX)
+- Sensor (TX) > Microcontroller (RX)
+ada>: And the wires cross: my transmit goes to your receive. The most common serial bug in history is connecting transmit to transmit.
+cy~: I once did that with an email. Nobody received it.
+# Chapter Two | Logic Levels and RS-232
+@zone screen
+N: Inside a board, serial signals use the chip's own voltage levels, typically zero and three point three volts. People often call this TTL serial, after an old logic family.
+%table Same bits, different voltages
+- Standard | One means | Zero means
+- 3.3 V logic | 3.3 V | 0 V
+- 5 V logic | 5 V | 0 V
+- RS-232 | -3 to -15 V | +3 to +15 V
+ada: For longer cables, there is RS-232, an old standard that uses larger, inverted voltages, so signals survive noisy environments. You cannot connect it straight to a microcontroller pin; it would destroy it. A small converter chip translates.
+ben: Today, most serial cables to a laptop go through a little USB adapter. It shows up as a serial port, and the chip never knows there was USB involved.
+# Chapter Three | SPI: Fast and Simple
+@zone screen
+N: When speed matters, many chips use SPI, the serial peripheral interface. It adds a clock wire, so the receiver knows exactly when to read each bit.
+%timing An SPI transfer
+- CS: 1000000000000001
+- SCK: 0010101010101010
+- MOSI: 0==============0 one byte out
+- MISO: 0==============0 one byte back
+ada: Four wires. A chip select line picks which device is listening. The clock, driven by the controller. One data line out, one data line back. Every clock tick moves one bit in each direction at the same time.
+N: Because the controller drives the clock, there is no baud rate to agree on. SPI can run at tens of megahertz. That is why memory chips and displays love it.
+%blocks SPI with several devices
+- Microcontroller > Flash chip:CS 1, Display:CS 2, Radio:CS 3
+- Flash chip
+- Display
+- Radio
+ben: Each extra device shares clock and data, but needs its own chip select wire. Ten devices means ten select pins. That adds up.
+ada: And SPI has modes: which clock edge to sample on, and whether the clock idles high or low. Get the mode wrong and every byte arrives shifted or scrambled. The datasheet tells you which.
+# Chapter Four | I squared C: Two Wires, Many Chips
+@zone screen
+N: When pins are precious and speed is modest, there is I squared C. Just two wires, shared by many devices, each with its own address.
+%timing An I squared C transaction
+- SCL: 1110101010101010101011
+- SDA: 1100==============0011 address 0x48 + write
+ada: One wire is the clock, the other carries data. A transaction begins with a start condition, then the address of the device you want, then data. The addressed device answers with an acknowledge bit. Everyone else stays quiet.
+%blocks Many devices, two wires
+- Microcontroller > Temp sensor (0x48):<>SDA + SCL, Light sensor (0x23):<>SDA + SCL, Memory (0x50):<>SDA + SCL
+- Temp sensor (0x48)
+- Light sensor (0x23)
+- Memory (0x50)
+N: The wires use open-drain outputs. Devices can only pull the line low; resistors pull it high. That way, two devices talking at once cannot short each other out, they just pull the line low together.
+ben!: And if we forget the pull-up resistors, the bus never goes high at all, and nothing works.
+ada: Classic. Another classic: two sensors from the same manufacturer with the same fixed address. They cannot both live on the same bus without help.
+cy?: How fast is it?
+ada: Typically one hundred or four hundred kilobits per second. Plenty for a temperature sensor read every few seconds. Too slow for a display showing video.
+# Chapter Five | One Wire, and Parallel
+@zone screen
+N: There are more. One-wire buses push data, and sometimes even power, over a single wire plus ground. They are slow, but great for long cables of cheap sensors, like temperature probes in a greenhouse.
+N: At the other extreme, parallel interfaces send many bits at once, one wire per bit. Eight or sixteen data lines plus control lines. Fast, but hungry for pins and board space.
+%table Comparing the buses
+- Bus | Wires | Speed | Devices
+- UART | 2 | slow to medium | 2
+- SPI | 4 + | very fast | few
+- I squared C | 2 | medium | many
+- One-wire | 1 + ground | slow | many
+- Parallel | 8 to 20 | very fast | few
+ada: There are also hybrids. Dual and quad SPI send two or four bits per clock, to make external flash nearly as fast as a parallel bus with far fewer pins.
+ben: And then there is USB.
+ada~: Then there is USB. A brilliant, complex standard that deserves respect. If you need it, use the vendor's USB library and a lot of patience.
+N: The choice is usually made by the parts you pick. The sensor speaks I squared C, so you speak I squared C. But knowing the trade-offs helps you pick parts wisely, and debug them when they misbehave.
+# Chapter Six | Buffers and FIFOs
+@zone bench
+N: Now a practical problem. The wireless module sends a burst of fifty bytes. The UART receives one byte at a time and interrupts for each. If the code is busy when byte twelve arrives, byte thirteen overwrites it.
+%timing Bytes arriving faster than handled
+- RX bytes: 1010101010101010
+- Code free: 1100000011000000
+ada: Many peripherals include a small hardware FIFO: a first-in, first-out queue of a few bytes. It buys a little time. But for real slack, the software needs its own buffer.
+N: The classic structure is a circular buffer, also called a ring buffer. An array with two indexes: a head where new data is written, and a tail where old data is read. When an index reaches the end, it wraps back to the start.
+%code A ring buffer
+| #define SIZE 64                    // power of two
+| static uint8_t buf[SIZE];
+| static volatile uint16_t head = 0, tail = 0;
+|
+| bool put(uint8_t b) {              // called from the ISR
+|   if (head - tail == SIZE) return false;   // full
+|   buf[head % SIZE] = b; head++; return true;
+| }
+| bool get(uint8_t *b) {             // called from the main loop
+|   if (head == tail) return false;           // empty
+|>  *b = buf[tail % SIZE]; tail++; return true;
+| }
+ada>: The interrupt only moves the head. The main loop only moves the tail. Because each index has exactly one writer, they can share the buffer safely without disabling interrupts, as long as index updates are atomic.
+N: Keeping the size a power of two makes the wraparound cheap, and letting the indexes run freely makes full and empty easy to tell apart: equal means empty, a difference of the size means full.
+ben?: What happens when it is full?
+ada: You decide: drop the new byte, overwrite the oldest, or signal an error. What you must not do is decide by accident. Count the drops, so you know it happened.
+# Chapter Seven | DMA: The Delivery Service
+@zone screen
+N: Even with a ring buffer, the processor handles every byte. At high speeds, that is a lot of interruptions. Enter DMA: direct memory access.
+%blocks DMA moves data without the CPU
+- UART > DMA controller:byte ready
+- DMA controller > RAM buffer:copy
+- DMA controller > CPU:done! (one interrupt)
+- RAM buffer
+- CPU
+ada: A DMA controller is a little engine that copies data between peripherals and memory by itself. You tell it: take bytes from the UART, put them in this buffer, and tell me when you have a hundred.
+N: The processor is free to do other work, or to sleep, while data streams in. One interrupt at the end replaces a hundred interrupts along the way.
+cy^: So it is an intern that never complains and never takes lunch.
+ada: And never tells you when it misunderstood the instructions. DMA mistakes are silent: wrong address, wrong length, and it happily overwrites the wrong memory.
+ben: Also, while DMA writes to a buffer, the code must not read it as if it were complete. Usually you use two buffers: the DMA fills one while the code processes the other. That is double buffering.
+# Chapter Eight | Reading the Analog World
+@zone bench
+N: Not every sensor speaks a digital language. Sprout's soil probe outputs a voltage: higher when the soil is wet. To read it, the chip uses its ADC, the analog to digital converter.
+%chart Soil probe voltage
+- line Probe voltage: 0.4,0.5,0.9,1.6,2.2,2.5,2.6
+xl bone dry,,,damp,,,soaked
+yl volts
+ada: The ADC samples the voltage and turns it into a number. A twelve bit ADC gives values from zero to four thousand ninety-five. With a three point three volt reference, each step is about eight tenths of a millivolt.
+%code Reading the probe
+| uint16_t raw = adc_read(SOIL_CHANNEL);        // 0..4095
+| uint32_t mv  = (uint32_t)raw * 3300 / 4095;   // millivolts
+|>uint16_t moisture = mv_to_percent(mv);        // calibrated
+N: Note the order of operations: multiply first, then divide, using a wider integer type. Dividing first would throw away precision. Using a sixteen bit type for the product would overflow.
+ben: The sample rate matters too. Soil moisture changes over hours. Sampling it a million times a second would be silly. Once a minute, averaging a few readings, is plenty.
+N: And for signals that do change quickly, like sound, the sample rate must be more than twice the highest frequency you care about, or fast signals masquerade as slow ones. Engineers call that aliasing.
+ada: Put it all together and you get a nice pipeline: a timer triggers the ADC at a steady rate, DMA moves the results into a buffer, and the code processes a whole block at once. The processor barely lifts a finger.
+%blocks A sampling pipeline
+- Timer > ADC:trigger
+- ADC > DMA:sample
+- DMA > Buffer:store
+- Buffer > Processing:block ready
+- Processing
+# Recap | Many Languages, One Chip
+@zone green
+%list Today we learned
+- UART: two wires, agreed baud rate
+- RS-232: bigger voltages, needs a converter
+- SPI: clocked, fast, a select line per device
+- I squared C: two wires, addresses, pull-ups
+- Ring buffers decouple interrupts from code
+- DMA moves data while the CPU rests
+- ADCs turn voltages into numbers
+N: To recap. Serial ports send bits one at a time at an agreed speed. SPI adds a clock for speed. I squared C shares two wires among many addressed devices. And there are one-wire, parallel, quad SPI, and USB for special needs.
+N: Ring buffers let interrupts and the main loop share data safely. DMA moves data without the processor. And the ADC turns the analog world into numbers you can reason about.
+cy^: So now Sprout can talk to six sensors.
+ben~: Five. The very promising one turned out to be a fridge magnet.
+ada: Next time, we put all the pieces together into a real system: displays, buttons, memory, and the data flowing between them.
